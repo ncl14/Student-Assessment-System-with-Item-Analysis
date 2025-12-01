@@ -16,5 +16,10 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
