@@ -19,9 +19,7 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbRole.Items.Add("Admin");
-            cmbRole.Items.Add("Teacher");
-            cmbRole.Items.Add("Student");
+           
         }
     }
 }
