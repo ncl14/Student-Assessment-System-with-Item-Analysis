@@ -31,5 +31,15 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
