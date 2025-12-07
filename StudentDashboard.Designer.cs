@@ -206,7 +206,8 @@
             this.Controls.Add(this.lblSystem);
             this.Controls.Add(this.txtb1);
             this.Name = "StudentDashboard";
-            this.Text = "StudentDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
             this.Load += new System.EventHandler(this.StudentDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxProfile)).EndInit();
             this.ResumeLayout(false);
