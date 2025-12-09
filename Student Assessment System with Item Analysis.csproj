@@ -107,10 +107,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="Forms\Dashboards\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
+    <Compile Include="Forms\Dashboards\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Assessment Creation Module.cs">
@@ -119,11 +119,35 @@
     <Compile Include="Assessment Creation Module.Designer.cs">
       <DependentUpon>Assessment Creation Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubjectManagement\SectionManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubjectManagement\SectionManagementForm.Designer.cs">
+      <DependentUpon>SectionManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubjectManagement\SubjectManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubjectManagement\SubjectManagementForm.Designer.cs">
+      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagement\AddEditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagement\AddEditUserForm.Designer.cs">
+      <DependentUpon>AddEditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagement\ManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagement\ManageUsersForm.Designer.cs">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="modProcedureVariable.cs" />
     <Compile Include="modVariable.cs" />
@@ -134,37 +158,49 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="StudentDashboard.cs">
+    <Compile Include="Forms\Dashboards\StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentDashboard.Designer.cs">
+    <Compile Include="Forms\Dashboards\StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherAccount.cs">
+    <Compile Include="Forms\Dashboards\TeacherDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherAccount.Designer.cs">
-      <DependentUpon>TeacherAccount.cs</DependentUpon>
+    <Compile Include="Forms\Dashboards\TeacherDashboard.Designer.cs">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminDashboard.resx">
+    <EmbeddedResource Include="Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Assessment Creation Module.resx">
       <DependentUpon>Assessment Creation Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubjectManagement\SectionManagementForm.resx">
+      <DependentUpon>SectionManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubjectManagement\SubjectManagementForm.resx">
+      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\AddEditUserForm.resx">
+      <DependentUpon>AddEditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentDashboard.resx">
+    <EmbeddedResource Include="Forms\Dashboards\StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherAccount.resx">
-      <DependentUpon>TeacherAccount.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dashboards\TeacherDashboard.resx">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -180,5 +216,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

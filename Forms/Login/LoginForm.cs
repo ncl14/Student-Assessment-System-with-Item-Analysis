@@ -5,9 +5,9 @@ using Student_Assessment_System_with_Item_Analysis;
 
 namespace Student_Assessment_System_with_Item_Analysis
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
