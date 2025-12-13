@@ -170,6 +170,12 @@
     <Compile Include="Forms\Dashboards\TeacherDashboard.Designer.cs">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Administration.Designer.cs">
+      <DependentUpon>Test Administration.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboards\TeacherDashboard.resx">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Administration.resx">
+      <DependentUpon>Test Administration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
