@@ -51,5 +51,15 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

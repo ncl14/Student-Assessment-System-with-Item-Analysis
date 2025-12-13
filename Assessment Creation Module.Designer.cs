@@ -39,8 +39,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTestDesc
@@ -80,21 +91,21 @@
             // 
             this.lblSub.AutoSize = true;
             this.lblSub.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblSub.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSub.Location = new System.Drawing.Point(113, 95);
+            this.lblSub.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub.Location = new System.Drawing.Point(113, 94);
             this.lblSub.Name = "lblSub";
-            this.lblSub.Size = new System.Drawing.Size(60, 20);
+            this.lblSub.Size = new System.Drawing.Size(57, 17);
             this.lblSub.TabIndex = 3;
-            this.lblSub.Text = "Subject";
+            this.lblSub.Text = "Subject:";
             this.lblSub.Click += new System.EventHandler(this.lblSub_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.DisplayMember = "IT12";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(172, 94);
+            this.comboBox1.Location = new System.Drawing.Point(172, 90);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(308, 21);
+            this.comboBox1.Size = new System.Drawing.Size(368, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "4";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -103,31 +114,34 @@
             // 
             this.lblCourse.AutoSize = true;
             this.lblCourse.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(113, 132);
+            this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(112, 131);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(57, 20);
+            this.lblCourse.Size = new System.Drawing.Size(54, 17);
             this.lblCourse.TabIndex = 5;
-            this.lblCourse.Text = "Course";
+            this.lblCourse.Text = "Course:";
             this.lblCourse.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(172, 131);
+            this.comboBox2.Items.AddRange(new object[] {
+            "Computer Science",
+            "Information Technology"});
+            this.comboBox2.Location = new System.Drawing.Point(172, 127);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(308, 21);
+            this.comboBox2.Size = new System.Drawing.Size(368, 21);
             this.comboBox2.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 66);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 56);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Subject & Course";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -136,50 +150,123 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 170);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Test Type";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(49, 191);
+            this.comboBox3.Items.AddRange(new object[] {
+            "Quiz",
+            "Exam",
+            "Diagnostic",
+            "Practice"});
+            this.comboBox3.Location = new System.Drawing.Point(116, 159);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(431, 21);
+            this.comboBox3.Size = new System.Drawing.Size(424, 21);
             this.comboBox3.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.SteelBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 215);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 198);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 18);
+            this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "Time Limit";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(49, 238);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(431, 21);
-            this.comboBox4.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(106, 301);
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(331, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(104, 20);
             this.label5.TabIndex = 12;
-            this.label5.Text = "label5";
+            this.label5.Text = "Passing Score";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(116, 195);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 21);
+            this.numericUpDown1.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.SteelBlue;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(31, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Number of Items";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.SteelBlue;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(331, 243);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Total Points";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(172, 243);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(105, 21);
+            this.numericUpDown2.TabIndex = 16;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.Location = new System.Drawing.Point(429, 243);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(96, 21);
+            this.numericUpDown3.TabIndex = 17;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.Location = new System.Drawing.Point(441, 197);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(101, 21);
+            this.numericUpDown4.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.SteelBlue;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(31, 293);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Instructions";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(63, 319);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(724, 84);
+            this.textBox2.TabIndex = 20;
             // 
             // Assessment_Creation_Module
             // 
@@ -187,8 +274,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(853, 432);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
@@ -202,6 +296,10 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Assessment_Creation_Module";
             this.Text = "Assessment_Creation_Module";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +318,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
