@@ -176,6 +176,12 @@
     <Compile Include="Test Administration.Designer.cs">
       <DependentUpon>Test Administration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test Taking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Taking.Designer.cs">
+      <DependentUpon>Test Taking.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test Administration.resx">
       <DependentUpon>Test Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Taking.resx">
+      <DependentUpon>Test Taking.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

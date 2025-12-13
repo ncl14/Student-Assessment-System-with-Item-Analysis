@@ -36,5 +36,15 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
