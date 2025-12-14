@@ -1,47 +1,22 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Windows.Forms;
+﻿using System.Data.SqlClient; // Import this namespace
 
 namespace Student_Assessment_System_with_Item_Analysis
 {
-    public static class modProcedureVariable
+    class modVariables
     {
-        public static bool fncConnectToDatabase()
-        {
-            try
-            {
-                modVariables.servername = "localhost";
-                modVariables.dbname = "studentasessment";
-                modVariables.username = "root";
-                modVariables.password = "";
-                modVariables.port = "3306";
+        // Change MySqlConnection to SqlConnection
+        public static SqlConnection conDbInformation;
 
-                modVariables.strConnection =
-                    $"SERVER={modVariables.servername};DATABASE={modVariables.dbname};UID={modVariables.username};PWD={modVariables.password};PORT={modVariables.port};";
+        // Change MySqlCommand to SqlCommand
+        public static SqlCommand command;
 
-                modVariables.conDbInformation = new MySqlConnection(modVariables.strConnection);
-                modVariables.conDbInformation.Open();
-
-                modVariables.command = new MySqlCommand();
-                modVariables.command.Connection = modVariables.conDbInformation;
-                modVariables.command.CommandTimeout = 20 * 60;
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database Connection Error: " + ex.Message);
-                return false;
-            }
-        }
-
-        public static void checkDatabaseConnection()
-        {
-            if (modVariables.conDbInformation == null ||
-                modVariables.conDbInformation.State == System.Data.ConnectionState.Closed)
-            {
-                fncConnectToDatabase();
-            }
-        }
+        // You can keep these if you still want to build the string manually, 
+        // but for LocalDB, the hardcoded string in the code above is often safer.
+        public static string servername;
+        public static string dbname;
+        public static string username;
+        public static string password;
+        public static string port;
+        public static string strConnection;
     }
 }

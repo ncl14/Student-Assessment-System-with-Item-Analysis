@@ -8,48 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Student_Assessment_System_with_Item_Analysis
+namespace Student_Assessment_System_with_Item_Analysis.Forms.Dashboards
 {
-    public partial class Teacher_Account : Form
+    public partial class TeacherDashboard : Form
     {
-        public Teacher_Account()
+        public TeacherDashboard()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtb2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Teacher_Account_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.SqlClient;
+using System.Configuration;
 using System;
 using System.Windows.Forms;
 using Student_Assessment_System_with_Item_Analysis;
+using Student_Assessment_System_with_Item_Analysis.Forms.Dashboards;
 
 namespace Student_Assessment_System_with_Item_Analysis
 {
@@ -25,69 +27,83 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
             string username = txtUser.Text.Trim();
             string password = txtPassword.Text.Trim();
+            string role = cmbRole.SelectedItem.ToString();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (username == "" || password == "")
             {
-                MessageBox.Show("Please enter both Username and Password.");
+                MessageBox.Show("Please enter both Username and Password.", "Required Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (cmbRole.SelectedItem == null)
+            var cs = ConfigurationManager.ConnectionStrings["MyConn"];
+            if (cs == null)
             {
-                MessageBox.Show("Please select a role.");
+                MessageBox.Show("Configuration error: missing 'MyConn' connection string in App.config.", "Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            string connStr = cs.ConnectionString;
 
-            string selectedRole = cmbRole.SelectedItem.ToString();
-
-            modProcedureVariable.checkDatabaseConnection();
-
+            // The using statement handles closing the connection and disposing the object automatically.
             try
             {
-                string query = "SELECT userFullName FROM users WHERE userName=@username AND userPass=@password AND userRole=@role";
-
-                MySqlCommand cmd = new MySqlCommand(query, modVariables.conDbInformation);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@role", selectedRole);
-
-                MySqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
-                    string fullname = dr["userFullName"].ToString();
-                    dr.Close();
+                    conn.Open();
 
-                    Form dashboard = null;
+                    // Corrected query using actual table column names: FullName, Username, Password, Role
+                    string query = "SELECT FullName FROM dbo.Users WHERE Username=@username AND PasswordHash=@password AND UserRole=@role";
 
-                    switch (selectedRole)
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        case "Admin":
-                            dashboard = new AdminDashboard();
-                            break;
-                        case "Teacher":
-                            dashboard = new Teacher_Account();
-                            break;
-                        case "Student":
-                            dashboard = new StudentDashboard();
-                            break;
-                        default:
-                            MessageBox.Show("Unknown role selected: " + selectedRole);
-                            return;
-                    }
 
-                    dashboard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    dr.Close();
-                    MessageBox.Show("Invalid Username, Password, or Role!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@role", role);
+
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.Read())
+                            {
+                                string fullname = dr["FullName"].ToString(); // Note: Using 'FullName' not 'userFullName'
+                                dr.Close();
+
+                                MessageBox.Show($"Login Successful. Welcome, {fullname}!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Role-based Navigation
+                                Form dashboard = null;
+                                switch (role)
+                                {
+                                    case "Admin":
+                                        dashboard = new AdminDashboard();
+                                        break;
+                                    case "Teacher":
+                                        dashboard = new TeacherDashboard();
+                                        break;
+                                    case "Student":
+                                        dashboard = new StudentDashboard();
+                                        break;
+                                }
+
+                                if (dashboard != null)
+                                {
+                                    dashboard.Show();
+                                    this.Hide();
+                                }
+                            }
+                            else
+                            {
+                                dr.Close();
+                                MessageBox.Show("Invalid Username, Password, or Role combination!", "Login Failed",
+                                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        } // End using SqlDataReader
+                    } // End using SqlCommand
+                } // End using SqlConnection (conn.Close() called automatically here)
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Login Error: " + ex.Message);
+                // Application must handle exceptions - no crashes allowed [cite: 212]
+                MessageBox.Show("A database error occurred: " + ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
