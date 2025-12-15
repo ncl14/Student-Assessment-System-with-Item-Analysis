@@ -45,7 +45,7 @@
             this.lblSectionName.AutoSize = true;
             this.lblSectionName.BackColor = System.Drawing.Color.SteelBlue;
             this.lblSectionName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSectionName.Location = new System.Drawing.Point(28, 100);
+            this.lblSectionName.Location = new System.Drawing.Point(101, 103);
             this.lblSectionName.Name = "lblSectionName";
             this.lblSectionName.Size = new System.Drawing.Size(125, 21);
             this.lblSectionName.TabIndex = 0;
@@ -54,10 +54,10 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox1.Location = new System.Drawing.Point(-1, -2);
+            this.textBox1.Location = new System.Drawing.Point(-12, -2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 454);
+            this.textBox1.Size = new System.Drawing.Size(345, 454);
             this.textBox1.TabIndex = 1;
             // 
             // lblSubject
@@ -65,7 +65,7 @@
             this.lblSubject.AutoSize = true;
             this.lblSubject.BackColor = System.Drawing.Color.SteelBlue;
             this.lblSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(28, 172);
+            this.lblSubject.Location = new System.Drawing.Point(101, 172);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(75, 21);
             this.lblSubject.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.lblCourse.AutoSize = true;
             this.lblCourse.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(28, 243);
+            this.lblCourse.Location = new System.Drawing.Point(101, 243);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(70, 21);
             this.lblCourse.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.lblAssignedTeacher.AutoSize = true;
             this.lblAssignedTeacher.BackColor = System.Drawing.Color.SteelBlue;
             this.lblAssignedTeacher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssignedTeacher.Location = new System.Drawing.Point(28, 315);
+            this.lblAssignedTeacher.Location = new System.Drawing.Point(101, 315);
             this.lblAssignedTeacher.Name = "lblAssignedTeacher";
             this.lblAssignedTeacher.Size = new System.Drawing.Size(148, 21);
             this.lblAssignedTeacher.TabIndex = 4;
@@ -96,7 +96,7 @@
             // cmbSec
             // 
             this.cmbSec.FormattingEnabled = true;
-            this.cmbSec.Location = new System.Drawing.Point(198, 100);
+            this.cmbSec.Location = new System.Drawing.Point(350, 103);
             this.cmbSec.Name = "cmbSec";
             this.cmbSec.Size = new System.Drawing.Size(337, 21);
             this.cmbSec.TabIndex = 5;
@@ -104,7 +104,7 @@
             // cmbSub
             // 
             this.cmbSub.FormattingEnabled = true;
-            this.cmbSub.Location = new System.Drawing.Point(198, 172);
+            this.cmbSub.Location = new System.Drawing.Point(350, 172);
             this.cmbSub.Name = "cmbSub";
             this.cmbSub.Size = new System.Drawing.Size(337, 21);
             this.cmbSub.TabIndex = 6;
@@ -112,7 +112,7 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(198, 243);
+            this.cmbCourse.Location = new System.Drawing.Point(350, 243);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(337, 21);
             this.cmbCourse.TabIndex = 7;
@@ -120,7 +120,7 @@
             // cmbAssigned
             // 
             this.cmbAssigned.FormattingEnabled = true;
-            this.cmbAssigned.Location = new System.Drawing.Point(198, 315);
+            this.cmbAssigned.Location = new System.Drawing.Point(350, 315);
             this.cmbAssigned.Name = "cmbAssigned";
             this.cmbAssigned.Size = new System.Drawing.Size(337, 21);
             this.cmbAssigned.TabIndex = 8;
@@ -131,7 +131,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(681, 387);
+            this.btnSave.Location = new System.Drawing.Point(496, 379);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(95, 39);
             this.btnSave.TabIndex = 9;
