@@ -61,5 +61,59 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void lblAdminDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtb1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+    }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSubjects_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
