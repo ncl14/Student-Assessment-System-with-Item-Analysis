@@ -159,16 +159,16 @@
     <Compile Include="modVariable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Dashboards\StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dashboards\StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Test Administration.cs">
       <SubType>Form</SubType>

@@ -121,5 +121,9 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
             // Optional: handle password change
         }
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
