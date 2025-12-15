@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblAdminDashboard = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ReportTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +59,8 @@
             this.panelUsersCard = new System.Windows.Forms.Panel();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblAdminDashboard = new System.Windows.Forms.Label();
-            this.lblLogout = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxProfile)).BeginInit();
@@ -68,7 +68,6 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelUsersCard.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -88,6 +87,43 @@
             this.panel3.Size = new System.Drawing.Size(800, 450);
             this.panel3.TabIndex = 27;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.lblAdminDashboard);
+            this.panel2.Controls.Add(this.lblLogout);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(176, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(624, 91);
+            this.panel2.TabIndex = 60;
+            // 
+            // lblAdminDashboard
+            // 
+            this.lblAdminDashboard.AutoSize = true;
+            this.lblAdminDashboard.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblAdminDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminDashboard.ForeColor = System.Drawing.Color.White;
+            this.lblAdminDashboard.Location = new System.Drawing.Point(26, 32);
+            this.lblAdminDashboard.Name = "lblAdminDashboard";
+            this.lblAdminDashboard.Size = new System.Drawing.Size(159, 32);
+            this.lblAdminDashboard.TabIndex = 59;
+            this.lblAdminDashboard.Text = "DASHBOARD";
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.White;
+            this.lblLogout.Location = new System.Drawing.Point(529, 44);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(66, 19);
+            this.lblLogout.TabIndex = 58;
+            this.lblLogout.Text = "LOGOUT";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -98,7 +134,7 @@
             this.Status});
             this.dataGridView1.Location = new System.Drawing.Point(208, 274);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(563, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 150);
             this.dataGridView1.TabIndex = 59;
             // 
             // ReportTitle
@@ -408,56 +444,6 @@
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.lblAdminDashboard);
-            this.panel2.Controls.Add(this.lblLogout);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(176, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(624, 91);
-            this.panel2.TabIndex = 60;
-            // 
-            // lblAdminDashboard
-            // 
-            this.lblAdminDashboard.AutoSize = true;
-            this.lblAdminDashboard.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblAdminDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminDashboard.ForeColor = System.Drawing.Color.White;
-            this.lblAdminDashboard.Location = new System.Drawing.Point(26, 32);
-            this.lblAdminDashboard.Name = "lblAdminDashboard";
-            this.lblAdminDashboard.Size = new System.Drawing.Size(210, 32);
-            this.lblAdminDashboard.TabIndex = 59;
-            this.lblAdminDashboard.Text = "Admin Dashboard";
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.ForeColor = System.Drawing.Color.White;
-            this.lblLogout.Location = new System.Drawing.Point(533, 44);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(53, 19);
-            this.lblLogout.TabIndex = 58;
-            this.lblLogout.Text = "Logout";
-            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(464, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Name";
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +455,8 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -481,8 +469,6 @@
             this.panel4.PerformLayout();
             this.panelUsersCard.ResumeLayout(false);
             this.panelUsersCard.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -518,6 +504,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblAdminDashboard;
         private System.Windows.Forms.Label lblLogout;
-        private System.Windows.Forms.Label label3;
     }
 }
