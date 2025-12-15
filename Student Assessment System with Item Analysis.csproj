@@ -170,6 +170,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Results\DetailedResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results\DetailedResult.Designer.cs">
+      <DependentUpon>DetailedResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results\Students Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results\Students Results.Designer.cs">
+      <DependentUpon>Students Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test Creation .cs">
       <SubType>Form</SubType>
     </Compile>
