@@ -21,20 +21,5 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
