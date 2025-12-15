@@ -37,6 +37,7 @@
             this.cmbSub = new System.Windows.Forms.ComboBox();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.cmbAssigned = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSectionName
@@ -124,11 +125,25 @@
             this.cmbAssigned.Size = new System.Drawing.Size(337, 21);
             this.cmbAssigned.TabIndex = 8;
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(681, 387);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(95, 39);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
             // SectionManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbAssigned);
             this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.cmbSub);
@@ -156,5 +171,6 @@
         private System.Windows.Forms.ComboBox cmbSub;
         private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.ComboBox cmbAssigned;
+        private System.Windows.Forms.Button btnSave;
     }
 }
