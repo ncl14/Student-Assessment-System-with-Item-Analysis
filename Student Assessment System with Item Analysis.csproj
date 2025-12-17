@@ -229,6 +229,9 @@
     <EmbeddedResource Include="Results\DetailedResult.resx">
       <DependentUpon>DetailedResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Results\Students Results.resx">
+      <DependentUpon>Students Results.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestAssessment\Test Creation .resx">
       <DependentUpon>Test Creation .cs</DependentUpon>
     </EmbeddedResource>

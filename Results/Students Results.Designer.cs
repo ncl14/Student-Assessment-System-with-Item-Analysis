@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblList = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lblList
+            // 
+            this.lblList.AutoSize = true;
+            this.lblList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblList.Location = new System.Drawing.Point(418, 60);
+            this.lblList.Name = "lblList";
+            this.lblList.Size = new System.Drawing.Size(185, 28);
+            this.lblList.TabIndex = 0;
+            this.lblList.Text = "List of Tests Taken";
+            // 
+            // Students_Results
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1047, 558);
+            this.Controls.Add(this.lblList);
+            this.Name = "Students_Results";
             this.Text = "Students_Results";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblList;
     }
 }
