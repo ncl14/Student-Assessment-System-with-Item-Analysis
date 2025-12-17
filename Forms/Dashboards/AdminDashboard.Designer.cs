@@ -86,6 +86,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 450);
             this.panel3.TabIndex = 27;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel2
             // 
@@ -97,6 +98,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(624, 91);
             this.panel2.TabIndex = 60;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblAdminDashboard
             // 
@@ -109,6 +111,7 @@
             this.lblAdminDashboard.Size = new System.Drawing.Size(159, 32);
             this.lblAdminDashboard.TabIndex = 59;
             this.lblAdminDashboard.Text = "DASHBOARD";
+            this.lblAdminDashboard.Click += new System.EventHandler(this.lblAdminDashboard_Click_1);
             // 
             // lblLogout
             // 
@@ -136,6 +139,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(442, 150);
             this.dataGridView1.TabIndex = 59;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ReportTitle
             // 
@@ -169,6 +173,7 @@
             this.label10.TabIndex = 58;
             this.label10.Text = "Recent Reports";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel1
             // 
@@ -197,6 +202,7 @@
             this.label1.Size = new System.Drawing.Size(89, 30);
             this.label1.TabIndex = 62;
             this.label1.Text = "ADMIN";
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // picboxProfile
             // 
@@ -208,6 +214,7 @@
             this.picboxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxProfile.TabIndex = 63;
             this.picboxProfile.TabStop = false;
+            this.picboxProfile.Click += new System.EventHandler(this.picboxProfile_Click);
             // 
             // button1
             // 
@@ -226,6 +233,7 @@
             this.button1.Text = "📊 Reports";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSubjects
             // 
@@ -244,6 +252,7 @@
             this.btnSubjects.Text = "📚 Subjects";
             this.btnSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubjects.UseVisualStyleBackColor = false;
+            this.btnSubjects.Click += new System.EventHandler(this.btnSubjects_Click_1);
             // 
             // btnUsers
             // 
@@ -262,6 +271,7 @@
             this.btnUsers.Text = "👨🏻‍💼 Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnDashboard
             // 
@@ -279,6 +289,7 @@
             this.btnDashboard.Text = "🏠︎ Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panel6
             // 
@@ -290,6 +301,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(129, 92);
             this.panel6.TabIndex = 57;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label9
             // 
@@ -303,6 +315,7 @@
             this.label9.TabIndex = 61;
             this.label9.Text = "Reports";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -316,6 +329,7 @@
             this.label8.TabIndex = 59;
             this.label8.Text = "278";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel5
             // 
@@ -327,6 +341,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(129, 92);
             this.panel5.TabIndex = 57;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label7
             // 
@@ -340,6 +355,7 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Subjects";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -353,6 +369,7 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "8";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel4
             // 
@@ -365,6 +382,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(129, 92);
             this.panel4.TabIndex = 57;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label5
             // 
@@ -378,6 +396,7 @@
             this.label5.TabIndex = 59;
             this.label5.Text = "Submissions";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label2
             // 
@@ -391,6 +410,7 @@
             this.label2.TabIndex = 58;
             this.label2.Text = "Pending";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblPendingSub
             // 
@@ -404,6 +424,7 @@
             this.lblPendingSub.TabIndex = 49;
             this.lblPendingSub.Text = "12";
             this.lblPendingSub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPendingSub.Click += new System.EventHandler(this.lblPendingSub_Click);
             // 
             // panelUsersCard
             // 
@@ -415,6 +436,7 @@
             this.panelUsersCard.Name = "panelUsersCard";
             this.panelUsersCard.Size = new System.Drawing.Size(129, 92);
             this.panelUsersCard.TabIndex = 56;
+            this.panelUsersCard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsersCard_Paint);
             // 
             // lbl1
             // 

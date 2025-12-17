@@ -24,6 +24,19 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
 
         private void ManageUsersForm_Load(object sender, EventArgs e)
         {
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
+        }
+
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bool selected = dgvUsers.SelectedRows.Count > 0;
+            btnEdit.Enabled = selected;
+            btnDelete.Enabled = selected;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
