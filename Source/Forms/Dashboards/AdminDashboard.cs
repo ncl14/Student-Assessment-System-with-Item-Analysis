@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Student_Assessment_System_with_Item_Analysis
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        private User currentUser;
+
+        public AdminDashboard(User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void label1_Click(object sender, EventArgs e)

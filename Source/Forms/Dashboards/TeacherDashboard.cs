@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.Dashboards
 {
     public partial class TeacherDashboard : Form
     {
-        public TeacherDashboard()
+        private User currentUser;
+
+        public TeacherDashboard(User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void txtb1_TextChanged(object sender, EventArgs e)

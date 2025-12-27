@@ -46,5 +46,24 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void Test_Administration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabTestWizard_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
