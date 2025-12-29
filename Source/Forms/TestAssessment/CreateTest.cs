@@ -65,5 +65,10 @@ namespace Student_Assessment_System_with_Item_Analysis
         {
 
         }
+
+        private void pnlQuestionsMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
