@@ -3,6 +3,8 @@ using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Student_Assessment_System_with_Item_Analysis.Source.Services
 {
@@ -15,9 +17,18 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Services
                 conn.Open();
 
                 const string query = @"
-                    SELECT UserName, UserRole, PasswordHash
-                    FROM Users
-                    WHERE UserName = @username";
+            SELECT 
+                UserId,
+                UserName,
+                UserRole,
+                PasswordHash,
+                Email,
+                FirstName,
+                LastName,
+                IsActive,
+                CreatedAt
+            FROM Users
+            WHERE UserName = @username";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -28,10 +39,18 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Services
                         if (!reader.Read())
                             return null;
 
-                        string storedHash = reader["PasswordHash"] as string;
-                        string role = reader["UserRole"] as string;
+                        // ✅ Cache all DB values FIRST
+                        int userId = Convert.ToInt32(reader["UserId"]);
+                        string dbUsername = reader["UserName"].ToString();
+                        string role = reader["UserRole"].ToString();
+                        string storedHash = reader["PasswordHash"].ToString();
+                        string email = reader["Email"] as string;
+                        string firstName = reader["FirstName"] as string;
+                        string lastName = reader["LastName"] as string;
+                        bool isActive = Convert.ToBoolean(reader["IsActive"]);
+                        DateTime createdAt = Convert.ToDateTime(reader["CreatedAt"]);
 
-                        if (string.IsNullOrWhiteSpace(storedHash))
+                        if (string.IsNullOrWhiteSpace(storedHash) || !isActive)
                             return null;
 
                         bool isBcryptHash =
@@ -39,13 +58,22 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Services
                             storedHash.StartsWith("$2b$") ||
                             storedHash.StartsWith("$2y$");
 
-                        // Handle legacy plain-text passwords (one-time migration)
+                        // 🔁 SHA-256 → BCrypt migration
                         if (!isBcryptHash)
                         {
-                            if (storedHash != password)
-                                return null;
+                            using (SHA256 sha = SHA256.Create())
+                            {
+                                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+                                string shaHash = BitConverter
+                                    .ToString(bytes)
+                                    .Replace("-", "")
+                                    .ToLower();
 
-                            reader.Close(); // REQUIRED before UPDATE
+                                if (shaHash != storedHash.ToLower())
+                                    return null;
+                            }
+
+                            reader.Close(); // now safe
 
                             string newHash = BCrypt.Net.BCrypt.HashPassword(password);
 
@@ -61,38 +89,35 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Services
                             storedHash = newHash;
                         }
 
-                        // Verify password securely
-                        if (!BCrypt.Net.BCrypt.Verify(password, storedHash))
+                        // 🔐 BCrypt verification (HARDENED)
+                        try
+                        {
+                            if (!BCrypt.Net.BCrypt.Verify(password, storedHash))
+                                return null;
+                        }
+                        catch (BCrypt.Net.SaltParseException)
+                        {
+                            // corrupted hash in DB
                             return null;
+                        }
 
-                        if (role == "Admin")
-                        {
-                            return new Admin
-                            {
-                                Username = username,
-                                UserRole = "Admin"
-                            };
-                        }
-                        else if (role == "Teacher")
-                        {
-                            return new Teacher
-                            {
-                                Username = username,
-                                UserRole = "Teacher"
-                            };
-                        }
-                        else if (role == "Student")
-                        {
-                            return new Student
-                            {
-                                Username = username,
-                                UserRole = "Student"
-                            };
-                        }
-                        else
-                        {
-                            return null;
-                        }
+                        // ✅ Create correct user object
+                        User user;
+                        if (role == "Admin") user = new Admin();
+                        else if (role == "Teacher") user = new Teacher();
+                        else if (role == "Student") user = new Student();
+                        else return null;
+
+                        user.UserId = userId;
+                        user.Username = dbUsername;
+                        user.UserRole = role;
+                        user.Email = email;
+                        user.FirstName = firstName;
+                        user.LastName = lastName;
+                        user.IsActive = isActive;
+                        user.CreatedAt = createdAt;
+
+                        return user;
                     }
                 }
             }
