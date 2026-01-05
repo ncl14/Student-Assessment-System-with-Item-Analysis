@@ -48,16 +48,16 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblReports = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblSubjects = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPendingSub = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.panelUsersCard = new System.Windows.Forms.Panel();
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.lblUsers = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,11 +104,11 @@
             // 
             this.lblAdminDashboard.AutoSize = true;
             this.lblAdminDashboard.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblAdminDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminDashboard.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdminDashboard.ForeColor = System.Drawing.Color.White;
             this.lblAdminDashboard.Location = new System.Drawing.Point(26, 32);
             this.lblAdminDashboard.Name = "lblAdminDashboard";
-            this.lblAdminDashboard.Size = new System.Drawing.Size(159, 32);
+            this.lblAdminDashboard.Size = new System.Drawing.Size(164, 32);
             this.lblAdminDashboard.TabIndex = 59;
             this.lblAdminDashboard.Text = "DASHBOARD";
             this.lblAdminDashboard.Click += new System.EventHandler(this.lblAdminDashboard_Click_1);
@@ -296,7 +296,7 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.lblReports);
             this.panel6.Location = new System.Drawing.Point(642, 115);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(129, 92);
@@ -317,26 +317,26 @@
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label8
+            // lblReports
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.label8.Location = new System.Drawing.Point(23, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 46);
-            this.label8.TabIndex = 59;
-            this.label8.Text = "278";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblReports.AutoSize = true;
+            this.lblReports.BackColor = System.Drawing.Color.White;
+            this.lblReports.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.lblReports.Location = new System.Drawing.Point(23, 5);
+            this.lblReports.Name = "lblReports";
+            this.lblReports.Size = new System.Drawing.Size(80, 46);
+            this.lblReports.TabIndex = 59;
+            this.lblReports.Text = "278";
+            this.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblReports.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.lblSubjects);
             this.panel5.Location = new System.Drawing.Point(497, 115);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(129, 92);
@@ -357,19 +357,19 @@
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label6
+            // lblSubjects
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.label6.Location = new System.Drawing.Point(43, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 46);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "8";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblSubjects.AutoSize = true;
+            this.lblSubjects.BackColor = System.Drawing.Color.White;
+            this.lblSubjects.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.lblSubjects.Location = new System.Drawing.Point(43, 5);
+            this.lblSubjects.Name = "lblSubjects";
+            this.lblSubjects.Size = new System.Drawing.Size(40, 46);
+            this.lblSubjects.TabIndex = 51;
+            this.lblSubjects.Text = "8";
+            this.lblSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubjects.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel4
             // 
@@ -377,7 +377,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.lblPendingSub);
+            this.panel4.Controls.Add(this.lbl);
             this.panel4.Location = new System.Drawing.Point(352, 115);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(129, 92);
@@ -412,25 +412,25 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lblPendingSub
+            // lbl
             // 
-            this.lblPendingSub.AutoSize = true;
-            this.lblPendingSub.BackColor = System.Drawing.Color.White;
-            this.lblPendingSub.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.lblPendingSub.Location = new System.Drawing.Point(33, 5);
-            this.lblPendingSub.Name = "lblPendingSub";
-            this.lblPendingSub.Size = new System.Drawing.Size(60, 46);
-            this.lblPendingSub.TabIndex = 49;
-            this.lblPendingSub.Text = "12";
-            this.lblPendingSub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPendingSub.Click += new System.EventHandler(this.lblPendingSub_Click);
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.White;
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.lbl.Location = new System.Drawing.Point(33, 5);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(60, 46);
+            this.lbl.TabIndex = 49;
+            this.lbl.Text = "12";
+            this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl.Click += new System.EventHandler(this.lblPendingSub_Click);
             // 
             // panelUsersCard
             // 
             this.panelUsersCard.BackColor = System.Drawing.Color.White;
             this.panelUsersCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelUsersCard.Controls.Add(this.lbl1);
+            this.panelUsersCard.Controls.Add(this.lblUsers);
             this.panelUsersCard.Controls.Add(this.lbl2);
             this.panelUsersCard.Location = new System.Drawing.Point(208, 115);
             this.panelUsersCard.Name = "panelUsersCard";
@@ -438,19 +438,19 @@
             this.panelUsersCard.TabIndex = 56;
             this.panelUsersCard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsersCard_Paint);
             // 
-            // lbl1
+            // lblUsers
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.White;
-            this.lbl1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.lbl1.Location = new System.Drawing.Point(23, 5);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(80, 46);
-            this.lbl1.TabIndex = 47;
-            this.lbl1.Text = "150";
-            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click_2);
+            this.lblUsers.AutoSize = true;
+            this.lblUsers.BackColor = System.Drawing.Color.White;
+            this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.lblUsers.Location = new System.Drawing.Point(23, 5);
+            this.lblUsers.Name = "lblUsers";
+            this.lblUsers.Size = new System.Drawing.Size(80, 46);
+            this.lblUsers.TabIndex = 47;
+            this.lblUsers.Text = "150";
+            this.lblUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsers.Click += new System.EventHandler(this.lbl1_Click_2);
             // 
             // lbl2
             // 
@@ -509,15 +509,15 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label lblPendingSub;
+        private System.Windows.Forms.Label lblUsers;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblSubjects;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;

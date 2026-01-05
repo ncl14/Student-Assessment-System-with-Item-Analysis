@@ -1,12 +1,6 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Managers.Admin;
+using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis
@@ -78,7 +72,12 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-    }
+            var manager = new AdminDashboardManager();
+
+            //lblUsers.Text = manager.GetTotalUsers().ToString();
+            //lblSubjects.Text = manager.GetTotalSubjects().ToString();
+            //lblReports.Text = manager.GetTotalReports().ToString();
+        }
 
         private void lbl1_Click(object sender, EventArgs e)
         {

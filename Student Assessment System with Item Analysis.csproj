@@ -342,14 +342,29 @@
     <Compile Include="Source\Forms\TestAssessment\Test Taking.Designer.cs">
       <DependentUpon>Test Taking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Managers\Admin\AdminDashboardManager.cs" />
+    <Compile Include="Source\Managers\Admin\AuditLogManager.cs" />
+    <Compile Include="Source\Managers\Admin\SystemSettingsManager.cs" />
+    <Compile Include="Source\Managers\Authentication\AuthManager.cs" />
     <Compile Include="Source\Managers\ItemAnalysisManager.cs" />
+    <Compile Include="Source\Managers\Reports\ReportManager.cs" />
     <Compile Include="Source\Managers\ScoringManager.cs" />
-    <Compile Include="Source\Managers\TestManager.cs" />
+    <Compile Include="Source\Managers\Subjects\SubjectManager.cs" />
+    <Compile Include="Source\Managers\Tests\TestManager.cs" />
+    <Compile Include="Source\Managers\Users\UserManager.cs" />
+    <Compile Include="Source\Models\Admin.cs" />
     <Compile Include="Source\Models\Question.cs" />
     <Compile Include="Source\Models\QuestionStatistics.cs" />
     <Compile Include="Source\Models\Test.cs" />
     <Compile Include="Source\Models\TestResult.cs" />
     <Compile Include="Source\Models\User.cs" />
+    <Compile Include="Source\Repositories\AuditLogRepository.cs" />
+    <Compile Include="Source\Repositories\BaseRepository.cs" />
+    <Compile Include="Source\Repositories\DashboardRepository.cs" />
+    <Compile Include="Source\Repositories\ReportRepository.cs" />
+    <Compile Include="Source\Repositories\SectionRepository.cs" />
+    <Compile Include="Source\Repositories\SubjectRepository.cs" />
+    <Compile Include="Source\Repositories\UserRepository.cs" />
     <Compile Include="Source\Services\AuthService.cs" />
     <EmbeddedResource Include="Source\Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -416,7 +431,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Source\Repositories\" />
     <Folder Include="Source\Utilities\" />
     <Folder Include="Tests\" />
   </ItemGroup>

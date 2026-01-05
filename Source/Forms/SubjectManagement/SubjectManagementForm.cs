@@ -16,5 +16,10 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.SubjectManagement
         {
             InitializeComponent();
         }
+
+        private void lblAdminDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

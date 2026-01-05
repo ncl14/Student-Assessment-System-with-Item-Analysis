@@ -1,4 +1,6 @@
 ﻿using Student_Assessment_System_with_Item_Analysis.Database;
+using Student_Assessment_System_with_Item_Analysis.Source.Models;
+using System;
 using System.Data.SqlClient;
 
 namespace Student_Assessment_System_with_Item_Analysis.Source.Managers
@@ -31,7 +33,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Managers
                         cmd.Parameters.AddWithValue("@Pass", test.PassingScore);
                         cmd.Parameters.AddWithValue("@Points", test.TotalPoints);
                         cmd.Parameters.AddWithValue("@CreatedBy", 1); // TODO: Get actual current user ID
-                        
+
                         testId = Convert.ToInt32(cmd.ExecuteScalar());
                     }
 
@@ -89,5 +91,10 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Managers
                 }
             }
         }
+
+        ////     internal int SaveTest(Test test)
+        //     {
+        //         throw new NotImplementedException();
+        //     }
     }
 }

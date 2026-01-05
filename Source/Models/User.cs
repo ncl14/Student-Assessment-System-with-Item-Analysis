@@ -18,8 +18,6 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Models
 
         public string FullName => $"{FirstName} {LastName}";
     }
-
-    public class Admin : User { }
     public class Teacher : User { }
     public class Student : User { }
 }

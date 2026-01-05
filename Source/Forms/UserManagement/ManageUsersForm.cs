@@ -39,5 +39,10 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
