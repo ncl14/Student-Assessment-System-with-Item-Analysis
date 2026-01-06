@@ -368,6 +368,12 @@
     <Compile Include="Source\Repositories\SubjectRepository.cs" />
     <Compile Include="Source\Repositories\UserRepository.cs" />
     <Compile Include="Source\Services\AuthService.cs" />
+    <Compile Include="tcQuestionbank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tcQuestionbank.Designer.cs">
+      <DependentUpon>tcQuestionbank.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Source\Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\UserManagement\PerformanceHistoy.resx">
       <DependentUpon>PerformanceHistoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tcQuestionbank.resx">
+      <DependentUpon>tcQuestionbank.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
