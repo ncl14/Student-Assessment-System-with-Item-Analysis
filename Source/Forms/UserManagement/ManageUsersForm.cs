@@ -1,59 +1,68 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Repositories;
+﻿using Student_Assessment_System_with_Item_Analysis.Forms.SubjectManagement;
+using Student_Assessment_System_with_Item_Analysis.Source.Models;
+using Student_Assessment_System_with_Item_Analysis.Source.Repositories;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
-// Ensure this namespace points to where your AdminDashboard is located
-// If AdminDashboard is in Source.Managers.Admin, use that instead.
 
 namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
 {
     public partial class ManageUsersForm : Form
     {
         private readonly UserRepository _userRepo;
+        private readonly User _currentUser;
 
-        public ManageUsersForm()
+        public ManageUsersForm(User currentUser)
         {
             InitializeComponent();
             _userRepo = new UserRepository();
+            _currentUser = currentUser;
 
-            // --- Wire up Event Handlers ---
-            // Main Action Buttons
-            // Ensure your buttons in Designer are named: btnAdd, btnDelete, btnEdit
-            if (this.btnAdd != null) this.btnAdd.Click += new EventHandler(this.btnAdd_Click);
-            if (this.btnDelete != null) this.btnDelete.Click += new EventHandler(this.btnDelete_Click);
-            if (this.btnEdit != null) this.btnEdit.Click += new EventHandler(this.btnEdit_Click);
-            if (this.dgvUsers != null) this.dgvUsers.SelectionChanged += new EventHandler(this.dgvUsers_SelectionChanged);
-
-            // Filter Dropdown
-            // Ensure your dropdown in Designer is named: cmbRoleFilter
-            if (this.cmbRoleFilter != null) this.cmbRoleFilter.SelectedIndexChanged += new EventHandler(this.cmbRoleFilter_SelectedIndexChanged);
-
-            // Sidebar Navigation
-            if (this.btnDashboard != null) this.btnDashboard.Click += new EventHandler(this.btnDashboard_Click);
-            if (this.lblLogout != null) this.lblLogout.Click += new EventHandler(this.lblLogout_Click);
+            // Start Maximized
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        // 1. LOAD: Setup form on start
         private void ManageUsersForm_Load(object sender, EventArgs e)
         {
-            dgvUsers.AutoGenerateColumns = false;
-
-            // Initialize Filter Dropdown
+            // Setup Dropdown
             cmbRoleFilter.Items.Clear();
-            cmbRoleFilter.Items.Add("All");
-            cmbRoleFilter.Items.Add("Admin");
-            cmbRoleFilter.Items.Add("Teacher");
-            cmbRoleFilter.Items.Add("Student");
-
-            // Set default to "All" (this triggers SelectedIndexChanged -> LoadUsers)
+            cmbRoleFilter.Items.AddRange(new string[] { "All", "Admin", "Teacher", "Student" });
             cmbRoleFilter.SelectedIndex = 0;
 
-            // Initial button states
-            btnEdit.Enabled = false;
-            btnDelete.Enabled = false;
+            // Setup DataGridView Styling
+            StyleDataGridView();
+
+            // Load Initial Data
+            LoadUsers();
         }
 
-        // 2. FETCH & FILTER DATA
+        // --- STYLING ---
+        private void StyleDataGridView()
+        {
+            dgvUsers.AutoGenerateColumns = false;
+            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvUsers.MultiSelect = false;
+            dgvUsers.ReadOnly = true;
+            dgvUsers.RowHeadersVisible = false;
+            dgvUsers.AllowUserToResizeRows = false;
+            dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Colors
+            dgvUsers.BackgroundColor = Color.WhiteSmoke;
+            dgvUsers.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvUsers.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgvUsers.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+
+            // Header
+            dgvUsers.EnableHeadersVisualStyles = false;
+            dgvUsers.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgvUsers.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvUsers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvUsers.ColumnHeadersHeight = 35;
+        }
+
+        // --- LOAD DATA ---
         private void LoadUsers()
         {
             try
@@ -61,25 +70,19 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
                 DataTable dt = _userRepo.GetAllUsers();
                 dgvUsers.Rows.Clear();
 
-                // Get filter selection (Default to "All" if null)
                 string selectedRole = cmbRoleFilter.SelectedItem?.ToString() ?? "All";
 
                 foreach (DataRow row in dt.Rows)
                 {
                     string dbRole = row["UserRole"].ToString();
 
-                    // --- FILTER LOGIC ---
-                    // If specific role selected AND it doesn't match current row, skip it
+                    // Filter
                     if (selectedRole != "All" && !dbRole.Equals(selectedRole, StringComparison.OrdinalIgnoreCase))
-                    {
                         continue;
-                    }
 
-                    // Prepare Data
                     string fullName = $"{row["FirstName"]} {row["LastName"]}";
                     string status = (bool)row["IsActive"] ? "Active" : "Inactive";
 
-                    // Add to Grid
                     int rowIndex = dgvUsers.Rows.Add(
                         row["UserName"],
                         fullName,
@@ -87,7 +90,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
                         status
                     );
 
-                    // Store ID for Actions
+                    // Store UserID in Tag
                     dgvUsers.Rows[rowIndex].Tag = row["UserID"];
                 }
             }
@@ -97,23 +100,41 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
             }
         }
 
-        // 3. FILTER CHANGE EVENT
         private void cmbRoleFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadUsers(); // Reload grid based on new filter
-        }
-
-        // 4. ADD USER
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            AddEditUserForm addForm = new AddEditUserForm();
-            addForm.ShowDialog();
-
-            // Refresh grid after closing add form
             LoadUsers();
         }
 
-        // 5. DELETE USER
+        // --- ADD BUTTON ---
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddEditUserForm addForm = new AddEditUserForm();
+            // If the user clicks Save, refreshing happens here
+            if (addForm.ShowDialog() == DialogResult.OK)
+            {
+                LoadUsers();
+            }
+        }
+
+        // --- EDIT BUTTON ---
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvUsers.SelectedRows.Count == 0) return;
+
+            if (dgvUsers.SelectedRows[0].Tag != null)
+            {
+                int userId = Convert.ToInt32(dgvUsers.SelectedRows[0].Tag);
+
+                AddEditUserForm editForm = new AddEditUserForm(userId);
+
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadUsers();
+                }
+            }
+        }
+
+        // --- DELETE BUTTON ---
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvUsers.SelectedRows.Count == 0) return;
@@ -122,6 +143,13 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
             {
                 int userId = Convert.ToInt32(dgvUsers.SelectedRows[0].Tag);
                 string username = dgvUsers.SelectedRows[0].Cells[0].Value.ToString();
+
+                // Prevent self-deletion
+                if (_currentUser != null && userId == _currentUser.UserID)
+                {
+                    MessageBox.Show("You cannot delete your own account while logged in.", "Action Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 DialogResult result = MessageBox.Show(
                     $"Are you sure you want to delete '{username}'?",
@@ -135,7 +163,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
                     {
                         _userRepo.DeleteUser(userId);
                         MessageBox.Show("User deleted successfully.");
-                        LoadUsers(); // Refresh grid
+                        LoadUsers();
                     }
                     catch (Exception ex)
                     {
@@ -145,14 +173,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
             }
         }
 
-        // 6. EDIT USER (Placeholder)
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (dgvUsers.SelectedRows.Count == 0) return;
-            MessageBox.Show("Edit functionality coming soon!", "Info");
-        }
-
-        // 7. SELECTION CHANGED
+        // --- ENABLE/DISABLE BUTTONS ON SELECTION ---
         private void dgvUsers_SelectionChanged(object sender, EventArgs e)
         {
             bool hasSelection = dgvUsers.SelectedRows.Count > 0;
@@ -163,30 +184,59 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
         // --- NAVIGATION ---
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            this.Close(); // Return to Dashboard
+            // 1. Hide the current 'Manage Users' form
+            this.Hide();
+
+            // 2. Create the 'Subject Management' form
+            // We pass '_currentUser' so the session (and profile info) carries over
+            AdminDashboard adminForm = new AdminDashboard(_currentUser);
+
+            // 3. Open it as a Dialog (This pauses the code here until Subject form is closed)
+            adminForm.ShowDialog();
+
+            // 4. When Subject form closes, show this form again
+            // (Unless the user navigated to Dashboard from there, which closes everything)
+            this.Show();
+        }
+
+        // Prevent crashes if accidentally linked
+        private void label1_Click(object sender, EventArgs e) { }
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
+        private void panel2_Paint(object sender, PaintEventArgs e) { }
+
+        private void btnSubjects_Click(object sender, EventArgs e)
+        {
+            // 1. Hide the current 'Manage Users' form
+            this.Hide();
+
+            // 2. Create the 'Subject Management' form
+            // We pass '_currentUser' so the session (and profile info) carries over
+            SubjectManagementForm subjectForm = new SubjectManagementForm(_currentUser);
+
+            // 3. Open it as a Dialog (This pauses the code here until Subject form is closed)
+            subjectForm.ShowDialog();
+
+            // 4. When Subject form closes, show this form again
+            // (Unless the user navigated to Dashboard from there, which closes everything)
+            this.Show();
         }
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-                "Are you sure you want to logout?",
-                "Logout Confirmation",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+          "Are you sure you want to logout?",
+          "Logout Confirmation",
+          MessageBoxButtons.YesNo,
+          MessageBoxIcon.Question
+);
 
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                // Ensure LoginForm is available
                 LoginForm login = new LoginForm();
                 login.Show();
+                this.Hide();
             }
         }
-
-        // Empty events to prevent designer errors
-        private void label1_Click(object sender, EventArgs e) { }
-        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
-        private void panel3_Paint(object sender, PaintEventArgs e) { }
-        private void panel2_Paint(object sender, PaintEventArgs e) { }
     }
 }
