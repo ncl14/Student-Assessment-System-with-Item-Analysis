@@ -53,7 +53,7 @@
             // 
             // lblSystemSub
             // 
-            this.lblSystemSub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblSystemSub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSystemSub.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.lblSystemSub.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -66,7 +66,7 @@
             // 
             // lblSystemTitle
             // 
-            this.lblSystemTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblSystemTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSystemTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblSystemTitle.ForeColor = System.Drawing.Color.White;
@@ -93,7 +93,7 @@
             this.tlpCentering.BackColor = System.Drawing.Color.White;
             this.tlpCentering.ColumnCount = 3;
             this.tlpCentering.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpCentering.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize, 400F));
+            this.tlpCentering.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCentering.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCentering.Controls.Add(this.pnlLoginContainer, 1, 1);
             this.tlpCentering.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -101,7 +101,7 @@
             this.tlpCentering.Name = "tlpCentering";
             this.tlpCentering.RowCount = 3;
             this.tlpCentering.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpCentering.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, 400F));
+            this.tlpCentering.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCentering.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCentering.Size = new System.Drawing.Size(584, 561);
             this.tlpCentering.TabIndex = 1;
@@ -129,7 +129,7 @@
             this.lblTagline.ForeColor = System.Drawing.Color.Gray;
             this.lblTagline.Location = new System.Drawing.Point(25, 45);
             this.lblTagline.Name = "lblTagline";
-            this.lblTagline.Size = new System.Drawing.Size(222, 19);
+            this.lblTagline.Size = new System.Drawing.Size(224, 19);
             this.lblTagline.TabIndex = 11;
             this.lblTagline.Text = "Please enter your credentials below";
             // 
@@ -140,7 +140,7 @@
             this.lblLoginHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.lblLoginHeader.Location = new System.Drawing.Point(22, 5);
             this.lblLoginHeader.Name = "lblLoginHeader";
-            this.lblLoginHeader.Size = new System.Drawing.Size(110, 37);
+            this.lblLoginHeader.Size = new System.Drawing.Size(99, 37);
             this.lblLoginHeader.TabIndex = 10;
             this.lblLoginHeader.Text = "LOGIN";
             // 
@@ -181,7 +181,7 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(21, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Select Role";
             // 
@@ -215,6 +215,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(350, 29);
             this.txtUser.TabIndex = 4;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label1
             // 
@@ -235,8 +236,6 @@
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.tlpCentering);
             this.Controls.Add(this.pnlSidebar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System Login";

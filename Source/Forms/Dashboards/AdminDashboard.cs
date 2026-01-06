@@ -1,4 +1,5 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Managers.Admin;
+﻿using Student_Assessment_System_with_Item_Analysis.Forms.UserManagement;
+using Student_Assessment_System_with_Item_Analysis.Source.Managers.Admin;
 using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
 using System.Windows.Forms;
@@ -72,11 +73,25 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            var manager = new AdminDashboardManager();
+            try
+            {
+                var manager = new AdminDashboardManager();
 
-            //lblUsers.Text = manager.GetTotalUsers().ToString();
-            //lblSubjects.Text = manager.GetTotalSubjects().ToString();
-            //lblReports.Text = manager.GetTotalReports().ToString();
+                // Populate Stats Labels
+                lblUsers.Text = manager.GetTotalUsers().ToString();
+                lblSubjects.Text = manager.GetTotalSubjects().ToString();
+
+                // Placeholder stats until those modules are built
+                lblReports.Text = "0";
+                lblPending.Text = "0"; // Pending submissions
+
+                // Populate Recent Activity Grid
+                dataGridView1.DataSource = manager.GetRecentActivity();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading dashboard data: " + ex.Message);
+            }
         }
 
         private void lbl1_Click(object sender, EventArgs e)
@@ -122,17 +137,19 @@ namespace Student_Assessment_System_with_Item_Analysis
         private void lblLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-            "Are you sure you want to logout?",
-            "Logout Confirmation",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question
-  );
+                  "Are you sure you want to logout?",
+                  "Logout Confirmation",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Question
+              );
 
             if (result == DialogResult.Yes)
             {
+                // Ensure LoginForm is accessible. 
+                // If LoginForm is hidden, you might need to create a new one or show the existing one.
                 LoginForm login = new LoginForm();
                 login.Show();
-                this.Hide();
+                this.Close(); // Close the dashboard
             }
         }
 
@@ -171,24 +188,33 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnReports_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Reports Module is under construction.");
         }
 
         private void btnSubjects_Click_1(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Subject Management Module is coming next!");
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            // 2. Create and Open the new form
+            ManageUsersForm usersForm = new ManageUsersForm();
+
+            // 3. Use ShowDialog() so the code "pauses" here until usersForm is closed
+            usersForm.ShowDialog();
+
+            // 4. When ManageUsersForm is closed, this line runs and brings the Dashboard back
+            this.Show();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            AdminDashboard_Load(this, EventArgs.Empty);
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -244,6 +270,10 @@ namespace Student_Assessment_System_with_Item_Analysis
         private void panelUsersCard_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void panelUsersCard_Click(object sender, EventArgs e)
+        {
+            btnUsers_Click(sender, e);
         }
     }
 }

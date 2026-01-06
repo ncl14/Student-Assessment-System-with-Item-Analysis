@@ -355,6 +355,8 @@
     <Compile Include="Source\Models\Admin.cs" />
     <Compile Include="Source\Models\Question.cs" />
     <Compile Include="Source\Models\QuestionStatistics.cs" />
+    <Compile Include="Source\Models\Student.cs" />
+    <Compile Include="Source\Models\Teacher.cs" />
     <Compile Include="Source\Models\Test.cs" />
     <Compile Include="Source\Models\TestResult.cs" />
     <Compile Include="Source\Models\User.cs" />

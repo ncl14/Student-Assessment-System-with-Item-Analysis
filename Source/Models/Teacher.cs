@@ -1,15 +1,15 @@
 ﻿namespace Student_Assessment_System_with_Item_Analysis.Source.Models
 {
-    public class Admin : User
+    public class Teacher : User
     {
-        public Admin()
+        public Teacher()
         {
             SetRole();
         }
 
         public override void SetRole()
         {
-            this.UserRole = "Admin";
+            this.UserRole = "Teacher";
         }
     }
 }

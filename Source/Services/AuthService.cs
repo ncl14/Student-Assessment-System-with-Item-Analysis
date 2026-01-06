@@ -108,8 +108,8 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Services
                         else if (role == "Student") user = new Student();
                         else return null;
 
-                        user.UserId = userId;
-                        user.Username = dbUsername;
+                        user.UserID = userId;
+                        user.UserName = dbUsername;
                         user.UserRole = role;
                         user.Email = email;
                         user.FirstName = firstName;
