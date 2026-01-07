@@ -105,7 +105,6 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 749);
->>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.panel1.TabIndex = 59;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -170,18 +169,15 @@
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
             this.btnSettings.Location = new System.Drawing.Point(-4, 577);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(217, 59);
-=======
             this.btnSettings.Location = new System.Drawing.Point(-3, 469);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(163, 48);
->>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.btnSettings.TabIndex = 47;
             this.btnSettings.Text = "⚙️ Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -610,18 +606,15 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-<<<<<<< HEAD
             this.pictureBox3.Location = new System.Drawing.Point(2037, 15);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.pictureBox3.Location = new System.Drawing.Point(1484, 13);
->>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(84, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 96;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            //this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel5
             // 
@@ -648,7 +641,7 @@
             this.richtxtboxAlerts.TabIndex = 84;
             this.richtxtboxAlerts.Text = "\n         ⚠️Question 5 (History) has low \n           discrimination. Review neede" +
     "d.\n";
-            this.richtxtboxAlerts.TextChanged += new System.EventHandler(this.richtxtboxAlerts_TextChanged);
+            //this.richtxtboxAlerts.TextChanged += new System.EventHandler(this.richtxtboxAlerts_TextChanged);
             // 
             // label18
             // 
