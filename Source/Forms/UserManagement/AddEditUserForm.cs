@@ -1,99 +1,133 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
-using Student_Assessment_System_with_Item_Analysis.Source.Repositories;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Repositories;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
 {
     public partial class AddEditUserForm : Form
     {
-        // 1. Initialize Repository
         private readonly UserRepository _userRepo;
+        private int _userId = 0; // 0 = Add Mode, >0 = Edit Mode
 
+        // --- CONSTRUCTOR 1: ADD NEW USER ---
         public AddEditUserForm()
         {
             InitializeComponent();
             _userRepo = new UserRepository();
+            _userId = 0;
 
-            // Wire up the button events
-            this.btnLogin.Click += new EventHandler(this.btnSaveUser_Click);
-            this.btnDashboard.Click += new EventHandler(this.btnDashboard_Click);
-
-            // Initialize Dropdowns
-            LoadRoles();
-            LoadSections();
+            lblTitle.Text = "Add New User";
+            InitializeDropdowns();
         }
 
-        // 2. Setup Dropdowns
-        private void LoadRoles()
+        // --- CONSTRUCTOR 2: EDIT EXISTING USER ---
+        public AddEditUserForm(int userId)
         {
-            if (cmbRole.Items.Count == 0)
-            {
-                cmbRole.Items.Add("Admin");
-                cmbRole.Items.Add("Teacher");
-                cmbRole.Items.Add("Student");
-            }
-            cmbRole.SelectedIndex = 0; // Default to first item
+            InitializeComponent();
+            _userRepo = new UserRepository();
+            _userId = userId;
+
+            lblTitle.Text = "Edit User";
+            InitializeDropdowns();
+            LoadUserData(userId);
         }
 
-        private void LoadSections()
+        // 1. SETUP DROPDOWNS
+        private void InitializeDropdowns()
         {
-            // Dummy data for sections
-            if (comboBox1.Items.Count == 0)
-            {
-                comboBox1.Items.Add("Section A");
-                comboBox1.Items.Add("Section B");
-                comboBox1.Items.Add("N/A");
-            }
-            comboBox1.SelectedIndex = 0;
+            // Roles
+            cmbRole.Items.Clear();
+            cmbRole.Items.Add("Admin");
+            cmbRole.Items.Add("Teacher");
+            cmbRole.Items.Add("Student");
+            cmbRole.SelectedIndex = 0;
+
+            // Sections
+            cmbSection.Items.Clear();
+            cmbSection.Items.Add("N/A"); // For Admins
+            cmbSection.Items.Add("Section A");
+            cmbSection.Items.Add("Section B");
+            cmbSection.SelectedIndex = 0;
         }
 
-        // 3. SAVE BUTTON LOGIC (Your button is named 'btnLogin')
-        private void btnSaveUser_Click(object sender, EventArgs e)
+        // 2. LOAD DATA FOR EDITING
+        private void LoadUserData(int id)
+        {
+            try
+            {
+                DataTable dt = _userRepo.GetUserById(id);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+
+                    txtUser.Text = row["UserName"].ToString();
+                    txtPassword.Text = row["Password"].ToString(); // Note: Check column name in Repo
+                    txtFirstName.Text = row["FirstName"].ToString();
+                    txtLastName.Text = row["LastName"].ToString();
+                    txtEmail.Text = row["Email"] != DBNull.Value ? row["Email"].ToString() : "";
+
+                    // Set Role
+                    string role = row["UserRole"].ToString();
+                    if (cmbRole.Items.Contains(role)) cmbRole.SelectedItem = role;
+
+                    // Set Section (if column exists in DB, otherwise ignore)
+                    if (dt.Columns.Contains("Section"))
+                    {
+                        string section = row["Section"].ToString();
+                        if (cmbSection.Items.Contains(section)) cmbSection.SelectedItem = section;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading user data: " + ex.Message);
+            }
+        }
+
+        // 3. SAVE BUTTON (ADD OR UPDATE)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             // A. Validation
             if (string.IsNullOrWhiteSpace(txtUser.Text) ||
                 string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(textBox1.Text) || // First Name
-                string.IsNullOrWhiteSpace(textBox2.Text) || // Last Name
-                string.IsNullOrWhiteSpace(txtEmail.Text))   // Email (New Field)
+                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtLastName.Text))
             {
-                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (cmbRole.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a role.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all required fields (Username, Password, Names).", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                // B. Create User Object based on Role
-                User newUser;
-                string selectedRole = cmbRole.SelectedItem.ToString();
+                // B. Gather Data
+                string username = txtUser.Text.Trim();
+                string password = txtPassword.Text.Trim();
+                string firstName = txtFirstName.Text.Trim();
+                string lastName = txtLastName.Text.Trim();
+                string email = txtEmail.Text.Trim(); // Now capturing Email
+                string role = cmbRole.SelectedItem.ToString();
+                bool isActive = true;
 
-                if (selectedRole == "Teacher") newUser = new Teacher();
-                else if (selectedRole == "Student") newUser = new Student();
-                else newUser = new Admin();
+                if (_userId == 0)
+                {
+                    // --- ADD NEW USER ---
+                    // Calls the AddUser method (Ensure Repo accepts email!)
+                    _userRepo.AddUser(username, password, role, firstName, lastName, email, isActive);
+                    MessageBox.Show("User added successfully!");
+                }
+                else
+                {
+                    // --- UPDATE EXISTING USER ---
+                    // Calls the UpdateUser method
+                    _userRepo.UpdateUser(_userId, username, password, role, firstName, lastName, email, isActive);
+                    MessageBox.Show("User updated successfully!");
+                }
 
-                // C. Populate Data
-                newUser.UserName = txtUser.Text.Trim();
-                newUser.PasswordHash = txtPassword.Text.Trim(); // In production, hash this!
-                newUser.FirstName = textBox1.Text.Trim();
-                newUser.LastName = textBox2.Text.Trim();
-                newUser.Email = txtEmail.Text.Trim(); // Save Email
-                newUser.UserRole = selectedRole;
-                newUser.IsActive = true;
-
-                // D. Save to Database
-                _userRepo.AddUser(newUser);
-
-                MessageBox.Show("User saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // E. Clear Form
-                ClearForm();
+                // C. Close Form
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -101,40 +135,11 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.UserManagement
             }
         }
 
-        private void ClearForm()
+        // 4. CANCEL BUTTON
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtUser.Clear();
-            txtPassword.Clear();
-            textBox1.Clear(); // First Name
-            textBox2.Clear(); // Last Name
-            txtEmail.Clear(); // Clear Email
-            cmbRole.SelectedIndex = 0;
-            comboBox1.SelectedIndex = -1;
-        }
-
-        // 4. NAVIGATION LOGIC
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Return to dashboard
-        }
-
-        private void lblLogout_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                 "Are you sure you want to logout?",
-                 "Logout Confirmation",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Question
-             );
-
-            if (result == DialogResult.Yes)
-            {
-                // Ensure LoginForm is accessible. 
-                // If LoginForm is hidden, you might need to create a new one or show the existing one.
-                LoginForm login = new LoginForm();
-                login.Show();
-                this.Close(); // Close the dashboard
-            }
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

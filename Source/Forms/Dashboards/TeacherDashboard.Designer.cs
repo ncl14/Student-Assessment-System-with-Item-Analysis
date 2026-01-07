@@ -104,7 +104,11 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(213, 1081);
+=======
+            this.panel1.Size = new System.Drawing.Size(160, 826);
+>>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.panel1.TabIndex = 59;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -169,11 +173,18 @@
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnSettings.Location = new System.Drawing.Point(-4, 577);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(217, 59);
+=======
+            this.btnSettings.Location = new System.Drawing.Point(-3, 469);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(163, 48);
+>>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.btnSettings.TabIndex = 47;
             this.btnSettings.Text = "⚙️ Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -602,8 +613,12 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+<<<<<<< HEAD
             this.pictureBox3.Location = new System.Drawing.Point(2037, 15);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.pictureBox3.Location = new System.Drawing.Point(1484, 13);
+>>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(84, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -824,7 +839,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1924, 1081);
+=======
+            this.ClientSize = new System.Drawing.Size(1559, 826);
+>>>>>>> 2323e412ad2c325c988a6b18b7919d03ca622788
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblRTR);

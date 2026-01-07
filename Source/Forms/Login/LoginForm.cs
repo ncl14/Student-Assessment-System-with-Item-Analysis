@@ -4,10 +4,6 @@ using Student_Assessment_System_with_Item_Analysis.Source.Services;
 using System;
 using System.Windows.Forms;
 
-// IMPORTANT: Ensure these match where you actually created the files
-// using Student_Assessment_System_with_Item_Analysis.Forms.Teacher; // (Example)
-// using Student_Assessment_System_with_Item_Analysis.Forms.Student; // (Example)
-
 namespace Student_Assessment_System_with_Item_Analysis
 {
     public partial class LoginForm : Form

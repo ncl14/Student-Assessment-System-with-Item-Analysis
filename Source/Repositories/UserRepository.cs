@@ -1,46 +1,19 @@
 ﻿using Student_Assessment_System_with_Item_Analysis.Database;
-using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace Student_Assessment_System_with_Item_Analysis.Source.Repositories
 {
-
     public class UserRepository
     {
-        // 1. ADD USER (Create)
-        public void AddUser(User user)
-        {
-            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
-            {
-                // UPDATED SQL: Uses FirstName, LastName, Email, UserRole, UserName
-                string query = @"INSERT INTO Users 
-                                (UserName, PasswordHash, FirstName, LastName, Email, UserRole, IsActive, CreatedAt) 
-                                VALUES 
-                                (@user, @pass, @fname, @lname, @email, @role, 1, GETDATE())";
-
-                using (var cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@user", user.UserName);
-                    cmd.Parameters.AddWithValue("@pass", user.PasswordHash);
-                    cmd.Parameters.AddWithValue("@fname", user.FirstName);
-                    cmd.Parameters.AddWithValue("@lname", user.LastName);
-                    cmd.Parameters.AddWithValue("@email", user.Email ?? (object)DBNull.Value); // Handle null email
-                    cmd.Parameters.AddWithValue("@role", user.UserRole);
-
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        // 2. GET ALL USERS (Read)
+        // ---------------------------------------------------------
+        // 1. GET ALL USERS (For the Dashboard Grid)
+        // ---------------------------------------------------------
         public DataTable GetAllUsers()
         {
             using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
             {
-                // UPDATED SQL: Selects correct columns
                 string query = "SELECT UserID, UserName, FirstName, LastName, Email, UserRole, IsActive FROM Users";
 
                 using (var cmd = new SqlCommand(query, conn))
@@ -52,7 +25,86 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Repositories
             }
         }
 
-        // 3. DELETE USER
+        // ---------------------------------------------------------
+        // 2. GET SINGLE USER (Fixes Error CS1061 - Used for Editing)
+        // ---------------------------------------------------------
+        public DataTable GetUserById(int userId)
+        {
+            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            {
+                // Note: We select PasswordHash as 'Password' to match the Form's expectation
+                string query = "SELECT UserID, UserName, PasswordHash as [Password], FirstName, LastName, Email, UserRole, IsActive FROM Users WHERE UserID = @id";
+
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", userId);
+                    var dt = new DataTable();
+                    new SqlDataAdapter(cmd).Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+        public void AddUser(string username, string password, string role, string firstName, string lastName, string email, bool isActive)
+        {
+            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            {
+                string query = @"INSERT INTO Users 
+                        (UserName, PasswordHash, UserRole, FirstName, LastName, Email, IsActive, CreatedAt) 
+                        VALUES 
+                        (@user, @pass, @role, @fname, @lname, @email, @active, GETDATE())";
+
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.Parameters.AddWithValue("@pass", password);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    cmd.Parameters.AddWithValue("@fname", firstName);
+                    cmd.Parameters.AddWithValue("@lname", lastName);
+                    // Handle null email gracefully
+                    cmd.Parameters.AddWithValue("@email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                    cmd.Parameters.AddWithValue("@active", isActive ? 1 : 0);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateUser(int userId, string username, string password, string role, string firstName, string lastName, string email, bool isActive)
+        {
+            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            {
+                string query = @"UPDATE Users 
+                         SET UserName = @user, 
+                             PasswordHash = @pass, 
+                             UserRole = @role, 
+                             FirstName = @fname, 
+                             LastName = @lname, 
+                             Email = @email,
+                             IsActive = @active 
+                         WHERE UserID = @id";
+
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.Parameters.AddWithValue("@pass", password);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    cmd.Parameters.AddWithValue("@fname", firstName);
+                    cmd.Parameters.AddWithValue("@lname", lastName);
+                    cmd.Parameters.AddWithValue("@email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                    cmd.Parameters.AddWithValue("@active", isActive ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@id", userId);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 5. DELETE USER
+        // ---------------------------------------------------------
         public void DeleteUser(int userId)
         {
             using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
