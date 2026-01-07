@@ -98,7 +98,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 25);
             this.txtSearch.TabIndex = 1;
-       //     this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
 
             // 
             // btnRefresh
@@ -113,7 +113,7 @@
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = false;
-   //         this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
 
             // 
             // dgvReports
