@@ -261,6 +261,18 @@
     <Compile Include="Source\Forms\Dashboards\TeacherDashboard.Designer.cs">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Forms\Testadministration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\Testadministration.Designer.cs">
+      <DependentUpon>Testadministration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Forms\subject&amp;courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\subject&amp;courses.Designer.cs">
+      <DependentUpon>subject&amp;courses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\Forms\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +389,9 @@
     <EmbeddedResource Include="Source\Forms\Dashboards\TeacherDashboard.resx">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\subject&amp;courses.resx">
+      <DependentUpon>subject&amp;courses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\SubjectManagement\SubjectManagementForm.resx">
       <DependentUpon>SubjectManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\Testadministration.resx">
+      <DependentUpon>Testadministration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\TestAssessment\TakeAssessment.resx">
       <DependentUpon>TakeAssessment.cs</DependentUpon>
