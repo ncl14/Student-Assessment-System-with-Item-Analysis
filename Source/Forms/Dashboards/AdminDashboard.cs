@@ -1,8 +1,9 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Forms.SubjectManagement;
-using Student_Assessment_System_with_Item_Analysis.Forms.UserManagement;
+﻿using Student_Assessment_System_with_Item_Analysis.Forms.UserManagement;
+using Student_Assessment_System_with_Item_Analysis.Source.Forms.SubjectManagement;
 using Student_Assessment_System_with_Item_Analysis.Source.Managers.Admin;
 using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis
@@ -17,7 +18,7 @@ namespace Student_Assessment_System_with_Item_Analysis
             currentUser = user;
         }
 
-        // --- LOAD DASHBOARD ---
+        // --- DASHBOARD LOAD ---
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             try
@@ -28,7 +29,7 @@ namespace Student_Assessment_System_with_Item_Analysis
                 lblUsers.Text = manager.GetTotalUsers().ToString();
                 lblSubjects.Text = manager.GetTotalSubjects().ToString();
 
-                // Placeholders (Update these when Reports module is ready)
+                // Placeholders (Update when Reports module is ready)
                 lblReports.Text = "0";
                 lblPending.Text = "0";
 
@@ -37,67 +38,163 @@ namespace Student_Assessment_System_with_Item_Analysis
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading dashboard: " + ex.Message);
+                MessageBox.Show("Error loading dashboard data: " + ex.Message);
             }
         }
 
-        // --- NAVIGATION: SUBJECTS ---
-        // Matches 'btnSubjects_Click_1' from your Designer
-        private void btnSubjects_Click_1(object sender, EventArgs e)
+        // --- HELPER: VIEW LOADER (USER CONTROLS) ---
+        // This is the main function to switch screens inside panel3
+        private void LoadView(UserControl view)
         {
-            this.Hide();
-            SubjectManagementForm subjectForm = new SubjectManagementForm(currentUser);
-            subjectForm.ShowDialog();
-            this.Show(); // Show dashboard again when Subject form closes
+            // 1. Hide the Dashboard Widgets (Cards, Graph, etc.)
+            if (tlpDashboardContent != null)
+            {
+                tlpDashboardContent.Visible = false;
+            }
+
+            // 2. Remove any PREVIOUS UserControl (Views) from the panel
+            foreach (Control c in panel3.Controls.OfType<UserControl>().ToList())
+            {
+                panel3.Controls.Remove(c);
+                c.Dispose(); // Clean up memory
+            }
+
+            // 3. Configure the new View to FILL the panel
+            view.Dock = DockStyle.Fill;
+
+            // 4. Add and Display
+            panel3.Controls.Add(view);
+            view.BringToFront();
+        }
+
+        // --- HELPER: FORM LOADER (LEGACY) ---
+        // Kept in case you still have some popup forms you want to embed
+        private void LoadFormIntoPanel(Form form)
+        {
+            tlpDashboardContent.Visible = false;
+
+            foreach (Control c in panel3.Controls.OfType<Form>().ToList())
+            {
+                panel3.Controls.Remove(c);
+                c.Dispose();
+            }
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panel3.Controls.Add(form);
+            panel3.Tag = form;
+            form.Show();
+            form.BringToFront();
+        }
+
+        // --- NAVIGATION: DASHBOARD HOME ---
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            // 1. Reset Header Text
+            lblAdminDashboard.Text = "DASHBOARD";
+
+            // 2. Remove any active UserControl views
+            foreach (Control c in panel3.Controls.OfType<UserControl>().ToList())
+            {
+                panel3.Controls.Remove(c);
+                c.Dispose();
+            }
+
+            // 3. Show the Dashboard Widgets again
+            if (tlpDashboardContent != null)
+            {
+                tlpDashboardContent.Visible = true;
+            }
+
+            // 4. Refresh Stats to ensure data is up to date
+            AdminDashboard_Load(this, EventArgs.Empty);
         }
 
         // --- NAVIGATION: USERS ---
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ManageUsersForm userForm = new ManageUsersForm(currentUser);
-            userForm.ShowDialog();
-            this.Show(); // Show dashboard again when User form closes
+            try
+            {
+                // 1. Change Header Text
+                lblAdminDashboard.Text = "MANAGE USERS";
+
+                // 2. Load the Users UserControl
+                // Ensure UC_ManageUsers constructor accepts 'User' or remove argument if not needed
+                var view = new UC_ManageUsers(currentUser);
+                LoadView(view);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading User module: " + ex.Message);
+            }
         }
 
-        // --- NAVIGATION: REFRESH DASHBOARD ---
-        private void btnDashboard_Click(object sender, EventArgs e)
+        // --- NAVIGATION: SUBJECTS ---
+        private void btnSubjects_Click_1(object sender, EventArgs e)
         {
-            AdminDashboard_Load(this, EventArgs.Empty);
+            try
+            {
+                // 1. Change Header Text
+                lblAdminDashboard.Text = "SUBJECT MANAGEMENT";
+
+                // 2. Load the Subjects UserControl
+                var view = new UC_SubjectManagement(currentUser);
+                LoadView(view);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Subject module: " + ex.Message);
+            }
         }
 
         // --- NAVIGATION: REPORTS ---
         private void btnReports_Click(object sender, EventArgs e)
         {
+            lblAdminDashboard.Text = "REPORTS";
             MessageBox.Show("Reports Module is under construction.");
+            // Eventually: LoadView(new UC_Reports());
         }
 
         // --- LOGOUT LOGIC ---
         private void lblLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-         "Are you sure you want to logout?",
-         "Logout Confirmation",
-         MessageBoxButtons.YesNo,
-         MessageBoxIcon.Question
-);
+                  "Are you sure you want to logout?",
+                  "Logout Confirmation",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Question
+              );
 
             if (result == DialogResult.Yes)
             {
-                LoginForm login = new LoginForm();
-                login.Show();
-                this.Hide();
+                // Check if LoginForm is hidden in background
+                Form existingLogin = Application.OpenForms.OfType<LoginForm>().FirstOrDefault();
+
+                if (existingLogin != null)
+                {
+                    existingLogin.Show();
+                }
+                else
+                {
+                    LoginForm newLogin = new LoginForm();
+                    newLogin.Show();
+                }
+
+                this.Close(); // Close Dashboard
             }
         }
 
-        // --- CLICK EVENTS FOR CARDS (Optional: Make clicking the card act like the button) ---
+        // --- CLICK EVENTS FOR CARDS (SHORTCUTS) ---
         private void panelUsersCard_Click(object sender, EventArgs e)
         {
+            // Acts exactly like clicking the sidebar button
             btnUsers_Click(sender, e);
         }
 
-        // --- EMPTY EVENT HANDLERS (Required to prevent Designer errors) ---
-        // Do not delete these if they are linked in the Designer (the lightning bolt icon)
+        // --- EMPTY EVENT HANDLERS ---
+        // DO NOT DELETE THESE. The Designer needs them to exist to avoid crashing.
         private void label1_Click(object sender, EventArgs e) { }
         private void lbl3_Click(object sender, EventArgs e) { }
         private void lbl4_Click(object sender, EventArgs e) { }
@@ -112,7 +209,7 @@ namespace Student_Assessment_System_with_Item_Analysis
         private void lbl1_Click(object sender, EventArgs e) { }
         private void label4_Click(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
-        private void btnSubjects_Click(object sender, EventArgs e) { } // Old event, kept just in case
+        private void btnSubjects_Click(object sender, EventArgs e) { }
         private void lbl1_Click_1(object sender, EventArgs e) { }
         private void lbl2_Click(object sender, EventArgs e) { }
         private void lbl1_Click_2(object sender, EventArgs e) { }
@@ -135,5 +232,6 @@ namespace Student_Assessment_System_with_Item_Analysis
         private void label2_Click(object sender, EventArgs e) { }
         private void lblPendingSub_Click(object sender, EventArgs e) { }
         private void panelUsersCard_Paint(object sender, PaintEventArgs e) { }
+        private void tlpDashboardContent_Paint(object sender, PaintEventArgs e) { }
     }
 }

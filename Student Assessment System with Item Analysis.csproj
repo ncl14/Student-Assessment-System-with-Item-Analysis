@@ -267,17 +267,23 @@
     <Compile Include="Source\Forms\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Forms\Reports\UC_Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\Reports\UC_Reports.Designer.cs">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\Forms\SubjectManagement\SectionManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Source\Forms\SubjectManagement\SectionManagementForm.Designer.cs">
       <DependentUpon>SectionManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\Forms\SubjectManagement\SubjectManagementForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Source\Forms\SubjectManagement\UC_SubjectManagement.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Source\Forms\SubjectManagement\SubjectManagementForm.Designer.cs">
-      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
+    <Compile Include="Source\Forms\SubjectManagement\UC_SubjectManagement.Designer.cs">
+      <DependentUpon>UC_SubjectManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\Forms\TestAssessment\TakeAssessment.cs">
       <SubType>Form</SubType>
@@ -296,12 +302,6 @@
     </Compile>
     <Compile Include="Source\Forms\UserManagement\PerformanceHistoy.Designer.cs">
       <DependentUpon>PerformanceHistoy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Source\Forms\UserManagement\ManageUsersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Source\Forms\UserManagement\ManageUsersForm.Designer.cs">
-      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="modProcedureVariable.cs" />
     <Compile Include="modVariable.cs" />
@@ -342,6 +342,12 @@
     <Compile Include="Source\Forms\TestAssessment\Test Taking.Designer.cs">
       <DependentUpon>Test Taking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Forms\UserManagement\UC_ManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\UserManagement\UC_ManageUsers.Designer.cs">
+      <DependentUpon>UC_ManageUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\Managers\Admin\AdminDashboardManager.cs" />
     <Compile Include="Source\Managers\Admin\AuditLogManager.cs" />
     <Compile Include="Source\Managers\Admin\SystemSettingsManager.cs" />
@@ -355,7 +361,9 @@
     <Compile Include="Source\Models\Admin.cs" />
     <Compile Include="Source\Models\Question.cs" />
     <Compile Include="Source\Models\QuestionStatistics.cs" />
+    <Compile Include="Source\Models\ReportViewModel.cs" />
     <Compile Include="Source\Models\Student.cs" />
+    <Compile Include="Source\Models\Subject.cs" />
     <Compile Include="Source\Models\Teacher.cs" />
     <Compile Include="Source\Models\Test.cs" />
     <Compile Include="Source\Models\TestResult.cs" />
@@ -386,20 +394,20 @@
     <EmbeddedResource Include="Source\Forms\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\Reports\UC_Reports.resx">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\SubjectManagement\SectionManagementForm.resx">
       <DependentUpon>SectionManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Source\Forms\SubjectManagement\SubjectManagementForm.resx">
-      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Source\Forms\SubjectManagement\UC_SubjectManagement.resx">
+      <DependentUpon>UC_SubjectManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\TestAssessment\TakeAssessment.resx">
       <DependentUpon>TakeAssessment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\UserManagement\AddEditUserForm.resx">
       <DependentUpon>AddEditUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Source\Forms\UserManagement\ManageUsersForm.resx">
-      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -423,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\UserManagement\PerformanceHistoy.resx">
       <DependentUpon>PerformanceHistoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\UserManagement\UC_ManageUsers.resx">
+      <DependentUpon>UC_ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tcQuestionbank.resx">
       <DependentUpon>tcQuestionbank.cs</DependentUpon>

@@ -1,83 +1,91 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Database;
-using System;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SqlClient; // or System.Data.OleDb
 
 namespace Student_Assessment_System_with_Item_Analysis.Source.Repositories
 {
     public class SubjectRepository
     {
-        // GET ALL
+        // CHANGE THIS LINE
+        private readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentAssessmentDB;Integrated Security=True";
+
+        // 1. Get All Subjects
         public DataTable GetAllSubjects()
         {
-            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "SELECT SubjectID, SubjectCode, SubjectName, Description, Units FROM Subjects ORDER BY SubjectCode";
-                using (var cmd = new SqlCommand(query, conn))
-                {
-                    var dt = new DataTable();
-                    new SqlDataAdapter(cmd).Fill(dt);
-                    return dt;
-                }
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Subjects", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
         }
 
-        // ADD
-        public void AddSubject(string code, string name, string description, int units)
+        // 2. Add New Subject
+        public void AddSubject(Subject sub)
         {
-            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = @"INSERT INTO Subjects (SubjectCode, SubjectName, Description, Units, CreatedAt) 
-                                VALUES (@code, @name, @desc, @units, GETDATE())";
-
-                using (var cmd = new SqlCommand(query, conn))
+                string query = "INSERT INTO Subjects (SubjectCode, SubjectName, Units, Description) VALUES (@Code, @Name, @Units, @Desc)";
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@code", code);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@desc", description ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@units", units);
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
+                    cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
+                    cmd.Parameters.AddWithValue("@Units", sub.Units);
+                    cmd.Parameters.AddWithValue("@Desc", sub.Description);
+                    con.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        // UPDATE
-        public void UpdateSubject(int id, string code, string name, string description, int units)
+        // 3. Update Existing Subject
+        public void UpdateSubject(Subject sub)
         {
-            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = @"UPDATE Subjects 
-                                SET SubjectCode = @code, 
-                                    SubjectName = @name, 
-                                    Description = @desc, 
-                                    Units = @units 
-                                WHERE SubjectID = @id";
-
-                using (var cmd = new SqlCommand(query, conn))
+                string query = "UPDATE Subjects SET SubjectCode=@Code, SubjectName=@Name, Units=@Units, Description=@Desc WHERE SubjectID=@ID";
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@code", code);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@desc", description ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@units", units);
-                    cmd.Parameters.AddWithValue("@id", id);
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@ID", sub.SubjectID);
+                    cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
+                    cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
+                    cmd.Parameters.AddWithValue("@Units", sub.Units);
+                    cmd.Parameters.AddWithValue("@Desc", sub.Description);
+                    con.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        // DELETE
+        // 4. Delete Subject
         public void DeleteSubject(int id)
         {
-            using (var conn = new SqlConnection(DatabaseContext.ConnectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Subjects WHERE SubjectID = @id";
-                using (var cmd = new SqlCommand(query, conn))
+                string query = "DELETE FROM Subjects WHERE SubjectID = @ID";
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    con.Open();
                     cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // 5. Search
+        public DataTable SearchSubjects(string keyword)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Subjects WHERE SubjectCode LIKE @Key OR SubjectName LIKE @Key";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Key", "%" + keyword + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                 }
             }
         }

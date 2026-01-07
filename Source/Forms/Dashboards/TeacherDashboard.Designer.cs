@@ -91,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 826);
+            this.panel1.Size = new System.Drawing.Size(160, 749);
             this.panel1.TabIndex = 59;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -272,7 +272,7 @@
             this.lblRes.ForeColor = System.Drawing.Color.DimGray;
             this.lblRes.Location = new System.Drawing.Point(19, 130);
             this.lblRes.Name = "lblRes";
-            this.lblRes.Size = new System.Drawing.Size(221, 17);
+            this.lblRes.Size = new System.Drawing.Size(220, 17);
             this.lblRes.TabIndex = 84;
             this.lblRes.Text = "📅 Research Counsultation - DEC 10";
             this.lblRes.Click += new System.EventHandler(this.lblRes_Click);
@@ -285,7 +285,7 @@
             this.lblPhys.ForeColor = System.Drawing.Color.DimGray;
             this.lblPhys.Location = new System.Drawing.Point(19, 91);
             this.lblPhys.Name = "lblPhys";
-            this.lblPhys.Size = new System.Drawing.Size(180, 17);
+            this.lblPhys.Size = new System.Drawing.Size(179, 17);
             this.lblPhys.TabIndex = 83;
             this.lblPhys.Text = "📅 Physics Midterm - DEC 16";
             // 
@@ -298,7 +298,7 @@
             this.lblCalc.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.lblCalc.Location = new System.Drawing.Point(19, 49);
             this.lblCalc.Name = "lblCalc";
-            this.lblCalc.Size = new System.Drawing.Size(162, 17);
+            this.lblCalc.Size = new System.Drawing.Size(161, 17);
             this.lblCalc.TabIndex = 82;
             this.lblCalc.Text = "📅 Calculus Quiz - DEC 26";
             // 
@@ -607,7 +607,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 826);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblRTR);

@@ -80,12 +80,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.tlpDashboardContent);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(200, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 611);
+            this.panel3.Size = new System.Drawing.Size(784, 531);
             this.panel3.TabIndex = 27;
             // 
             // tlpDashboardContent
@@ -96,7 +94,7 @@
             this.tlpDashboardContent.Controls.Add(this.label10, 0, 1);
             this.tlpDashboardContent.Controls.Add(this.dataGridView1, 0, 2);
             this.tlpDashboardContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDashboardContent.Location = new System.Drawing.Point(200, 80);
+            this.tlpDashboardContent.Location = new System.Drawing.Point(0, 0);
             this.tlpDashboardContent.Name = "tlpDashboardContent";
             this.tlpDashboardContent.Padding = new System.Windows.Forms.Padding(20);
             this.tlpDashboardContent.RowCount = 3;
@@ -105,6 +103,7 @@
             this.tlpDashboardContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDashboardContent.Size = new System.Drawing.Size(784, 531);
             this.tlpDashboardContent.TabIndex = 61;
+            this.tlpDashboardContent.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpDashboardContent_Paint);
             // 
             // tlpCards
             // 
@@ -502,7 +501,7 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -523,13 +522,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel3.ResumeLayout(false);
             this.tlpDashboardContent.ResumeLayout(false);
@@ -552,6 +552,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblAdminDashboard;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnSubjects;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picboxProfile;
         private System.Windows.Forms.TableLayoutPanel tlpDashboardContent;
         private System.Windows.Forms.TableLayoutPanel tlpCards;
         private System.Windows.Forms.Panel panelUsersCard;
@@ -573,15 +583,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblAdminDashboard;
-        private System.Windows.Forms.Label lblLogout;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox picboxProfile;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnSubjects;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnDashboard;
     }
 }
