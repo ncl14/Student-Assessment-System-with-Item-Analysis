@@ -354,6 +354,12 @@
     <Compile Include="Source\Forms\TestAssessment\Test Taking.Designer.cs">
       <DependentUpon>Test Taking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Forms\UserManagement\TestCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\UserManagement\TestCreation.Designer.cs">
+      <DependentUpon>TestCreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\Managers\Admin\AdminDashboardManager.cs" />
     <Compile Include="Source\Managers\Admin\AuditLogManager.cs" />
     <Compile Include="Source\Managers\Admin\SystemSettingsManager.cs" />
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\UserManagement\PerformanceHistoy.resx">
       <DependentUpon>PerformanceHistoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\UserManagement\TestCreation.resx">
+      <DependentUpon>TestCreation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tcQuestionbank.resx">
       <DependentUpon>tcQuestionbank.cs</DependentUpon>
