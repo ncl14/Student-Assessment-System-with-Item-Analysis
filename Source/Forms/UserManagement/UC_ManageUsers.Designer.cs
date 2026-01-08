@@ -225,7 +225,7 @@
             // 
             // Role
             // 
-            this.Role.DataPropertyName = "UserRole";
+            this.Role.DataPropertyName = "Role";
             this.Role.HeaderText = "Role";
             this.Role.Name = "Role";
             this.Role.ReadOnly = true;
