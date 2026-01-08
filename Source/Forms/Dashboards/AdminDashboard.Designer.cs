@@ -49,10 +49,6 @@
             this.lblReports = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ReportTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAdminDashboard = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
@@ -63,6 +59,12 @@
             this.btnSubjects = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.ReportTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GeneratedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.tlpDashboardContent.SuspendLayout();
             this.tlpCards.SuspendLayout();
@@ -80,12 +82,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.tlpDashboardContent);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(200, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 611);
+            this.panel3.Size = new System.Drawing.Size(784, 531);
             this.panel3.TabIndex = 27;
             // 
             // tlpDashboardContent
@@ -96,7 +96,7 @@
             this.tlpDashboardContent.Controls.Add(this.label10, 0, 1);
             this.tlpDashboardContent.Controls.Add(this.dataGridView1, 0, 2);
             this.tlpDashboardContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDashboardContent.Location = new System.Drawing.Point(200, 80);
+            this.tlpDashboardContent.Location = new System.Drawing.Point(0, 0);
             this.tlpDashboardContent.Name = "tlpDashboardContent";
             this.tlpDashboardContent.Padding = new System.Windows.Forms.Padding(20);
             this.tlpDashboardContent.RowCount = 3;
@@ -105,6 +105,7 @@
             this.tlpDashboardContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDashboardContent.Size = new System.Drawing.Size(784, 531);
             this.tlpDashboardContent.TabIndex = 61;
+            this.tlpDashboardContent.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpDashboardContent_Paint);
             // 
             // tlpCards
             // 
@@ -330,7 +331,8 @@
             this.ReportTitle,
             this.Subject,
             this.Date,
-            this.Status});
+            this.Status,
+            this.GeneratedBy});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,26 +349,6 @@
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(738, 315);
             this.dataGridView1.TabIndex = 59;
-            // 
-            // ReportTitle
-            // 
-            this.ReportTitle.HeaderText = "Report Title";
-            this.ReportTitle.Name = "ReportTitle";
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
             // 
             // panel2
             // 
@@ -408,6 +390,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picboxProfile);
             this.panel1.Controls.Add(this.btnReports);
@@ -426,7 +409,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 126);
+            this.label1.Location = new System.Drawing.Point(55, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 30);
             this.label1.TabIndex = 62;
@@ -436,7 +419,7 @@
             // 
             this.picboxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picboxProfile.Image = ((System.Drawing.Image)(resources.GetObject("picboxProfile.Image")));
-            this.picboxProfile.Location = new System.Drawing.Point(56, 29);
+            this.picboxProfile.Location = new System.Drawing.Point(56, 38);
             this.picboxProfile.Name = "picboxProfile";
             this.picboxProfile.Size = new System.Drawing.Size(87, 76);
             this.picboxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +435,7 @@
             this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.White;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 344);
+            this.btnReports.Location = new System.Drawing.Point(0, 368);
             this.btnReports.Name = "btnReports";
             this.btnReports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnReports.Size = new System.Drawing.Size(200, 45);
@@ -471,7 +454,7 @@
             this.btnSubjects.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubjects.ForeColor = System.Drawing.Color.White;
             this.btnSubjects.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubjects.Location = new System.Drawing.Point(0, 293);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 317);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSubjects.Size = new System.Drawing.Size(200, 45);
@@ -490,7 +473,7 @@
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 242);
+            this.btnUsers.Location = new System.Drawing.Point(0, 266);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnUsers.Size = new System.Drawing.Size(200, 45);
@@ -502,14 +485,14 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 190);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 214);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDashboard.Size = new System.Drawing.Size(200, 45);
@@ -519,17 +502,67 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // ReportTitle
+            // 
+            this.ReportTitle.DataPropertyName = "ReportTitle";
+            this.ReportTitle.HeaderText = "Report Title";
+            this.ReportTitle.Name = "ReportTitle";
+            // 
+            // Subject
+            // 
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
+            // GeneratedBy
+            // 
+            this.GeneratedBy.DataPropertyName = "GeneratedBy";
+            this.GeneratedBy.HeaderText = "Generated By";
+            this.GeneratedBy.Name = "GeneratedBy";
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 420);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(200, 45);
+            this.btnSettings.TabIndex = 64;
+            this.btnSettings.Text = "⚙️ Settings";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "ADMIN ACCOUNT";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel3.ResumeLayout(false);
             this.tlpDashboardContent.ResumeLayout(false);
@@ -552,6 +585,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblAdminDashboard;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnSubjects;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picboxProfile;
         private System.Windows.Forms.TableLayoutPanel tlpDashboardContent;
         private System.Windows.Forms.TableLayoutPanel tlpCards;
         private System.Windows.Forms.Panel panelUsersCard;
@@ -573,15 +616,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblAdminDashboard;
-        private System.Windows.Forms.Label lblLogout;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox picboxProfile;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnSubjects;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GeneratedBy;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
