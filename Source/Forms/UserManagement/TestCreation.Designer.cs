@@ -1,13 +1,13 @@
-﻿namespace Student_Assessment_System_with_Item_Analysis
+﻿namespace Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManagement
 {
-    partial class tcQuestionbank
+    partial class TestCreation
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,27 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tcQuestionbank));
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblbuildquiz = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.lblQuestionsinGroup = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnswerType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAction = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.lbl = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestCreation));
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,140 +39,25 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblGeneral = new System.Windows.Forms.Label();
+            this.txtbGeneral = new System.Windows.Forms.TextBox();
+            this.lblTestTitle = new System.Windows.Forms.Label();
+            this.cmbProgramming = new System.Windows.Forms.ComboBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // textBox1
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(221, 42);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(273, 41);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "❔ Question Bank";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
-            // 
-            // lblbuildquiz
-            // 
-            this.lblbuildquiz.AutoSize = true;
-            this.lblbuildquiz.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblbuildquiz.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblbuildquiz.Location = new System.Drawing.Point(524, 62);
-            this.lblbuildquiz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblbuildquiz.Name = "lblbuildquiz";
-            this.lblbuildquiz.Size = new System.Drawing.Size(263, 16);
-            this.lblbuildquiz.TabIndex = 22;
-            this.lblbuildquiz.Text = "Build quiz question bank and use in quizzes";
-            this.lblbuildquiz.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(324, 226);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(176, 59);
-            this.btnCreate.TabIndex = 22;
-            this.btnCreate.Text = "+ Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            // 
-            // btnDel
-            // 
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.ForeColor = System.Drawing.Color.Red;
-            this.btnDel.Location = new System.Drawing.Point(591, 226);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(176, 59);
-            this.btnDel.TabIndex = 23;
-            this.btnDel.Text = "🚮 Delete";
-            this.btnDel.UseVisualStyleBackColor = true;
-            // 
-            // lblQuestionsinGroup
-            // 
-            this.lblQuestionsinGroup.AutoSize = true;
-            this.lblQuestionsinGroup.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestionsinGroup.Location = new System.Drawing.Point(320, 327);
-            this.lblQuestionsinGroup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuestionsinGroup.Name = "lblQuestionsinGroup";
-            this.lblQuestionsinGroup.Size = new System.Drawing.Size(305, 20);
-            this.lblQuestionsinGroup.TabIndex = 24;
-            this.lblQuestionsinGroup.Text = "Questions in Group <Show All Questions>";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCheck,
-            this.colQuestion,
-            this.colAnswerType,
-            this.colPoints,
-            this.colAction});
-            this.dataGridView1.Location = new System.Drawing.Point(324, 373);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(673, 464);
-            this.dataGridView1.TabIndex = 25;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // colCheck
-            // 
-            this.colCheck.HeaderText = "Column1";
-            this.colCheck.MinimumWidth = 6;
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Width = 125;
-            // 
-            // colQuestion
-            // 
-            this.colQuestion.HeaderText = "Question";
-            this.colQuestion.MinimumWidth = 6;
-            this.colQuestion.Name = "colQuestion";
-            this.colQuestion.Width = 125;
-            // 
-            // colAnswerType
-            // 
-            this.colAnswerType.HeaderText = "AnswerType";
-            this.colAnswerType.MinimumWidth = 6;
-            this.colAnswerType.Name = "colAnswerType";
-            this.colAnswerType.Width = 125;
-            // 
-            // colPoints
-            // 
-            this.colPoints.HeaderText = "Points";
-            this.colPoints.MinimumWidth = 6;
-            this.colPoints.Name = "colPoints";
-            this.colPoints.Width = 125;
-            // 
-            // colAction
-            // 
-            this.colAction.HeaderText = "Button";
-            this.colAction.MinimumWidth = 6;
-            this.colAction.Name = "colAction";
-            this.colAction.Width = 125;
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(321, 180);
-            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(483, 16);
-            this.lbl.TabIndex = 26;
-            this.lbl.Text = "Store and manage questions that can be reused in the course to assess learners";
-            this.lbl.Click += new System.EventHandler(this.lbl_Click);
+            this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1559, 118);
+            this.textBox1.TabIndex = 99;
             // 
             // panel6
             // 
@@ -200,8 +74,8 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(213, 893);
-            this.panel6.TabIndex = 62;
+            this.panel6.Size = new System.Drawing.Size(213, 935);
+            this.panel6.TabIndex = 100;
             // 
             // pictureBox4
             // 
@@ -354,35 +228,72 @@
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(183, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1342, 116);
-            this.textBox1.TabIndex = 63;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(248, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 41);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "Test Creation";
             // 
-            // tcQuestionbank
+            // lblGeneral
+            // 
+            this.lblGeneral.AutoSize = true;
+            this.lblGeneral.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneral.Location = new System.Drawing.Point(250, 154);
+            this.lblGeneral.Name = "lblGeneral";
+            this.lblGeneral.Size = new System.Drawing.Size(238, 28);
+            this.lblGeneral.TabIndex = 102;
+            this.lblGeneral.Text = "📋 General Information";
+            // 
+            // txtbGeneral
+            // 
+            this.txtbGeneral.BackColor = System.Drawing.Color.White;
+            this.txtbGeneral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbGeneral.Location = new System.Drawing.Point(255, 203);
+            this.txtbGeneral.Multiline = true;
+            this.txtbGeneral.Name = "txtbGeneral";
+            this.txtbGeneral.Size = new System.Drawing.Size(485, 399);
+            this.txtbGeneral.TabIndex = 103;
+            // 
+            // lblTestTitle
+            // 
+            this.lblTestTitle.AutoSize = true;
+            this.lblTestTitle.BackColor = System.Drawing.Color.White;
+            this.lblTestTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestTitle.Location = new System.Drawing.Point(267, 216);
+            this.lblTestTitle.Name = "lblTestTitle";
+            this.lblTestTitle.Size = new System.Drawing.Size(82, 23);
+            this.lblTestTitle.TabIndex = 104;
+            this.lblTestTitle.Text = "Test Title";
+            // 
+            // cmbProgramming
+            // 
+            this.cmbProgramming.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProgramming.FormattingEnabled = true;
+            this.cmbProgramming.Location = new System.Drawing.Point(271, 344);
+            this.cmbProgramming.Name = "cmbProgramming";
+            this.cmbProgramming.Size = new System.Drawing.Size(190, 24);
+            this.cmbProgramming.TabIndex = 105;
+            this.cmbProgramming.Text = "Programming";
+            // 
+            // TestCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1519, 893);
+            this.Controls.Add(this.cmbProgramming);
+            this.Controls.Add(this.lblTestTitle);
+            this.Controls.Add(this.txtbGeneral);
+            this.Controls.Add(this.lblGeneral);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.lblbuildquiz);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.lbl);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblQuestionsinGroup);
-            this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "tcQuestionbank";
-            this.Text = "tcQuestionbank";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "TestCreation";
+            this.Size = new System.Drawing.Size(1559, 935);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -391,18 +302,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblbuildquiz;
-        private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Label lblQuestionsinGroup;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnswerType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPoints;
-        private System.Windows.Forms.DataGridViewButtonColumn colAction;
-        private System.Windows.Forms.Label lbl;
+
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button1;
@@ -412,6 +313,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGeneral;
+        private System.Windows.Forms.TextBox txtbGeneral;
+        private System.Windows.Forms.Label lblTestTitle;
+        private System.Windows.Forms.ComboBox cmbProgramming;
     }
 }

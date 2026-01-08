@@ -36,5 +36,15 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
         {
 
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNotif_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

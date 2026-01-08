@@ -93,6 +93,11 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.Dashboards
         private void label5_Click(object sender, EventArgs e) { }
         private void lbl9_Click(object sender, EventArgs e) { }
 
+        private void TeacherDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // These might be extra depending on your exact designer setup, 
         // but keeping them prevents "Definition not found" errors.
     }

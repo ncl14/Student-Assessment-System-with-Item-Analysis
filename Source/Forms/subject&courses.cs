@@ -71,5 +71,15 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
         {
 
         }
+
+        private void btnSearchCourse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
