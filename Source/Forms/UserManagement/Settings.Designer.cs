@@ -1,13 +1,13 @@
-﻿namespace Student_Assessment_System_with_Item_Analysis
+﻿namespace Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManagement
 {
-    partial class tcQuestionbank
+    partial class Settings
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,19 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tcQuestionbank));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblbuildquiz = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,61 +38,17 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblSettings = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbSub = new System.Windows.Forms.ComboBox();
-            this.btnSearchQuestion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbDifficulty = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtgID = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coldsubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDifficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgID)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(188, 34);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(202, 37);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Question Bank";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
-            // 
-            // lblbuildquiz
-            // 
-            this.lblbuildquiz.AutoSize = true;
-            this.lblbuildquiz.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblbuildquiz.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblbuildquiz.Location = new System.Drawing.Point(409, 53);
-            this.lblbuildquiz.Name = "lblbuildquiz";
-            this.lblbuildquiz.Size = new System.Drawing.Size(212, 13);
-            this.lblbuildquiz.TabIndex = 22;
-            this.lblbuildquiz.Text = "Build quiz question bank and use in quizzes";
-            this.lblbuildquiz.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Lime;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(771, 21);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(163, 28);
-            this.btnCreate.TabIndex = 22;
-            this.btnCreate.Text = "+ Create New Question";
-            this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -111,8 +63,8 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(160, 726);
-            this.panel6.TabIndex = 62;
+            this.panel6.Size = new System.Drawing.Size(160, 793);
+            this.panel6.TabIndex = 64;
             // 
             // pictureBox4
             // 
@@ -243,162 +195,111 @@
             this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(140, 0);
+            this.textBox1.Location = new System.Drawing.Point(152, 0);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1006, 96);
-            this.textBox1.TabIndex = 63;
+            this.textBox1.Size = new System.Drawing.Size(1035, 103);
+            this.textBox1.TabIndex = 65;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblSettings
+            // 
+            this.lblSettings.AutoSize = true;
+            this.lblSettings.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblSettings.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSettings.ForeColor = System.Drawing.Color.White;
+            this.lblSettings.Location = new System.Drawing.Point(180, 37);
+            this.lblSettings.Name = "lblSettings";
+            this.lblSettings.Size = new System.Drawing.Size(122, 37);
+            this.lblSettings.TabIndex = 66;
+            this.lblSettings.Text = "Settings";
+            // 
+            // lblProfile
+            // 
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.White;
+            this.lblProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(27, 21);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(127, 21);
+            this.lblProfile.TabIndex = 67;
+            this.lblProfile.Text = "Profile Settings";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dtgID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cmbDifficulty);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cmbSub);
-            this.panel1.Controls.Add(this.btnSearchQuestion);
-            this.panel1.Controls.Add(this.btnCreate);
-            this.panel1.Location = new System.Drawing.Point(154, 92);
+            this.panel1.Controls.Add(this.lblPass);
+            this.panel1.Controls.Add(this.lblEmail);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.lblProfile);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Location = new System.Drawing.Point(204, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(992, 634);
-            this.panel1.TabIndex = 64;
+            this.panel1.Size = new System.Drawing.Size(933, 632);
+            this.panel1.TabIndex = 68;
             // 
-            // cmbSub
+            // textBox2
             // 
-            this.cmbSub.FormattingEnabled = true;
-            this.cmbSub.Items.AddRange(new object[] {
-            "Subject"});
-            this.cmbSub.Location = new System.Drawing.Point(355, 26);
-            this.cmbSub.Name = "cmbSub";
-            this.cmbSub.Size = new System.Drawing.Size(160, 21);
-            this.cmbSub.TabIndex = 24;
-            this.cmbSub.SelectedIndexChanged += new System.EventHandler(this.cmbSub_SelectedIndexChanged);
+            this.textBox2.Location = new System.Drawing.Point(3, 3);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(927, 626);
+            this.textBox2.TabIndex = 0;
             // 
-            // btnSearchQuestion
+            // lblName
             // 
-            this.btnSearchQuestion.BackColor = System.Drawing.Color.White;
-            this.btnSearchQuestion.Location = new System.Drawing.Point(41, 21);
-            this.btnSearchQuestion.Name = "btnSearchQuestion";
-            this.btnSearchQuestion.Size = new System.Drawing.Size(294, 28);
-            this.btnSearchQuestion.TabIndex = 23;
-            this.btnSearchQuestion.Text = " ⌕   Search questions..";
-            this.btnSearchQuestion.UseVisualStyleBackColor = false;
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.White;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(39, 81);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(44, 15);
+            this.lblName.TabIndex = 68;
+            this.lblName.Text = "Name:";
             // 
-            // label1
+            // lblEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(362, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Subject";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.White;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(39, 114);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 15);
+            this.lblEmail.TabIndex = 69;
+            this.lblEmail.Text = "Email:";
             // 
-            // cmbDifficulty
+            // lblPass
             // 
-            this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Items.AddRange(new object[] {
-            "Subject"});
-            this.cmbDifficulty.Location = new System.Drawing.Point(544, 26);
-            this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(160, 21);
-            this.cmbDifficulty.TabIndex = 26;
+            this.lblPass.AutoSize = true;
+            this.lblPass.BackColor = System.Drawing.Color.White;
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Location = new System.Drawing.Point(39, 148);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(64, 15);
+            this.lblPass.TabIndex = 70;
+            this.lblPass.Text = "Password:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(550, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Difficulty";
-            // 
-            // dtgID
-            // 
-            this.dtgID.BackgroundColor = System.Drawing.Color.White;
-            this.dtgID.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgID.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgID.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colQuestion,
-            this.colType,
-            this.coldsubject,
-            this.colDifficulty,
-            this.colActions});
-            this.dtgID.EnableHeadersVisualStyles = false;
-            this.dtgID.Location = new System.Drawing.Point(41, 117);
-            this.dtgID.Name = "dtgID";
-            this.dtgID.RowHeadersVisible = false;
-            this.dtgID.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgID.Size = new System.Drawing.Size(602, 328);
-            this.dtgID.TabIndex = 28;
-            // 
-            // colId
-            // 
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            // 
-            // colQuestion
-            // 
-            this.colQuestion.HeaderText = "Question ";
-            this.colQuestion.Name = "colQuestion";
-            // 
-            // colType
-            // 
-            this.colType.HeaderText = "Type";
-            this.colType.Name = "colType";
-            // 
-            // coldsubject
-            // 
-            this.coldsubject.HeaderText = "Subject";
-            this.coldsubject.Name = "coldsubject";
-            // 
-            // colDifficulty
-            // 
-            this.colDifficulty.HeaderText = "Difficulty";
-            this.colDifficulty.Name = "colDifficulty";
-            // 
-            // colActions
-            // 
-            this.colActions.HeaderText = "Actions";
-            this.colActions.Name = "colActions";
-            // 
-            // tcQuestionbank
+            // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 726);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.lblbuildquiz);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "tcQuestionbank";
-            this.Text = "tcQuestionbank";
+            this.Controls.Add(this.lblSettings);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.textBox1);
+            this.Name = "Settings";
+            this.Size = new System.Drawing.Size(1177, 793);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblbuildquiz;
-        private System.Windows.Forms.Button btnCreate;
+
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button1;
@@ -408,18 +309,12 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblSettings;
+        private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSearchQuestion;
-        private System.Windows.Forms.ComboBox cmbSub;
-        private System.Windows.Forms.DataGridView dtgID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbDifficulty;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coldsubject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDifficulty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colActions;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblName;
     }
 }
