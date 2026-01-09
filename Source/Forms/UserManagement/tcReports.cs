@@ -31,5 +31,10 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManageme
         {
 
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
