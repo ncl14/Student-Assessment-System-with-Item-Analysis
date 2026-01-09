@@ -39,15 +39,26 @@
             this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSettings = new System.Windows.Forms.Label();
-            this.lblProfile = new System.Windows.Forms.Label();
+            this.lblAccount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUEmail = new System.Windows.Forms.Label();
+            this.lblChangePass = new System.Windows.Forms.Label();
+            this.lblconfig = new System.Windows.Forms.Label();
+            this.btnChangePass = new System.Windows.Forms.Button();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPass = new System.Windows.Forms.Label();
+            this.lblSystemSettings = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTimezone = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblSystemLanguage = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -63,7 +74,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(160, 793);
+            this.panel6.Size = new System.Drawing.Size(160, 537);
             this.panel6.TabIndex = 64;
             // 
             // pictureBox4
@@ -215,84 +226,196 @@
             this.lblSettings.TabIndex = 66;
             this.lblSettings.Text = "Settings";
             // 
-            // lblProfile
+            // lblAccount
             // 
-            this.lblProfile.AutoSize = true;
-            this.lblProfile.BackColor = System.Drawing.Color.White;
-            this.lblProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(27, 21);
-            this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(127, 21);
-            this.lblProfile.TabIndex = 67;
-            this.lblProfile.Text = "Profile Settings";
+            this.lblAccount.AutoSize = true;
+            this.lblAccount.BackColor = System.Drawing.Color.White;
+            this.lblAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccount.Location = new System.Drawing.Point(17, 32);
+            this.lblAccount.Name = "lblAccount";
+            this.lblAccount.Size = new System.Drawing.Size(166, 21);
+            this.lblAccount.TabIndex = 67;
+            this.lblAccount.Text = "👤 Account Settings";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblPass);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.lblProfile);
+            this.panel1.Controls.Add(this.txtbEmail);
+            this.panel1.Controls.Add(this.btnChangePass);
+            this.panel1.Controls.Add(this.lblUEmail);
+            this.panel1.Controls.Add(this.lblChangePass);
+            this.panel1.Controls.Add(this.lblAccount);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Location = new System.Drawing.Point(204, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 632);
+            this.panel1.Size = new System.Drawing.Size(458, 295);
             this.panel1.TabIndex = 68;
+            // 
+            // lblUEmail
+            // 
+            this.lblUEmail.AutoSize = true;
+            this.lblUEmail.BackColor = System.Drawing.Color.White;
+            this.lblUEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUEmail.Location = new System.Drawing.Point(39, 131);
+            this.lblUEmail.Name = "lblUEmail";
+            this.lblUEmail.Size = new System.Drawing.Size(104, 16);
+            this.lblUEmail.TabIndex = 69;
+            this.lblUEmail.Text = "✉ Update Email";
+            // 
+            // lblChangePass
+            // 
+            this.lblChangePass.AutoSize = true;
+            this.lblChangePass.BackColor = System.Drawing.Color.White;
+            this.lblChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangePass.Location = new System.Drawing.Point(39, 84);
+            this.lblChangePass.Name = "lblChangePass";
+            this.lblChangePass.Size = new System.Drawing.Size(132, 16);
+            this.lblChangePass.TabIndex = 68;
+            this.lblChangePass.Text = "🔐 Change Password";
+            // 
+            // lblconfig
+            // 
+            this.lblconfig.AutoSize = true;
+            this.lblconfig.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblconfig.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconfig.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblconfig.Location = new System.Drawing.Point(308, 56);
+            this.lblconfig.Name = "lblconfig";
+            this.lblconfig.Size = new System.Drawing.Size(166, 13);
+            this.lblconfig.TabIndex = 71;
+            this.lblconfig.Text = " Configure the system settings.";
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangePass.ForeColor = System.Drawing.Color.White;
+            this.btnChangePass.Location = new System.Drawing.Point(243, 80);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(124, 25);
+            this.btnChangePass.TabIndex = 71;
+            this.btnChangePass.Text = "Change Password";
+            this.btnChangePass.UseVisualStyleBackColor = false;
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.Location = new System.Drawing.Point(243, 127);
+            this.txtbEmail.Multiline = true;
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(149, 19);
+            this.txtbEmail.TabIndex = 73;
+            this.txtbEmail.Text = "teacher.1@umindanao.eu.ph";
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(3, 3);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(927, 626);
+            this.textBox2.Size = new System.Drawing.Size(450, 286);
             this.textBox2.TabIndex = 0;
             // 
-            // lblName
+            // lblSystemSettings
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.White;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(39, 81);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 15);
-            this.lblName.TabIndex = 68;
-            this.lblName.Text = "Name:";
+            this.lblSystemSettings.AutoSize = true;
+            this.lblSystemSettings.BackColor = System.Drawing.Color.White;
+            this.lblSystemSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemSettings.Location = new System.Drawing.Point(17, 29);
+            this.lblSystemSettings.Name = "lblSystemSettings";
+            this.lblSystemSettings.Size = new System.Drawing.Size(154, 21);
+            this.lblSystemSettings.TabIndex = 74;
+            this.lblSystemSettings.Text = "⚙️System Settings";
             // 
-            // lblEmail
+            // textBox3
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.BackColor = System.Drawing.Color.White;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(39, 114);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 15);
-            this.lblEmail.TabIndex = 69;
-            this.lblEmail.Text = "Email:";
+            this.textBox3.Location = new System.Drawing.Point(3, 3);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(450, 286);
+            this.textBox3.TabIndex = 75;
             // 
-            // lblPass
+            // panel2
             // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.BackColor = System.Drawing.Color.White;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(39, 148);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(64, 15);
-            this.lblPass.TabIndex = 70;
-            this.lblPass.Text = "Password:";
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.lblSystemLanguage);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.lblTimezone);
+            this.panel2.Controls.Add(this.lblSystemSettings);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Location = new System.Drawing.Point(692, 139);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(458, 295);
+            this.panel2.TabIndex = 76;
+            // 
+            // lblTimezone
+            // 
+            this.lblTimezone.AutoSize = true;
+            this.lblTimezone.BackColor = System.Drawing.Color.White;
+            this.lblTimezone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimezone.Location = new System.Drawing.Point(39, 86);
+            this.lblTimezone.Name = "lblTimezone";
+            this.lblTimezone.Size = new System.Drawing.Size(67, 16);
+            this.lblTimezone.TabIndex = 77;
+            this.lblTimezone.Text = "Timezone";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(107, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 21);
+            this.comboBox1.TabIndex = 78;
+            this.comboBox1.Text = "(GMT+8) 8:50 PM (PH)";
+            // 
+            // lblSystemLanguage
+            // 
+            this.lblSystemLanguage.AutoSize = true;
+            this.lblSystemLanguage.BackColor = System.Drawing.Color.White;
+            this.lblSystemLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemLanguage.Location = new System.Drawing.Point(41, 176);
+            this.lblSystemLanguage.Name = "lblSystemLanguage";
+            this.lblSystemLanguage.Size = new System.Drawing.Size(116, 16);
+            this.lblSystemLanguage.TabIndex = 77;
+            this.lblSystemLanguage.Text = "System Language";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(149, 206);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(243, 21);
+            this.comboBox2.TabIndex = 79;
+            this.comboBox2.Text = "English";
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(608, 471);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(136, 42);
+            this.btnSave.TabIndex = 77;
+            this.btnSave.Text = "Save Changes";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lblconfig);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblSettings);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel2);
             this.Name = "Settings";
-            this.Size = new System.Drawing.Size(1177, 793);
+            this.Size = new System.Drawing.Size(1177, 537);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,11 +433,21 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblSettings;
-        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblAccount;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblUEmail;
+        private System.Windows.Forms.Label lblChangePass;
+        private System.Windows.Forms.Label lblconfig;
+        private System.Windows.Forms.Button btnChangePass;
+        private System.Windows.Forms.TextBox txtbEmail;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblSystemSettings;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTimezone;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblSystemLanguage;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnSave;
     }
 }
