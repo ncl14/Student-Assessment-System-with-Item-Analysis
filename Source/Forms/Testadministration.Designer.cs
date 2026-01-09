@@ -38,65 +38,60 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblManage = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblTestSetup = new System.Windows.Forms.Label();
+            this.lblTestTaking = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblDateTaken = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.lblTestOverview = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.btnViewReports = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnViewAll = new System.Windows.Forms.Button();
             this.btnNotif = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblConfig = new System.Windows.Forms.Label();
+            this.lblSelect = new System.Windows.Forms.Label();
+            this.cbPeriod1 = new System.Windows.Forms.CheckBox();
+            this.cbPeriod2 = new System.Windows.Forms.CheckBox();
+            this.cbPeriod3 = new System.Windows.Forms.CheckBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnAssign = new System.Windows.Forms.Button();
+            this.lblTestSettings = new System.Windows.Forms.Label();
+            this.cbRandomizeQ = new System.Windows.Forms.CheckBox();
+            this.cbRandomizeA = new System.Windows.Forms.CheckBox();
+            this.cbShow = new System.Windows.Forms.CheckBox();
+            this.cbAllow = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblProgramming = new System.Windows.Forms.Label();
+            this.lblQuestions = new System.Windows.Forms.Label();
+            this.lblT = new System.Windows.Forms.Label();
+            this.rdn1 = new System.Windows.Forms.RadioButton();
+            this.rdn2 = new System.Windows.Forms.RadioButton();
+            this.rdn3 = new System.Windows.Forms.RadioButton();
+            this.rdn4 = new System.Windows.Forms.RadioButton();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn10 = new System.Windows.Forms.Button();
+            this.btn11 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
+            this.txtbAuto = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -252,627 +247,39 @@
             this.label9.Text = "Test Administration";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // lblManage
+            // lblTestSetup
             // 
-            this.lblManage.AutoSize = true;
-            this.lblManage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManage.Location = new System.Drawing.Point(180, 112);
-            this.lblManage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblManage.Name = "lblManage";
-            this.lblManage.Size = new System.Drawing.Size(113, 21);
-            this.lblManage.TabIndex = 94;
-            this.lblManage.Text = "Manage Tests";
+            this.lblTestSetup.AutoSize = true;
+            this.lblTestSetup.BackColor = System.Drawing.Color.White;
+            this.lblTestSetup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestSetup.Location = new System.Drawing.Point(12, 17);
+            this.lblTestSetup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTestSetup.Name = "lblTestSetup";
+            this.lblTestSetup.Size = new System.Drawing.Size(88, 21);
+            this.lblTestSetup.TabIndex = 94;
+            this.lblTestSetup.Text = "Test Setup";
             // 
-            // textBox4
+            // lblTestTaking
             // 
-            this.textBox4.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(198, 161);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 74);
-            this.textBox4.TabIndex = 95;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(317, 161);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 74);
-            this.textBox5.TabIndex = 96;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.SteelBlue;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(244, 192);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
-            this.label6.TabIndex = 97;
-            this.label6.Text = "All Tests";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.SteelBlue;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(203, 186);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 26);
-            this.label7.TabIndex = 98;
-            this.label7.Text = "📋";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(325, 184);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 20);
-            this.label8.TabIndex = 99;
-            this.label8.Text = "120";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(328, 210);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 15);
-            this.label10.TabIndex = 100;
-            this.label10.Text = "Total Tests";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(433, 161);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(146, 74);
-            this.textBox6.TabIndex = 101;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(563, 161);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 74);
-            this.textBox7.TabIndex = 102;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(474, 190);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 20);
-            this.label11.TabIndex = 103;
-            this.label11.Text = "Scheduled";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(442, 186);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 26);
-            this.label12.TabIndex = 104;
-            this.label12.Text = "🗓️";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(573, 185);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 20);
-            this.label13.TabIndex = 105;
-            this.label13.Text = "6";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(574, 210);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 15);
-            this.label14.TabIndex = 106;
-            this.label14.Text = "Upcoming Tests";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.Khaki;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(198, 249);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(126, 66);
-            this.textBox8.TabIndex = 107;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(317, 249);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(108, 66);
-            this.textBox9.TabIndex = 108;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Khaki;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(203, 272);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 26);
-            this.label15.TabIndex = 109;
-            this.label15.Text = "⏳";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Khaki;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(236, 276);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 20);
-            this.label16.TabIndex = 110;
-            this.label16.Text = "Ongoing";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(325, 267);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(19, 20);
-            this.label17.TabIndex = 111;
-            this.label17.Text = "2";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(326, 287);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 15);
-            this.label18.TabIndex = 112;
-            this.label18.Text = "Current Tests";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.SandyBrown;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(433, 250);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(136, 65);
-            this.textBox10.TabIndex = 113;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(563, 250);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(124, 65);
-            this.textBox11.TabIndex = 114;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.SandyBrown;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(442, 271);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 26);
-            this.label19.TabIndex = 115;
-            this.label19.Text = "⏳";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.SandyBrown;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(471, 276);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 20);
-            this.label20.TabIndex = 116;
-            this.label20.Text = "Ongoing";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(573, 267);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(19, 20);
-            this.label21.TabIndex = 117;
-            this.label21.Text = "2";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(573, 287);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(86, 15);
-            this.label22.TabIndex = 118;
-            this.label22.Text = "Running Tests";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(728, 335);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(159, 21);
-            this.label23.TabIndex = 119;
-            this.label23.Text = "Recent Test Activity";
+            this.lblTestTaking.AutoSize = true;
+            this.lblTestTaking.BackColor = System.Drawing.Color.White;
+            this.lblTestTaking.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestTaking.Location = new System.Drawing.Point(22, 15);
+            this.lblTestTaking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTestTaking.Name = "lblTestTaking";
+            this.lblTestTaking.Size = new System.Drawing.Size(95, 21);
+            this.lblTestTaking.TabIndex = 119;
+            this.lblTestTaking.Text = "Test Taking";
             // 
             // textBox12
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(722, 381);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Location = new System.Drawing.Point(2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(473, 294);
+            this.textBox12.Size = new System.Drawing.Size(469, 402);
             this.textBox12.TabIndex = 120;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(722, 446);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(473, 9);
-            this.textBox13.TabIndex = 121;
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.BackColor = System.Drawing.Color.White;
-            this.lblClass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(785, 410);
-            this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(42, 19);
-            this.lblClass.TabIndex = 123;
-            this.lblClass.Text = "Class";
-            // 
-            // lblDateTaken
-            // 
-            this.lblDateTaken.AutoSize = true;
-            this.lblDateTaken.BackColor = System.Drawing.Color.White;
-            this.lblDateTaken.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTaken.Location = new System.Drawing.Point(938, 410);
-            this.lblDateTaken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDateTaken.Name = "lblDateTaken";
-            this.lblDateTaken.Size = new System.Drawing.Size(83, 19);
-            this.lblDateTaken.TabIndex = 124;
-            this.lblDateTaken.Text = "Date Taken";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.White;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(1081, 410);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(93, 19);
-            this.lblStatus.TabIndex = 125;
-            this.lblStatus.Text = "Status/Score";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.White;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(736, 487);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(181, 15);
-            this.label28.TabIndex = 126;
-            this.label28.Text = "Python Programming - Unit Test";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.White;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(736, 539);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(158, 15);
-            this.label29.TabIndex = 127;
-            this.label29.Text = "SQL Fundamentals - Quiz 1";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.White;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(734, 593);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(183, 15);
-            this.label30.TabIndex = 128;
-            this.label30.Text = " Java Programming - Lab Activity";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.White;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(948, 483);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(55, 15);
-            this.label31.TabIndex = 129;
-            this.label31.Text = "10/12/25";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.White;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(948, 539);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(55, 15);
-            this.label32.TabIndex = 130;
-            this.label32.Text = "11/24/25";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.White;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(948, 590);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 15);
-            this.label33.TabIndex = 131;
-            this.label33.Text = "12/03/25";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.PaleGreen;
-            this.label34.Location = new System.Drawing.Point(1063, 485);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(42, 13);
-            this.label34.TabIndex = 132;
-            this.label34.Text = "Graded";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.PaleGreen;
-            this.label35.Location = new System.Drawing.Point(1063, 540);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(42, 13);
-            this.label35.TabIndex = 133;
-            this.label35.Text = "Graded";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.LemonChiffon;
-            this.label36.Location = new System.Drawing.Point(1063, 595);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 13);
-            this.label36.TabIndex = 134;
-            this.label36.Text = "In Progress";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.White;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(1135, 483);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(35, 15);
-            this.label37.TabIndex = 135;
-            this.label37.Text = "85%";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.White;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(1135, 540);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(35, 15);
-            this.label38.TabIndex = 136;
-            this.label38.Text = "78%";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.White;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(1135, 595);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(23, 15);
-            this.label39.TabIndex = 137;
-            this.label39.Text = "➖";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Location = new System.Drawing.Point(183, 382);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(476, 293);
-            this.textBox14.TabIndex = 138;
-            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
-            // 
-            // lblTestOverview
-            // 
-            this.lblTestOverview.AutoSize = true;
-            this.lblTestOverview.BackColor = System.Drawing.Color.White;
-            this.lblTestOverview.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestOverview.Location = new System.Drawing.Point(188, 406);
-            this.lblTestOverview.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTestOverview.Name = "lblTestOverview";
-            this.lblTestOverview.Size = new System.Drawing.Size(117, 21);
-            this.lblTestOverview.TabIndex = 140;
-            this.lblTestOverview.Text = "Test Overview";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.White;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(196, 483);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(82, 18);
-            this.label41.TabIndex = 142;
-            this.label41.Text = "Total Tests";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.White;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(195, 535);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(105, 18);
-            this.label42.TabIndex = 143;
-            this.label42.Text = "Average Score";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.White;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(196, 590);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(123, 18);
-            this.label43.TabIndex = 144;
-            this.label43.Text = "Tests This Month";
-            // 
-            // btnViewReports
-            // 
-            this.btnViewReports.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnViewReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewReports.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewReports.Location = new System.Drawing.Point(539, 626);
-            this.btnViewReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnViewReports.Name = "btnViewReports";
-            this.btnViewReports.Size = new System.Drawing.Size(105, 39);
-            this.btnViewReports.TabIndex = 145;
-            this.btnViewReports.Text = "View Reports";
-            this.btnViewReports.UseVisualStyleBackColor = false;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.White;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(579, 487);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(31, 15);
-            this.label44.TabIndex = 146;
-            this.label44.Text = "120";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.White;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(579, 538);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(35, 15);
-            this.label45.TabIndex = 147;
-            this.label45.Text = "77%";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.White;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(579, 582);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(23, 15);
-            this.label46.TabIndex = 148;
-            this.label46.Text = "15";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(183, 446);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(476, 9);
-            this.textBox3.TabIndex = 149;
             // 
             // textBox15
             // 
@@ -880,7 +287,7 @@
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.ForeColor = System.Drawing.Color.White;
             this.textBox15.Location = new System.Drawing.Point(158, 0);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(1077, 97);
@@ -892,26 +299,12 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(902, 30);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(234, 45);
             this.btnSearch.TabIndex = 151;
             this.btnSearch.Text = "⌕ Search tests...\r\n";
             this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnViewAll
-            // 
-            this.btnViewAll.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAll.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.ForeColor = System.Drawing.Color.Black;
-            this.btnViewAll.Location = new System.Drawing.Point(1082, 326);
-            this.btnViewAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(113, 40);
-            this.btnViewAll.TabIndex = 153;
-            this.btnViewAll.Text = "View All  »";
-            this.btnViewAll.UseVisualStyleBackColor = false;
             // 
             // btnNotif
             // 
@@ -919,7 +312,7 @@
             this.btnNotif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotif.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotif.Location = new System.Drawing.Point(1155, 30);
-            this.btnNotif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNotif.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotif.Name = "btnNotif";
             this.btnNotif.Size = new System.Drawing.Size(40, 41);
             this.btnNotif.TabIndex = 154;
@@ -927,76 +320,522 @@
             this.btnNotif.UseVisualStyleBackColor = false;
             this.btnNotif.Click += new System.EventHandler(this.btnNotif_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cbAllow);
+            this.panel1.Controls.Add(this.cbShow);
+            this.panel1.Controls.Add(this.cbRandomizeA);
+            this.panel1.Controls.Add(this.cbRandomizeQ);
+            this.panel1.Controls.Add(this.lblTestSettings);
+            this.panel1.Controls.Add(this.btnAssign);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.cbPeriod3);
+            this.panel1.Controls.Add(this.cbPeriod2);
+            this.panel1.Controls.Add(this.cbPeriod1);
+            this.panel1.Controls.Add(this.lblSelect);
+            this.panel1.Controls.Add(this.lblConfig);
+            this.panel1.Controls.Add(this.lblTestSetup);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(183, 108);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(475, 406);
+            this.panel1.TabIndex = 155;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(2, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(472, 401);
+            this.textBox1.TabIndex = 0;
+            // 
+            // lblConfig
+            // 
+            this.lblConfig.AutoSize = true;
+            this.lblConfig.BackColor = System.Drawing.Color.White;
+            this.lblConfig.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfig.Location = new System.Drawing.Point(13, 66);
+            this.lblConfig.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfig.Name = "lblConfig";
+            this.lblConfig.Size = new System.Drawing.Size(201, 17);
+            this.lblConfig.TabIndex = 156;
+            this.lblConfig.Text = "Configure Programming Quiz 1";
+            // 
+            // lblSelect
+            // 
+            this.lblSelect.AutoSize = true;
+            this.lblSelect.BackColor = System.Drawing.Color.White;
+            this.lblSelect.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelect.Location = new System.Drawing.Point(14, 101);
+            this.lblSelect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSelect.Name = "lblSelect";
+            this.lblSelect.Size = new System.Drawing.Size(86, 13);
+            this.lblSelect.TabIndex = 157;
+            this.lblSelect.Text = "Select Sections:";
+            // 
+            // cbPeriod1
+            // 
+            this.cbPeriod1.AutoSize = true;
+            this.cbPeriod1.BackColor = System.Drawing.Color.White;
+            this.cbPeriod1.Location = new System.Drawing.Point(69, 128);
+            this.cbPeriod1.Name = "cbPeriod1";
+            this.cbPeriod1.Size = new System.Drawing.Size(65, 17);
+            this.cbPeriod1.TabIndex = 158;
+            this.cbPeriod1.Text = "Period 1";
+            this.cbPeriod1.UseVisualStyleBackColor = false;
+            // 
+            // cbPeriod2
+            // 
+            this.cbPeriod2.AutoSize = true;
+            this.cbPeriod2.BackColor = System.Drawing.Color.White;
+            this.cbPeriod2.Location = new System.Drawing.Point(69, 151);
+            this.cbPeriod2.Name = "cbPeriod2";
+            this.cbPeriod2.Size = new System.Drawing.Size(65, 17);
+            this.cbPeriod2.TabIndex = 159;
+            this.cbPeriod2.Text = "Period 2";
+            this.cbPeriod2.UseVisualStyleBackColor = false;
+            // 
+            // cbPeriod3
+            // 
+            this.cbPeriod3.AutoSize = true;
+            this.cbPeriod3.BackColor = System.Drawing.Color.White;
+            this.cbPeriod3.Location = new System.Drawing.Point(69, 174);
+            this.cbPeriod3.Name = "cbPeriod3";
+            this.cbPeriod3.Size = new System.Drawing.Size(65, 17);
+            this.cbPeriod3.TabIndex = 160;
+            this.cbPeriod3.Text = "Period 3";
+            this.cbPeriod3.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBack.Location = new System.Drawing.Point(304, 196);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 156;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // btnAssign
+            // 
+            this.btnAssign.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAssign.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAssign.ForeColor = System.Drawing.Color.White;
+            this.btnAssign.Location = new System.Drawing.Point(385, 196);
+            this.btnAssign.Name = "btnAssign";
+            this.btnAssign.Size = new System.Drawing.Size(75, 23);
+            this.btnAssign.TabIndex = 157;
+            this.btnAssign.Text = "Assign Test";
+            this.btnAssign.UseVisualStyleBackColor = false;
+            // 
+            // lblTestSettings
+            // 
+            this.lblTestSettings.AutoSize = true;
+            this.lblTestSettings.BackColor = System.Drawing.Color.White;
+            this.lblTestSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestSettings.Location = new System.Drawing.Point(13, 240);
+            this.lblTestSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTestSettings.Name = "lblTestSettings";
+            this.lblTestSettings.Size = new System.Drawing.Size(106, 21);
+            this.lblTestSettings.TabIndex = 156;
+            this.lblTestSettings.Text = "Test Settings";
+            // 
+            // cbRandomizeQ
+            // 
+            this.cbRandomizeQ.AutoSize = true;
+            this.cbRandomizeQ.BackColor = System.Drawing.Color.White;
+            this.cbRandomizeQ.Location = new System.Drawing.Point(69, 274);
+            this.cbRandomizeQ.Name = "cbRandomizeQ";
+            this.cbRandomizeQ.Size = new System.Drawing.Size(122, 17);
+            this.cbRandomizeQ.TabIndex = 159;
+            this.cbRandomizeQ.Text = "Randomize question";
+            this.cbRandomizeQ.UseVisualStyleBackColor = false;
+            // 
+            // cbRandomizeA
+            // 
+            this.cbRandomizeA.AutoSize = true;
+            this.cbRandomizeA.BackColor = System.Drawing.Color.White;
+            this.cbRandomizeA.Location = new System.Drawing.Point(69, 305);
+            this.cbRandomizeA.Name = "cbRandomizeA";
+            this.cbRandomizeA.Size = new System.Drawing.Size(156, 17);
+            this.cbRandomizeA.TabIndex = 161;
+            this.cbRandomizeA.Text = "Randomize answer choices";
+            this.cbRandomizeA.UseVisualStyleBackColor = false;
+            // 
+            // cbShow
+            // 
+            this.cbShow.AutoSize = true;
+            this.cbShow.BackColor = System.Drawing.Color.White;
+            this.cbShow.Location = new System.Drawing.Point(69, 340);
+            this.cbShow.Name = "cbShow";
+            this.cbShow.Size = new System.Drawing.Size(237, 17);
+            this.cbShow.TabIndex = 162;
+            this.cbShow.Text = "Show/hide correct answers after submission ";
+            this.cbShow.UseVisualStyleBackColor = false;
+            // 
+            // cbAllow
+            // 
+            this.cbAllow.AutoSize = true;
+            this.cbAllow.BackColor = System.Drawing.Color.White;
+            this.cbAllow.Location = new System.Drawing.Point(69, 373);
+            this.cbAllow.Name = "cbAllow";
+            this.cbAllow.Size = new System.Drawing.Size(248, 17);
+            this.cbAllow.TabIndex = 163;
+            this.cbAllow.Text = "Allow Students to review questions and answer";
+            this.cbAllow.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnSubmit);
+            this.panel2.Controls.Add(this.txtbAuto);
+            this.panel2.Controls.Add(this.btn11);
+            this.panel2.Controls.Add(this.btn10);
+            this.panel2.Controls.Add(this.rdn4);
+            this.panel2.Controls.Add(this.btn9);
+            this.panel2.Controls.Add(this.rdn3);
+            this.panel2.Controls.Add(this.btn8);
+            this.panel2.Controls.Add(this.rdn2);
+            this.panel2.Controls.Add(this.btn7);
+            this.panel2.Controls.Add(this.rdn1);
+            this.panel2.Controls.Add(this.btn6);
+            this.panel2.Controls.Add(this.lblT);
+            this.panel2.Controls.Add(this.btn5);
+            this.panel2.Controls.Add(this.lblQuestions);
+            this.panel2.Controls.Add(this.btn1);
+            this.panel2.Controls.Add(this.lblProgramming);
+            this.panel2.Controls.Add(this.btn2);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Controls.Add(this.btn4);
+            this.panel2.Controls.Add(this.lblTestTaking);
+            this.panel2.Controls.Add(this.btn3);
+            this.panel2.Controls.Add(this.textBox12);
+            this.panel2.Location = new System.Drawing.Point(722, 110);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(473, 406);
+            this.panel2.TabIndex = 156;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.White;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(44, 55);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(109, 13);
+            this.lblWelcome.TabIndex = 158;
+            this.lblWelcome.Text = "Welcome, John Doe";
+            // 
+            // lblProgramming
+            // 
+            this.lblProgramming.AutoSize = true;
+            this.lblProgramming.BackColor = System.Drawing.Color.White;
+            this.lblProgramming.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramming.Location = new System.Drawing.Point(23, 83);
+            this.lblProgramming.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProgramming.Name = "lblProgramming";
+            this.lblProgramming.Size = new System.Drawing.Size(140, 17);
+            this.lblProgramming.TabIndex = 157;
+            this.lblProgramming.Text = " Programming Quiz 1";
+            // 
+            // lblQuestions
+            // 
+            this.lblQuestions.AutoSize = true;
+            this.lblQuestions.BackColor = System.Drawing.Color.White;
+            this.lblQuestions.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestions.Location = new System.Drawing.Point(44, 121);
+            this.lblQuestions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuestions.Name = "lblQuestions";
+            this.lblQuestions.Size = new System.Drawing.Size(118, 13);
+            this.lblQuestions.TabIndex = 159;
+            this.lblQuestions.Text = "Questions 3 out of 10";
+            // 
+            // lblT
+            // 
+            this.lblT.AutoSize = true;
+            this.lblT.BackColor = System.Drawing.Color.White;
+            this.lblT.Location = new System.Drawing.Point(67, 149);
+            this.lblT.Name = "lblT";
+            this.lblT.Size = new System.Drawing.Size(370, 26);
+            this.lblT.TabIndex = 160;
+            this.lblT.Text = "Which SQL constraint is used to ensure that the values in a column matches \r\nthe " +
+    "values in a primary key of another table?";
+            // 
+            // rdn1
+            // 
+            this.rdn1.AutoSize = true;
+            this.rdn1.BackColor = System.Drawing.Color.White;
+            this.rdn1.Location = new System.Drawing.Point(62, 204);
+            this.rdn1.Name = "rdn1";
+            this.rdn1.Size = new System.Drawing.Size(56, 17);
+            this.rdn1.TabIndex = 161;
+            this.rdn1.TabStop = true;
+            this.rdn1.Text = "Check";
+            this.rdn1.UseVisualStyleBackColor = false;
+            // 
+            // rdn2
+            // 
+            this.rdn2.AutoSize = true;
+            this.rdn2.BackColor = System.Drawing.Color.White;
+            this.rdn2.Location = new System.Drawing.Point(61, 227);
+            this.rdn2.Name = "rdn2";
+            this.rdn2.Size = new System.Drawing.Size(59, 17);
+            this.rdn2.TabIndex = 162;
+            this.rdn2.TabStop = true;
+            this.rdn2.Text = "Unique";
+            this.rdn2.UseVisualStyleBackColor = false;
+            // 
+            // rdn3
+            // 
+            this.rdn3.AutoSize = true;
+            this.rdn3.BackColor = System.Drawing.Color.White;
+            this.rdn3.Location = new System.Drawing.Point(61, 249);
+            this.rdn3.Name = "rdn3";
+            this.rdn3.Size = new System.Drawing.Size(80, 17);
+            this.rdn3.TabIndex = 163;
+            this.rdn3.TabStop = true;
+            this.rdn3.Text = "Primary Key";
+            this.rdn3.UseVisualStyleBackColor = false;
+            // 
+            // rdn4
+            // 
+            this.rdn4.AutoSize = true;
+            this.rdn4.BackColor = System.Drawing.Color.White;
+            this.rdn4.Location = new System.Drawing.Point(61, 272);
+            this.rdn4.Name = "rdn4";
+            this.rdn4.Size = new System.Drawing.Size(81, 17);
+            this.rdn4.TabIndex = 164;
+            this.rdn4.TabStop = true;
+            this.rdn4.Text = "Foreign Key";
+            this.rdn4.UseVisualStyleBackColor = false;
+            // 
+            // btn4
+            // 
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Location = new System.Drawing.Point(162, 310);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(27, 23);
+            this.btn4.TabIndex = 167;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
+            // 
+            // btn2
+            // 
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Location = new System.Drawing.Point(114, 310);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(27, 23);
+            this.btn2.TabIndex = 168;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
+            // 
+            // btn1
+            // 
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Location = new System.Drawing.Point(90, 310);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(27, 23);
+            this.btn1.TabIndex = 169;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // btn5
+            // 
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Location = new System.Drawing.Point(187, 310);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(27, 23);
+            this.btn5.TabIndex = 170;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
+            // 
+            // btn6
+            // 
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Location = new System.Drawing.Point(210, 310);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(27, 23);
+            this.btn6.TabIndex = 171;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            // 
+            // btn7
+            // 
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Location = new System.Drawing.Point(233, 310);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(27, 23);
+            this.btn7.TabIndex = 172;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
+            // 
+            // btn8
+            // 
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn8.Location = new System.Drawing.Point(257, 310);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(29, 23);
+            this.btn8.TabIndex = 173;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = true;
+            // 
+            // btn9
+            // 
+            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn9.Location = new System.Drawing.Point(282, 310);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(27, 23);
+            this.btn9.TabIndex = 174;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = true;
+            // 
+            // btn10
+            // 
+            this.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn10.Location = new System.Drawing.Point(306, 310);
+            this.btn10.Name = "btn10";
+            this.btn10.Size = new System.Drawing.Size(37, 23);
+            this.btn10.TabIndex = 175;
+            this.btn10.Text = "10";
+            this.btn10.UseVisualStyleBackColor = true;
+            // 
+            // btn11
+            // 
+            this.btn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn11.Location = new System.Drawing.Point(337, 310);
+            this.btn11.Name = "btn11";
+            this.btn11.Size = new System.Drawing.Size(48, 23);
+            this.btn11.TabIndex = 176;
+            this.btn11.Text = ">>";
+            this.btn11.UseVisualStyleBackColor = true;
+            // 
+            // btn3
+            // 
+            this.btn3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Location = new System.Drawing.Point(139, 310);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(27, 23);
+            this.btn3.TabIndex = 166;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = false;
+            // 
+            // txtbAuto
+            // 
+            this.txtbAuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbAuto.Location = new System.Drawing.Point(26, 348);
+            this.txtbAuto.Multiline = true;
+            this.txtbAuto.Name = "txtbAuto";
+            this.txtbAuto.Size = new System.Drawing.Size(426, 40);
+            this.txtbAuto.TabIndex = 157;
+            this.txtbAuto.Text = "    ⚠️ Time will auto submit\r\n    10/20 points answered so far.";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(362, 356);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 158;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Location = new System.Drawing.Point(186, 551);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(472, 149);
+            this.panel3.TabIndex = 157;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(3, 3);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(466, 143);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "\r\n\r\n\r\n ● Assign to specific sections\r\n ● Randomize questions\r\n ● Randomize choice" +
+    "s\r\n ● Show/hide correct answers after submission\r\n ● Allow review";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.TabIndex = 158;
+            this.label1.Text = " 📝 Test Setup";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Location = new System.Drawing.Point(722, 551);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(470, 148);
+            this.panel4.TabIndex = 158;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(3, 3);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(464, 142);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Text = " \r\n\r\n\r\n ● Student authentication\r\n ● Timer display\r\n ● Progress indicator\r\n ● Aut" +
+    "o-submit when time expires";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 21);
+            this.label2.TabIndex = 120;
+            this.label2.Text = "📝 Test Taking";
+            // 
             // Testadministration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1234, 712);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnNotif);
-            this.Controls.Add(this.btnViewAll);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label46);
-            this.Controls.Add(this.label45);
-            this.Controls.Add(this.label44);
-            this.Controls.Add(this.btnViewReports);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.lblTestOverview);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblDateTaken);
-            this.Controls.Add(this.lblClass);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.lblManage);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox15);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Testadministration";
             this.Load += new System.EventHandler(this.Testadministration_Load);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1013,62 +852,53 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblManage;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblTestSetup;
+        private System.Windows.Forms.Label lblTestTaking;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label lblClass;
-        private System.Windows.Forms.Label lblDateTaken;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label lblTestOverview;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Button btnViewReports;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.Button btnNotif;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblConfig;
+        private System.Windows.Forms.Label lblSelect;
+        private System.Windows.Forms.Button btnAssign;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.CheckBox cbPeriod3;
+        private System.Windows.Forms.CheckBox cbPeriod2;
+        private System.Windows.Forms.CheckBox cbPeriod1;
+        private System.Windows.Forms.CheckBox cbAllow;
+        private System.Windows.Forms.CheckBox cbShow;
+        private System.Windows.Forms.CheckBox cbRandomizeA;
+        private System.Windows.Forms.CheckBox cbRandomizeQ;
+        private System.Windows.Forms.Label lblTestSettings;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblQuestions;
+        private System.Windows.Forms.Label lblProgramming;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.RadioButton rdn1;
+        private System.Windows.Forms.Label lblT;
+        private System.Windows.Forms.RadioButton rdn4;
+        private System.Windows.Forms.RadioButton rdn3;
+        private System.Windows.Forms.RadioButton rdn2;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btn10;
+        private System.Windows.Forms.Button btn11;
+        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.TextBox txtbAuto;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
