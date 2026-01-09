@@ -81,5 +81,30 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
         {
 
         }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFall_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

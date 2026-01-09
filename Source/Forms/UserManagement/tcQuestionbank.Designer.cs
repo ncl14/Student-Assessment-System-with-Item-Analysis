@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tcQuestionbank));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblbuildquiz = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -43,11 +43,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbSub = new System.Windows.Forms.ComboBox();
-            this.btnSearchQuestion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbDifficulty = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtgID = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +50,11 @@
             this.coldsubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDifficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDifficulty = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbSub = new System.Windows.Forms.ComboBox();
+            this.btnSearchQuestion = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
@@ -264,69 +264,18 @@
             this.panel1.Size = new System.Drawing.Size(992, 634);
             this.panel1.TabIndex = 64;
             // 
-            // cmbSub
-            // 
-            this.cmbSub.FormattingEnabled = true;
-            this.cmbSub.Items.AddRange(new object[] {
-            "Subject"});
-            this.cmbSub.Location = new System.Drawing.Point(355, 26);
-            this.cmbSub.Name = "cmbSub";
-            this.cmbSub.Size = new System.Drawing.Size(160, 21);
-            this.cmbSub.TabIndex = 24;
-            this.cmbSub.SelectedIndexChanged += new System.EventHandler(this.cmbSub_SelectedIndexChanged);
-            // 
-            // btnSearchQuestion
-            // 
-            this.btnSearchQuestion.BackColor = System.Drawing.Color.White;
-            this.btnSearchQuestion.Location = new System.Drawing.Point(41, 21);
-            this.btnSearchQuestion.Name = "btnSearchQuestion";
-            this.btnSearchQuestion.Size = new System.Drawing.Size(294, 28);
-            this.btnSearchQuestion.TabIndex = 23;
-            this.btnSearchQuestion.Text = " ⌕   Search questions..";
-            this.btnSearchQuestion.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(362, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Subject";
-            // 
-            // cmbDifficulty
-            // 
-            this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Items.AddRange(new object[] {
-            "Subject"});
-            this.cmbDifficulty.Location = new System.Drawing.Point(544, 26);
-            this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(160, 21);
-            this.cmbDifficulty.TabIndex = 26;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(550, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Difficulty";
-            // 
             // dtgID
             // 
             this.dtgID.BackgroundColor = System.Drawing.Color.White;
             this.dtgID.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgID.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgID.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgID.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -336,7 +285,7 @@
             this.colDifficulty,
             this.colActions});
             this.dtgID.EnableHeadersVisualStyles = false;
-            this.dtgID.Location = new System.Drawing.Point(41, 117);
+            this.dtgID.Location = new System.Drawing.Point(41, 108);
             this.dtgID.Name = "dtgID";
             this.dtgID.RowHeadersVisible = false;
             this.dtgID.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -372,6 +321,57 @@
             // 
             this.colActions.HeaderText = "Actions";
             this.colActions.Name = "colActions";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(550, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Difficulty";
+            // 
+            // cmbDifficulty
+            // 
+            this.cmbDifficulty.FormattingEnabled = true;
+            this.cmbDifficulty.Items.AddRange(new object[] {
+            "Subject"});
+            this.cmbDifficulty.Location = new System.Drawing.Point(544, 26);
+            this.cmbDifficulty.Name = "cmbDifficulty";
+            this.cmbDifficulty.Size = new System.Drawing.Size(160, 21);
+            this.cmbDifficulty.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(362, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Subject";
+            // 
+            // cmbSub
+            // 
+            this.cmbSub.FormattingEnabled = true;
+            this.cmbSub.Items.AddRange(new object[] {
+            "Subject"});
+            this.cmbSub.Location = new System.Drawing.Point(355, 26);
+            this.cmbSub.Name = "cmbSub";
+            this.cmbSub.Size = new System.Drawing.Size(160, 21);
+            this.cmbSub.TabIndex = 24;
+            this.cmbSub.SelectedIndexChanged += new System.EventHandler(this.cmbSub_SelectedIndexChanged);
+            // 
+            // btnSearchQuestion
+            // 
+            this.btnSearchQuestion.BackColor = System.Drawing.Color.White;
+            this.btnSearchQuestion.Location = new System.Drawing.Point(41, 21);
+            this.btnSearchQuestion.Name = "btnSearchQuestion";
+            this.btnSearchQuestion.Size = new System.Drawing.Size(294, 28);
+            this.btnSearchQuestion.TabIndex = 23;
+            this.btnSearchQuestion.Text = " ⌕   Search questions..";
+            this.btnSearchQuestion.UseVisualStyleBackColor = false;
             // 
             // tcQuestionbank
             // 
