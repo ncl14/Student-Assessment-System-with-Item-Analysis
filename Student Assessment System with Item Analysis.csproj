@@ -250,12 +250,6 @@
     <Compile Include="Source\Forms\Dashboards\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Assessment Creation Module.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Assessment Creation Module.Designer.cs">
-      <DependentUpon>Assessment Creation Module.cs</DependentUpon>
-    </Compile>
     <Compile Include="Source\Forms\Dashboards\TeacherDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -405,17 +399,14 @@
     <Compile Include="Source\Repositories\SubjectRepository.cs" />
     <Compile Include="Source\Repositories\UserRepository.cs" />
     <Compile Include="Source\Services\AuthService.cs" />
-    <Compile Include="tcQuestionbank.cs">
+    <Compile Include="Source\Forms\UserManagement\tcQuestionbank.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tcQuestionbank.Designer.cs">
+    <Compile Include="Source\Forms\UserManagement\tcQuestionbank.Designer.cs">
       <DependentUpon>tcQuestionbank.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Source\Forms\Dashboards\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assessment Creation Module.resx">
-      <DependentUpon>Assessment Creation Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\Dashboards\TeacherDashboard.resx">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
@@ -479,7 +470,7 @@
     <EmbeddedResource Include="Source\Forms\UserManagement\TestCreation.resx">
       <DependentUpon>TestCreation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tcQuestionbank.resx">
+    <EmbeddedResource Include="Source\Forms\UserManagement\tcQuestionbank.resx">
       <DependentUpon>tcQuestionbank.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
