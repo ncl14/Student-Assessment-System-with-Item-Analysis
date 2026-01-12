@@ -22,41 +22,41 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Repositories
         }
 
         // 2. Add New Subject
-        public void AddSubject(Subject sub)
-        {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "INSERT INTO Subjects (SubjectCode, SubjectName, Units, Description) VALUES (@Code, @Name, @Units, @Desc)";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
-                    cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
-                    cmd.Parameters.AddWithValue("@Units", sub.Units);
-                    cmd.Parameters.AddWithValue("@Desc", sub.Description);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
+        //public void AddSubject(Subject sub)
+        //{
+        //    using (SqlConnection con = new SqlConnection(connectionString))
+        //    {
+        //        string query = "INSERT INTO Subjects (SubjectCode, SubjectName, Units, Description) VALUES (@Code, @Name, @Units, @Desc)";
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
+        //            cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
+        //            cmd.Parameters.AddWithValue("@Units", sub.Units);
+        //            cmd.Parameters.AddWithValue("@Desc", sub.Description);
+        //            con.Open();
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //}
 
         // 3. Update Existing Subject
-        public void UpdateSubject(Subject sub)
-        {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "UPDATE Subjects SET SubjectCode=@Code, SubjectName=@Name, Units=@Units, Description=@Desc WHERE SubjectID=@ID";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@ID", sub.SubjectID);
-                    cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
-                    cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
-                    cmd.Parameters.AddWithValue("@Units", sub.Units);
-                    cmd.Parameters.AddWithValue("@Desc", sub.Description);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
+        //public void UpdateSubject(Subject sub)
+        //{
+        //    using (SqlConnection con = new SqlConnection(connectionString))
+        //    {
+        //        string query = "UPDATE Subjects SET SubjectCode=@Code, SubjectName=@Name, Units=@Units, Description=@Desc WHERE SubjectID=@ID";
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            cmd.Parameters.AddWithValue("@ID", sub.SubjectID);
+        //            cmd.Parameters.AddWithValue("@Code", sub.SubjectCode);
+        //            cmd.Parameters.AddWithValue("@Name", sub.SubjectName);
+        //            cmd.Parameters.AddWithValue("@Units", sub.Units);
+        //            cmd.Parameters.AddWithValue("@Desc", sub.Description);
+        //            con.Open();
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //}
 
         // 4. Delete Subject
         public void DeleteSubject(int id)

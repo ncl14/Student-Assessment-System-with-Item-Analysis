@@ -43,9 +43,9 @@
             this.txtbTest = new System.Windows.Forms.TextBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.panelTest = new System.Windows.Forms.Panel();
-            this.cmbProgramming = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbProgramming = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
@@ -55,37 +55,39 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblItem = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lbl95 = new System.Windows.Forms.Label();
+            this.lblEasy = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblDifficulty = new System.Windows.Forms.Label();
             this.lblQuestion = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEasy = new System.Windows.Forms.Label();
-            this.lbl95 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblItem = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.cbRelability = new System.Windows.Forms.CheckBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.cbDifficult = new System.Windows.Forms.CheckBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.cbAverage = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbEasy = new System.Windows.Forms.CheckBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblRep = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblOverall = new System.Windows.Forms.Label();
             this.lblTest = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lblRep = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.cbEasy = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.cbAverage = new System.Windows.Forms.CheckBox();
-            this.cbDifficult = new System.Windows.Forms.CheckBox();
-            this.cbRelability = new System.Windows.Forms.CheckBox();
-            this.button11 = new System.Windows.Forms.Button();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.pbNotif = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelTest.SuspendLayout();
@@ -96,9 +98,10 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -221,6 +224,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -250,8 +254,9 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1007, 103);
+            this.textBox1.Size = new System.Drawing.Size(1009, 103);
             this.textBox1.TabIndex = 64;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblReport
             // 
@@ -308,14 +313,16 @@
             this.panelTest.Size = new System.Drawing.Size(300, 316);
             this.panelTest.TabIndex = 66;
             // 
-            // cmbProgramming
+            // label1
             // 
-            this.cmbProgramming.FormattingEnabled = true;
-            this.cmbProgramming.Location = new System.Drawing.Point(13, 55);
-            this.cmbProgramming.Name = "cmbProgramming";
-            this.cmbProgramming.Size = new System.Drawing.Size(267, 21);
-            this.cmbProgramming.TabIndex = 69;
-            this.cmbProgramming.Text = "Programming Quiz 1";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 17);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Class Performance - Programming Quiz 1\r\n";
             // 
             // pictureBox1
             // 
@@ -327,16 +334,14 @@
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // cmbProgramming
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 17);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Class Performance - Programming Quiz 1\r\n";
+            this.cmbProgramming.FormattingEnabled = true;
+            this.cmbProgramming.Location = new System.Drawing.Point(13, 55);
+            this.cmbProgramming.Name = "cmbProgramming";
+            this.cmbProgramming.Size = new System.Drawing.Size(267, 21);
+            this.cmbProgramming.TabIndex = 69;
+            this.cmbProgramming.Text = "Programming Quiz 1";
             // 
             // panel1
             // 
@@ -437,14 +442,6 @@
             this.panel2.Size = new System.Drawing.Size(300, 313);
             this.panel2.TabIndex = 173;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(3, 3);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(294, 307);
-            this.textBox3.TabIndex = 0;
-            // 
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.Color.White;
@@ -453,6 +450,14 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(65, 10);
             this.progressBar1.TabIndex = 174;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(3, 3);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(294, 307);
+            this.textBox3.TabIndex = 0;
             // 
             // panel3
             // 
@@ -468,6 +473,95 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(309, 316);
             this.panel3.TabIndex = 174;
+            // 
+            // lbl95
+            // 
+            this.lbl95.AutoSize = true;
+            this.lbl95.BackColor = System.Drawing.Color.White;
+            this.lbl95.Location = new System.Drawing.Point(248, 159);
+            this.lbl95.Name = "lbl95";
+            this.lbl95.Size = new System.Drawing.Size(27, 13);
+            this.lbl95.TabIndex = 175;
+            this.lbl95.Text = "95%";
+            // 
+            // lblEasy
+            // 
+            this.lblEasy.AutoSize = true;
+            this.lblEasy.BackColor = System.Drawing.Color.LightGreen;
+            this.lblEasy.ForeColor = System.Drawing.Color.Black;
+            this.lblEasy.Location = new System.Drawing.Point(212, 159);
+            this.lblEasy.Name = "lblEasy";
+            this.lblEasy.Size = new System.Drawing.Size(30, 13);
+            this.lblEasy.TabIndex = 175;
+            this.lblEasy.Text = "Easy";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(40, 158);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 65);
+            this.label7.TabIndex = 175;
+            this.label7.Text = "Which SQL constraint is\r\nused to ensure that \r\nthe values in a column \r\nmatches t" +
+    "he values\r\n in a primary key of another table?\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(18, 159);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 13);
+            this.label5.TabIndex = 175;
+            this.label5.Text = "1 ";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lbl1);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lblDifficulty);
+            this.panel4.Controls.Add(this.lblQuestion);
+            this.panel4.Location = new System.Drawing.Point(7, 112);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(287, 34);
+            this.panel4.TabIndex = 175;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(12, 13);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(14, 13);
+            this.lbl1.TabIndex = 175;
+            this.lbl1.Text = "#";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(308, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Status";
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(202, 13);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(47, 13);
+            this.lblDifficulty.TabIndex = 2;
+            this.lblDifficulty.Text = "Difficulty";
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Location = new System.Drawing.Point(92, 13);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(49, 13);
+            this.lblQuestion.TabIndex = 0;
+            this.lblQuestion.Text = "Question";
             // 
             // label3
             // 
@@ -499,95 +593,6 @@
             this.textBox2.Size = new System.Drawing.Size(303, 308);
             this.textBox2.TabIndex = 0;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lbl1);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.lblDifficulty);
-            this.panel4.Controls.Add(this.lblQuestion);
-            this.panel4.Location = new System.Drawing.Point(7, 112);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(287, 34);
-            this.panel4.TabIndex = 175;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Status";
-            // 
-            // lblDifficulty
-            // 
-            this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(202, 13);
-            this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(47, 13);
-            this.lblDifficulty.TabIndex = 2;
-            this.lblDifficulty.Text = "Difficulty";
-            // 
-            // lblQuestion
-            // 
-            this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(92, 13);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(49, 13);
-            this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "Question";
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(12, 13);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(14, 13);
-            this.lbl1.TabIndex = 175;
-            this.lbl1.Text = "#";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(18, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 175;
-            this.label5.Text = "1 ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(40, 158);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 65);
-            this.label7.TabIndex = 175;
-            this.label7.Text = "Which SQL constraint is\r\nused to ensure that \r\nthe values in a column \r\nmatches t" +
-    "he values\r\n in a primary key of another table?\r\n";
-            // 
-            // lblEasy
-            // 
-            this.lblEasy.AutoSize = true;
-            this.lblEasy.BackColor = System.Drawing.Color.LightGreen;
-            this.lblEasy.ForeColor = System.Drawing.Color.Black;
-            this.lblEasy.Location = new System.Drawing.Point(212, 159);
-            this.lblEasy.Name = "lblEasy";
-            this.lblEasy.Size = new System.Drawing.Size(30, 13);
-            this.lblEasy.TabIndex = 175;
-            this.lblEasy.Text = "Easy";
-            // 
-            // lbl95
-            // 
-            this.lbl95.AutoSize = true;
-            this.lbl95.BackColor = System.Drawing.Color.White;
-            this.lbl95.Location = new System.Drawing.Point(248, 159);
-            this.lbl95.Name = "lbl95";
-            this.lbl95.Size = new System.Drawing.Size(27, 13);
-            this.lbl95.TabIndex = 175;
-            this.lbl95.Text = "95%";
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.button11);
@@ -609,6 +614,137 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(954, 316);
             this.panel5.TabIndex = 176;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Red;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.Red;
+            this.button11.Location = new System.Drawing.Point(709, 240);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(16, 16);
+            this.button11.TabIndex = 171;
+            this.button11.Text = " ";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // cbRelability
+            // 
+            this.cbRelability.AutoSize = true;
+            this.cbRelability.BackColor = System.Drawing.Color.White;
+            this.cbRelability.Location = new System.Drawing.Point(709, 241);
+            this.cbRelability.Name = "cbRelability";
+            this.cbRelability.Size = new System.Drawing.Size(68, 17);
+            this.cbRelability.TabIndex = 170;
+            this.cbRelability.Text = "Relability";
+            this.cbRelability.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(545, 242);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(16, 16);
+            this.button10.TabIndex = 168;
+            this.button10.Text = " ";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // cbDifficult
+            // 
+            this.cbDifficult.AutoSize = true;
+            this.cbDifficult.BackColor = System.Drawing.Color.White;
+            this.cbDifficult.Location = new System.Drawing.Point(545, 243);
+            this.cbDifficult.Name = "cbDifficult";
+            this.cbDifficult.Size = new System.Drawing.Size(61, 17);
+            this.cbDifficult.TabIndex = 169;
+            this.cbDifficult.Text = "Difficult";
+            this.cbDifficult.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button9.Location = new System.Drawing.Point(364, 244);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(16, 16);
+            this.button9.TabIndex = 167;
+            this.button9.Text = " ";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // cbAverage
+            // 
+            this.cbAverage.AutoSize = true;
+            this.cbAverage.BackColor = System.Drawing.Color.White;
+            this.cbAverage.Location = new System.Drawing.Point(364, 245);
+            this.cbAverage.Name = "cbAverage";
+            this.cbAverage.Size = new System.Drawing.Size(66, 17);
+            this.cbAverage.TabIndex = 166;
+            this.cbAverage.Text = "Average";
+            this.cbAverage.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button4.Location = new System.Drawing.Point(198, 246);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(16, 16);
+            this.button4.TabIndex = 165;
+            this.button4.Text = " ";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // cbEasy
+            // 
+            this.cbEasy.AutoSize = true;
+            this.cbEasy.BackColor = System.Drawing.Color.White;
+            this.cbEasy.Location = new System.Drawing.Point(198, 247);
+            this.cbEasy.Name = "cbEasy";
+            this.cbEasy.Size = new System.Drawing.Size(49, 17);
+            this.cbEasy.TabIndex = 164;
+            this.cbEasy.Text = "Easy";
+            this.cbEasy.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(611, 118);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(85, 74);
+            this.pictureBox6.TabIndex = 163;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lblRep
+            // 
+            this.lblRep.AutoSize = true;
+            this.lblRep.BackColor = System.Drawing.Color.White;
+            this.lblRep.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRep.Location = new System.Drawing.Point(443, 193);
+            this.lblRep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRep.Name = "lblRep";
+            this.lblRep.Size = new System.Drawing.Size(72, 15);
+            this.lblRep.TabIndex = 162;
+            this.lblRep.Text = "Reports 82%";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(435, 118);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(89, 72);
+            this.pictureBox5.TabIndex = 71;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(254, 111);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox3.TabIndex = 70;
+            this.pictureBox3.TabStop = false;
             // 
             // lblOverall
             // 
@@ -640,141 +776,39 @@
             this.textBox5.Size = new System.Drawing.Size(948, 308);
             this.textBox5.TabIndex = 0;
             // 
-            // pictureBox3
+            // lblLogout
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(254, 111);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox3.TabIndex = 70;
-            this.pictureBox3.TabStop = false;
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.White;
+            this.lblLogout.Location = new System.Drawing.Point(1061, 53);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(70, 19);
+            this.lblLogout.TabIndex = 177;
+            this.lblLogout.Text = "LOGOUT ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
             // 
-            // pictureBox5
+            // pbNotif
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(435, 118);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(89, 72);
-            this.pictureBox5.TabIndex = 71;
-            this.pictureBox5.TabStop = false;
-            // 
-            // lblRep
-            // 
-            this.lblRep.AutoSize = true;
-            this.lblRep.BackColor = System.Drawing.Color.White;
-            this.lblRep.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRep.Location = new System.Drawing.Point(443, 193);
-            this.lblRep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRep.Name = "lblRep";
-            this.lblRep.Size = new System.Drawing.Size(72, 15);
-            this.lblRep.TabIndex = 162;
-            this.lblRep.Text = "Reports 82%";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(611, 118);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(85, 74);
-            this.pictureBox6.TabIndex = 163;
-            this.pictureBox6.TabStop = false;
-            // 
-            // cbEasy
-            // 
-            this.cbEasy.AutoSize = true;
-            this.cbEasy.BackColor = System.Drawing.Color.White;
-            this.cbEasy.Location = new System.Drawing.Point(198, 247);
-            this.cbEasy.Name = "cbEasy";
-            this.cbEasy.Size = new System.Drawing.Size(49, 17);
-            this.cbEasy.TabIndex = 164;
-            this.cbEasy.Text = "Easy";
-            this.cbEasy.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button4.Location = new System.Drawing.Point(198, 246);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(16, 16);
-            this.button4.TabIndex = 165;
-            this.button4.Text = " ";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button9.Location = new System.Drawing.Point(364, 244);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(16, 16);
-            this.button9.TabIndex = 167;
-            this.button9.Text = " ";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(545, 242);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(16, 16);
-            this.button10.TabIndex = 168;
-            this.button10.Text = " ";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // cbAverage
-            // 
-            this.cbAverage.AutoSize = true;
-            this.cbAverage.BackColor = System.Drawing.Color.White;
-            this.cbAverage.Location = new System.Drawing.Point(364, 245);
-            this.cbAverage.Name = "cbAverage";
-            this.cbAverage.Size = new System.Drawing.Size(66, 17);
-            this.cbAverage.TabIndex = 166;
-            this.cbAverage.Text = "Average";
-            this.cbAverage.UseVisualStyleBackColor = false;
-            // 
-            // cbDifficult
-            // 
-            this.cbDifficult.AutoSize = true;
-            this.cbDifficult.BackColor = System.Drawing.Color.White;
-            this.cbDifficult.Location = new System.Drawing.Point(545, 243);
-            this.cbDifficult.Name = "cbDifficult";
-            this.cbDifficult.Size = new System.Drawing.Size(61, 17);
-            this.cbDifficult.TabIndex = 169;
-            this.cbDifficult.Text = "Difficult";
-            this.cbDifficult.UseVisualStyleBackColor = false;
-            // 
-            // cbRelability
-            // 
-            this.cbRelability.AutoSize = true;
-            this.cbRelability.BackColor = System.Drawing.Color.White;
-            this.cbRelability.Location = new System.Drawing.Point(709, 241);
-            this.cbRelability.Name = "cbRelability";
-            this.cbRelability.Size = new System.Drawing.Size(68, 17);
-            this.cbRelability.TabIndex = 170;
-            this.cbRelability.Text = "Relability";
-            this.cbRelability.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Red;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.Red;
-            this.button11.Location = new System.Drawing.Point(709, 240);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(16, 16);
-            this.button11.TabIndex = 171;
-            this.button11.Text = " ";
-            this.button11.UseVisualStyleBackColor = false;
+            this.pbNotif.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbNotif.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNotif.Image = ((System.Drawing.Image)(resources.GetObject("pbNotif.Image")));
+            this.pbNotif.Location = new System.Drawing.Point(1020, 46);
+            this.pbNotif.Name = "pbNotif";
+            this.pbNotif.Size = new System.Drawing.Size(25, 28);
+            this.pbNotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNotif.TabIndex = 191;
+            this.pbNotif.TabStop = false;
             // 
             // tcReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbNotif);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -801,9 +835,10 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,5 +903,7 @@
         private System.Windows.Forms.CheckBox cbEasy;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.CheckBox cbRelability;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.PictureBox pbNotif;
     }
 }

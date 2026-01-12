@@ -24,11 +24,11 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-        
+
         }
 
-      
- 
+
+
         private void lblTitle_Click(object sender, EventArgs e)
         {
 
@@ -75,6 +75,33 @@ namespace Student_Assessment_System_with_Item_Analysis
         }
 
         private void lblT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to logout?",
+            "Logout Confirmation",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+  );
+
+            if (result == DialogResult.Yes)
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void pbNotif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

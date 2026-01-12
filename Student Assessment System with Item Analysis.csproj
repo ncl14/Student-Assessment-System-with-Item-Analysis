@@ -256,6 +256,7 @@
     <Compile Include="Source\Forms\Dashboards\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Forms\Dashboards\lblSubjectcourses.cs" />
     <Compile Include="Source\Forms\Dashboards\TeacherDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,11 +269,11 @@
     <Compile Include="Source\Forms\Testadministration.Designer.cs">
       <DependentUpon>Testadministration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\Forms\subject&amp;courses.cs">
+    <Compile Include="Source\Forms\subjectcourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Source\Forms\subject&amp;courses.Designer.cs">
-      <DependentUpon>subject&amp;courses.cs</DependentUpon>
+    <Compile Include="Source\Forms\subjectcourses.Designer.cs">
+      <DependentUpon>subjectcourses.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\Forms\Login\LoginForm.cs">
       <SubType>Form</SubType>
@@ -292,12 +293,6 @@
     <Compile Include="Source\Forms\SubjectManagement\SectionManagementForm.Designer.cs">
       <DependentUpon>SectionManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\Forms\SubjectManagement\SubjectManagementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Source\Forms\SubjectManagement\SubjectManagementForm.Designer.cs">
-      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Source\Forms\TestAssessment\TakeAssessment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,12 +310,6 @@
     </Compile>
     <Compile Include="Source\Forms\UserManagement\PerformanceHistoy.Designer.cs">
       <DependentUpon>PerformanceHistoy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Source\Forms\UserManagement\ManageUsersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Source\Forms\UserManagement\ManageUsersForm.Designer.cs">
-      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="modProcedureVariable.cs" />
     <Compile Include="modVariable.cs" />
@@ -417,8 +406,8 @@
     <EmbeddedResource Include="Source\Forms\Dashboards\TeacherDashboard.resx">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Source\Forms\subject&amp;courses.resx">
-      <DependentUpon>subject&amp;courses.cs</DependentUpon>
+    <EmbeddedResource Include="Source\Forms\subjectcourses.resx">
+      <DependentUpon>subjectcourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -429,9 +418,6 @@
     <EmbeddedResource Include="Source\Forms\SubjectManagement\SectionManagementForm.resx">
       <DependentUpon>SectionManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Source\Forms\SubjectManagement\SubjectManagementForm.resx">
-      <DependentUpon>SubjectManagementForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\Testadministration.resx">
       <DependentUpon>Testadministration.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,9 +426,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\Forms\UserManagement\AddEditUserForm.resx">
       <DependentUpon>AddEditUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Source\Forms\UserManagement\ManageUsersForm.resx">
-      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

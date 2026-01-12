@@ -1,7 +1,10 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Forms;
+using Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManagement;
+using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Student_Assessment_System_with_Item_Analysis.Forms.Dashboards
 {
@@ -98,7 +101,77 @@ namespace Student_Assessment_System_with_Item_Analysis.Forms.Dashboards
 
         }
 
-        // These might be extra depending on your exact designer setup, 
-        // but keeping them prevents "Definition not found" errors.
+        private void TeacherDashboard_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNotif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbNotif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to logout?",
+           "Logout Confirmation",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question
+ );
+
+            if (result == DialogResult.Yes)
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e) //Question bank
+        {
+            tcQuestionbank tcQuestionbank = new tcQuestionbank();
+            tcQuestionbank.Show();
+
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e) //Teacher Reports
+        {
+            tcReports tcReports = new tcReports();
+            tcReports.Show();
+
+            this.Close();
+
+        }
+
+        private void button6_Click(object sender, EventArgs e) //Subject Courses
+        {
+            lblSubjectcourses subjectcourses = new lblSubjectcourses();
+            subjectcourses.Show();
+
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e) //Test Administration
+        {
+            Testadministration testadministration = new Testadministration();   
+            testadministration.Show();
+
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e) //Settings
+        {
+            Settings settings = new Settings(); 
+            settings.Show();
+
+            this.Close();
+        }
     }
 }

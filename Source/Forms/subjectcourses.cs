@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
 {
-    public partial class lblsubjectcourse : Form
+    public partial class lblSubjectcourse : Form
     {
-        public lblsubjectcourse()
+        public lblSubjectcourse()
         {
             InitializeComponent();
         }
@@ -106,5 +106,33 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
         {
 
         }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to logout?",
+           "Logout Confirmation",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question
+ );
+
+            if (result == DialogResult.Yes)
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void BtnSear_Click(object sender, EventArgs e)
+        {
+           
+            }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+    

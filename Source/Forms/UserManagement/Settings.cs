@@ -21,5 +21,23 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManageme
         {
 
         }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+             "Are you sure you want to logout?",
+             "Logout Confirmation",
+             MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question
+   );
+
+            if (result == DialogResult.Yes)
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+            }
+        }
     }
+
 }

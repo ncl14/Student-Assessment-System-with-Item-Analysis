@@ -1,6 +1,6 @@
 ﻿namespace Student_Assessment_System_with_Item_Analysis.Source.Forms
 {
-    partial class lblsubjectcourse
+    partial class lblSubjectcourse
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lblsubjectcourse));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lblSubjectcourse));
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,12 +60,13 @@
             this.btnStatus = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.pnlStudentList = new System.Windows.Forms.Panel();
-            this.lblStudent = new System.Windows.Forms.Label();
-            this.lblP = new System.Windows.Forms.Label();
-            this.lblG = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.lblG = new System.Windows.Forms.Label();
+            this.lblP = new System.Windows.Forms.Label();
+            this.lblStudent = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,7 +85,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPerio = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblSu = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -96,7 +96,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button11 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button12 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -112,6 +111,8 @@
             this.lblSpring = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.pbNotif = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJohn)).BeginInit();
@@ -120,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -384,6 +386,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(1426, 94);
             this.textBox3.TabIndex = 127;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // btnAddStudent
             // 
@@ -528,23 +531,14 @@
             this.pnlStudentList.TabIndex = 140;
             this.pnlStudentList.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblStudent
+            // lblStatus
             // 
-            this.lblStudent.AutoSize = true;
-            this.lblStudent.Location = new System.Drawing.Point(3, 13);
-            this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(44, 13);
-            this.lblStudent.TabIndex = 0;
-            this.lblStudent.Text = "Student";
-            // 
-            // lblP
-            // 
-            this.lblP.AutoSize = true;
-            this.lblP.Location = new System.Drawing.Point(128, 13);
-            this.lblP.Name = "lblP";
-            this.lblP.Size = new System.Drawing.Size(37, 13);
-            this.lblP.TabIndex = 1;
-            this.lblP.Text = "Period";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(289, 13);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.TabIndex = 3;
+            this.lblStatus.Text = "Status";
             // 
             // lblG
             // 
@@ -555,14 +549,23 @@
             this.lblG.TabIndex = 2;
             this.lblG.Text = "Grade";
             // 
-            // lblStatus
+            // lblP
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(289, 13);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
-            this.lblStatus.TabIndex = 3;
-            this.lblStatus.Text = "Status";
+            this.lblP.AutoSize = true;
+            this.lblP.Location = new System.Drawing.Point(128, 13);
+            this.lblP.Name = "lblP";
+            this.lblP.Size = new System.Drawing.Size(37, 13);
+            this.lblP.TabIndex = 1;
+            this.lblP.Text = "Period";
+            // 
+            // lblStudent
+            // 
+            this.lblStudent.AutoSize = true;
+            this.lblStudent.Location = new System.Drawing.Point(3, 13);
+            this.lblStudent.Name = "lblStudent";
+            this.lblStudent.Size = new System.Drawing.Size(44, 13);
+            this.lblStudent.TabIndex = 0;
+            this.lblStudent.Text = "Student";
             // 
             // textBox6
             // 
@@ -585,6 +588,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 34);
             this.panel1.TabIndex = 154;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(128, 13);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 157;
+            this.lblID.Text = "ID";
             // 
             // label2
             // 
@@ -688,6 +700,7 @@
             this.BtnSear.TabIndex = 148;
             this.BtnSear.Text = "⌕ Search";
             this.BtnSear.UseVisualStyleBackColor = false;
+            this.BtnSear.Click += new System.EventHandler(this.BtnSear_Click);
             // 
             // cmbAny
             // 
@@ -776,15 +789,6 @@
             this.lbl1.Size = new System.Drawing.Size(13, 13);
             this.lbl1.TabIndex = 156;
             this.lbl1.Text = "1";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(128, 13);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
-            this.lblID.TabIndex = 157;
-            this.lblID.Text = "ID";
             // 
             // panel2
             // 
@@ -900,20 +904,6 @@
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 163;
             this.comboBox1.Text = "Filter any";
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.SteelBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(969, 668);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(97, 27);
-            this.button12.TabIndex = 162;
-            this.button12.Text = "+ Add Student";
-            this.button12.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -1088,11 +1078,40 @@
             this.button14.Text = "Delete";
             this.button14.UseVisualStyleBackColor = false;
             // 
-            // lblsubjectcourse
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.White;
+            this.lblLogout.Location = new System.Drawing.Point(1467, 48);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(70, 19);
+            this.lblLogout.TabIndex = 187;
+            this.lblLogout.Text = "LOGOUT ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
+            // pbNotif
+            // 
+            this.pbNotif.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbNotif.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNotif.Image = ((System.Drawing.Image)(resources.GetObject("pbNotif.Image")));
+            this.pbNotif.Location = new System.Drawing.Point(1423, 41);
+            this.pbNotif.Name = "pbNotif";
+            this.pbNotif.Size = new System.Drawing.Size(25, 28);
+            this.pbNotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNotif.TabIndex = 190;
+            this.pbNotif.TabStop = false;
+            // 
+            // lblSubjectcourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1573, 735);
+            this.Controls.Add(this.pbNotif);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.lblSpring);
@@ -1111,7 +1130,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button12);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
@@ -1158,7 +1176,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox3);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "lblsubjectcourse";
+            this.Name = "lblSubjectcourse";
             this.Text = " ";
             this.Load += new System.EventHandler(this.lblsubjectcourse_Load);
             this.panel6.ResumeLayout(false);
@@ -1172,6 +1190,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1246,7 +1265,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1262,5 +1280,7 @@
         private System.Windows.Forms.Label lblSpring;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.PictureBox pbNotif;
     }
 }

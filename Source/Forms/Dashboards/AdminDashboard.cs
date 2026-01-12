@@ -1,9 +1,9 @@
 ﻿using Student_Assessment_System_with_Item_Analysis.Forms.UserManagement;
-using Student_Assessment_System_with_Item_Analysis.Source.Forms.Reports;
-using Student_Assessment_System_with_Item_Analysis.Source.Forms.SubjectManagement;
+//using Student_Assessment_System_with_Item_Analysis.Source.Forms.Reports;
+//using Student_Assessment_System_with_Item_Analysis.Source.Forms.SubjectManagement;
 using Student_Assessment_System_with_Item_Analysis.Source.Managers.Admin;
 using Student_Assessment_System_with_Item_Analysis.Source.Models;
-using StudentAssessmentSystem;
+//using StudentAssessmentSystem;
 using System;
 using System.Drawing; // Required for Color/Fonts
 using System.Linq;
@@ -104,24 +104,24 @@ namespace Student_Assessment_System_with_Item_Analysis
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            try
-            {
-                lblAdminDashboard.Text = "MANAGE USERS";
-                var view = new UC_ManageUsers(currentUser);
-                LoadView(view);
-            }
-            catch (Exception ex) { MessageBox.Show("Error loading User module: " + ex.Message); }
+            //try
+            //{
+            //    lblAdminDashboard.Text = "MANAGE USERS";
+            //    var view = new UC_ManageUsers(currentUser);
+            //    LoadView(view);
+            //}
+            //catch (Exception ex) { MessageBox.Show("Error loading User module: " + ex.Message); }
         }
 
         private void btnSubjects_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                lblAdminDashboard.Text = "SUBJECT MANAGEMENT";
-                var view = new UC_SubjectManagement(currentUser);
-                LoadView(view);
-            }
-            catch (Exception ex) { MessageBox.Show("Error loading Subject module: " + ex.Message); }
+            //try
+            //{
+            //    lblAdminDashboard.Text = "SUBJECT MANAGEMENT";
+            //    var view = new UC_SubjectManagement(currentUser);
+            //    LoadView(view);
+            //}
+            //catch (Exception ex) { MessageBox.Show("Error loading Subject module: " + ex.Message); }
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace Student_Assessment_System_with_Item_Analysis
             try
             {
                 lblAdminDashboard.Text = "MANAGE REPORTS";
-                var view = new UC_Reports(currentUser);
-                LoadView(view);
+              //  var view = new UC_Reports(currentUser);
+              //  LoadView(view);
             }
             catch (Exception ex) { MessageBox.Show("Error loading Reports module: " + ex.Message); }
         }
@@ -171,10 +171,10 @@ namespace Student_Assessment_System_with_Item_Analysis
 
                 // 2. Initialize the Settings Control
                 // Ensure SettingsUserControl matches the class name you created earlier
-                var view = new SettingsUserControl();
+                //var view = new SettingsUserControl();
 
                 // 3. Load it into the main panel using your helper method
-                LoadView(view);
+              //  LoadView(view);
             }
             catch (Exception ex)
             {

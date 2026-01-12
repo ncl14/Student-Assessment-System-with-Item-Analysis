@@ -41,24 +41,27 @@
             this.lblSettings = new System.Windows.Forms.Label();
             this.lblAccount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.lblUEmail = new System.Windows.Forms.Label();
             this.lblChangePass = new System.Windows.Forms.Label();
-            this.lblconfig = new System.Windows.Forms.Label();
-            this.btnChangePass = new System.Windows.Forms.Button();
-            this.txtbEmail = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblconfig = new System.Windows.Forms.Label();
             this.lblSystemSettings = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTimezone = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblSystemLanguage = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblSystemLanguage = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTimezone = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.pbNotif = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -210,7 +213,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1035, 103);
+            this.textBox1.Size = new System.Drawing.Size(1025, 103);
             this.textBox1.TabIndex = 65;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -250,6 +253,27 @@
             this.panel1.Size = new System.Drawing.Size(458, 295);
             this.panel1.TabIndex = 68;
             // 
+            // txtbEmail
+            // 
+            this.txtbEmail.Location = new System.Drawing.Point(243, 127);
+            this.txtbEmail.Multiline = true;
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(149, 19);
+            this.txtbEmail.TabIndex = 73;
+            this.txtbEmail.Text = "teacher.1@umindanao.eu.ph";
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangePass.ForeColor = System.Drawing.Color.White;
+            this.btnChangePass.Location = new System.Drawing.Point(243, 80);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(124, 25);
+            this.btnChangePass.TabIndex = 71;
+            this.btnChangePass.Text = "Change Password";
+            this.btnChangePass.UseVisualStyleBackColor = false;
+            // 
             // lblUEmail
             // 
             this.lblUEmail.AutoSize = true;
@@ -272,6 +296,14 @@
             this.lblChangePass.TabIndex = 68;
             this.lblChangePass.Text = "🔐 Change Password";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(3, 3);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(450, 286);
+            this.textBox2.TabIndex = 0;
+            // 
             // lblconfig
             // 
             this.lblconfig.AutoSize = true;
@@ -283,35 +315,6 @@
             this.lblconfig.Size = new System.Drawing.Size(166, 13);
             this.lblconfig.TabIndex = 71;
             this.lblconfig.Text = " Configure the system settings.";
-            // 
-            // btnChangePass
-            // 
-            this.btnChangePass.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChangePass.ForeColor = System.Drawing.Color.White;
-            this.btnChangePass.Location = new System.Drawing.Point(243, 80);
-            this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.Size = new System.Drawing.Size(124, 25);
-            this.btnChangePass.TabIndex = 71;
-            this.btnChangePass.Text = "Change Password";
-            this.btnChangePass.UseVisualStyleBackColor = false;
-            // 
-            // txtbEmail
-            // 
-            this.txtbEmail.Location = new System.Drawing.Point(243, 127);
-            this.txtbEmail.Multiline = true;
-            this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Size = new System.Drawing.Size(149, 19);
-            this.txtbEmail.TabIndex = 73;
-            this.txtbEmail.Text = "teacher.1@umindanao.eu.ph";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(450, 286);
-            this.textBox2.TabIndex = 0;
             // 
             // lblSystemSettings
             // 
@@ -345,25 +348,14 @@
             this.panel2.Size = new System.Drawing.Size(458, 295);
             this.panel2.TabIndex = 76;
             // 
-            // lblTimezone
+            // comboBox2
             // 
-            this.lblTimezone.AutoSize = true;
-            this.lblTimezone.BackColor = System.Drawing.Color.White;
-            this.lblTimezone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimezone.Location = new System.Drawing.Point(39, 86);
-            this.lblTimezone.Name = "lblTimezone";
-            this.lblTimezone.Size = new System.Drawing.Size(67, 16);
-            this.lblTimezone.TabIndex = 77;
-            this.lblTimezone.Text = "Timezone";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(285, 21);
-            this.comboBox1.TabIndex = 78;
-            this.comboBox1.Text = "(GMT+8) 8:50 PM (PH)";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(149, 206);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(243, 21);
+            this.comboBox2.TabIndex = 79;
+            this.comboBox2.Text = "English";
             // 
             // lblSystemLanguage
             // 
@@ -376,14 +368,25 @@
             this.lblSystemLanguage.TabIndex = 77;
             this.lblSystemLanguage.Text = "System Language";
             // 
-            // comboBox2
+            // comboBox1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(149, 206);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(243, 21);
-            this.comboBox2.TabIndex = 79;
-            this.comboBox2.Text = "English";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(107, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 21);
+            this.comboBox1.TabIndex = 78;
+            this.comboBox1.Text = "(GMT+8) 8:50 PM (PH)";
+            // 
+            // lblTimezone
+            // 
+            this.lblTimezone.AutoSize = true;
+            this.lblTimezone.BackColor = System.Drawing.Color.White;
+            this.lblTimezone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimezone.Location = new System.Drawing.Point(39, 86);
+            this.lblTimezone.Name = "lblTimezone";
+            this.lblTimezone.Size = new System.Drawing.Size(67, 16);
+            this.lblTimezone.TabIndex = 77;
+            this.lblTimezone.Text = "Timezone";
             // 
             // btnSave
             // 
@@ -397,10 +400,39 @@
             this.btnSave.Text = "Save Changes";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.White;
+            this.lblLogout.Location = new System.Drawing.Point(1080, 53);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(70, 19);
+            this.lblLogout.TabIndex = 157;
+            this.lblLogout.Text = "LOGOUT ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
+            // pbNotif
+            // 
+            this.pbNotif.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbNotif.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNotif.Image = ((System.Drawing.Image)(resources.GetObject("pbNotif.Image")));
+            this.pbNotif.Location = new System.Drawing.Point(1040, 46);
+            this.pbNotif.Name = "pbNotif";
+            this.pbNotif.Size = new System.Drawing.Size(25, 28);
+            this.pbNotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNotif.TabIndex = 191;
+            this.pbNotif.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbNotif);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblconfig);
             this.Controls.Add(this.panel1);
@@ -416,6 +448,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +482,7 @@
         private System.Windows.Forms.Label lblSystemLanguage;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.PictureBox pbNotif;
     }
 }
