@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnTestAd = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.btnQuestion = new System.Windows.Forms.Button();
             this.btnSubjects = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblUpcoming = new System.Windows.Forms.Label();
             this.lblRes = new System.Windows.Forms.Label();
@@ -46,27 +46,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalTest = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTotalTest = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblRTR = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
             this.richtxtboxAlerts = new System.Windows.Forms.RichTextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,9 +81,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.btnTestAd);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnTestC);
             this.panel1.Controls.Add(this.btnQuestion);
             this.panel1.Controls.Add(this.btnSubjects);
@@ -91,9 +91,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 450);
+            this.panel1.Size = new System.Drawing.Size(160, 878);
             this.panel1.TabIndex = 59;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSettings
             // 
@@ -104,10 +114,10 @@
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 374);
+            this.btnSettings.Location = new System.Drawing.Point(-3, 469);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(160, 34);
+            this.btnSettings.Size = new System.Drawing.Size(163, 48);
             this.btnSettings.TabIndex = 47;
             this.btnSettings.Text = "⚙️ Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,15 +134,16 @@
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.White;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 334);
+            this.btnReports.Location = new System.Drawing.Point(-3, 418);
             this.btnReports.Name = "btnReports";
             this.btnReports.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(160, 34);
+            this.btnReports.Size = new System.Drawing.Size(163, 48);
             this.btnReports.TabIndex = 46;
             this.btnReports.Text = "📊 Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnTestAd
             // 
@@ -143,10 +154,10 @@
             this.btnTestAd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTestAd.ForeColor = System.Drawing.Color.White;
             this.btnTestAd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTestAd.Location = new System.Drawing.Point(0, 295);
+            this.btnTestAd.Location = new System.Drawing.Point(-3, 366);
             this.btnTestAd.Name = "btnTestAd";
             this.btnTestAd.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnTestAd.Size = new System.Drawing.Size(160, 34);
+            this.btnTestAd.Size = new System.Drawing.Size(163, 46);
             this.btnTestAd.TabIndex = 45;
             this.btnTestAd.Text = "💻 Test Administration";
             this.btnTestAd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,10 +173,10 @@
             this.btnTestC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTestC.ForeColor = System.Drawing.Color.White;
             this.btnTestC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTestC.Location = new System.Drawing.Point(0, 254);
+            this.btnTestC.Location = new System.Drawing.Point(-3, 305);
             this.btnTestC.Name = "btnTestC";
             this.btnTestC.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnTestC.Size = new System.Drawing.Size(160, 34);
+            this.btnTestC.Size = new System.Drawing.Size(163, 55);
             this.btnTestC.TabIndex = 44;
             this.btnTestC.Text = "📝 Test Creation";
             this.btnTestC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,10 +192,10 @@
             this.btnQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuestion.ForeColor = System.Drawing.Color.White;
             this.btnQuestion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuestion.Location = new System.Drawing.Point(0, 215);
+            this.btnQuestion.Location = new System.Drawing.Point(-3, 250);
             this.btnQuestion.Name = "btnQuestion";
             this.btnQuestion.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnQuestion.Size = new System.Drawing.Size(160, 34);
+            this.btnQuestion.Size = new System.Drawing.Size(160, 49);
             this.btnQuestion.TabIndex = 43;
             this.btnQuestion.Text = "❔ Question Bank";
             this.btnQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,10 +212,10 @@
             this.btnSubjects.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubjects.ForeColor = System.Drawing.Color.White;
             this.btnSubjects.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubjects.Location = new System.Drawing.Point(0, 157);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 184);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnSubjects.Size = new System.Drawing.Size(160, 52);
+            this.btnSubjects.Size = new System.Drawing.Size(160, 60);
             this.btnSubjects.TabIndex = 42;
             this.btnSubjects.Text = "📚 Subjects and Courses";
             this.btnSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,25 +231,15 @@
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 117);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 125);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(160, 34);
+            this.btnDashboard.Size = new System.Drawing.Size(160, 53);
             this.btnDashboard.TabIndex = 41;
             this.btnDashboard.Text = "🏠︎ Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
@@ -269,11 +270,12 @@
             this.lblRes.BackColor = System.Drawing.Color.White;
             this.lblRes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRes.ForeColor = System.Drawing.Color.DimGray;
-            this.lblRes.Location = new System.Drawing.Point(19, 107);
+            this.lblRes.Location = new System.Drawing.Point(19, 130);
             this.lblRes.Name = "lblRes";
-            this.lblRes.Size = new System.Drawing.Size(220, 17);
+            this.lblRes.Size = new System.Drawing.Size(221, 17);
             this.lblRes.TabIndex = 84;
             this.lblRes.Text = "📅 Research Counsultation - DEC 10";
+            this.lblRes.Click += new System.EventHandler(this.lblRes_Click);
             // 
             // lblPhys
             // 
@@ -281,9 +283,9 @@
             this.lblPhys.BackColor = System.Drawing.Color.White;
             this.lblPhys.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhys.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPhys.Location = new System.Drawing.Point(19, 78);
+            this.lblPhys.Location = new System.Drawing.Point(19, 91);
             this.lblPhys.Name = "lblPhys";
-            this.lblPhys.Size = new System.Drawing.Size(179, 17);
+            this.lblPhys.Size = new System.Drawing.Size(180, 17);
             this.lblPhys.TabIndex = 83;
             this.lblPhys.Text = "📅 Physics Midterm - DEC 16";
             // 
@@ -296,7 +298,7 @@
             this.lblCalc.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.lblCalc.Location = new System.Drawing.Point(19, 49);
             this.lblCalc.Name = "lblCalc";
-            this.lblCalc.Size = new System.Drawing.Size(161, 17);
+            this.lblCalc.Size = new System.Drawing.Size(162, 17);
             this.lblCalc.TabIndex = 82;
             this.lblCalc.Text = "📅 Calculus Quiz - DEC 26";
             // 
@@ -319,10 +321,11 @@
             this.panel2.Controls.Add(this.lblCalc);
             this.panel2.Controls.Add(this.lblPhys);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Location = new System.Drawing.Point(184, 64);
+            this.panel2.Location = new System.Drawing.Point(351, 469);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 145);
+            this.panel2.Size = new System.Drawing.Size(450, 280);
             this.panel2.TabIndex = 85;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -336,10 +339,48 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Location = new System.Drawing.Point(569, 64);
+            this.panel3.Location = new System.Drawing.Point(982, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(207, 145);
+            this.panel3.Size = new System.Drawing.Size(450, 292);
             this.panel3.TabIndex = 86;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label7.Location = new System.Drawing.Point(135, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 28);
+            this.label7.TabIndex = 87;
+            this.label7.Text = "75%";
+            // 
+            // lblTotalTest
+            // 
+            this.lblTotalTest.AutoSize = true;
+            this.lblTotalTest.BackColor = System.Drawing.Color.White;
+            this.lblTotalTest.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblTotalTest.Location = new System.Drawing.Point(135, 132);
+            this.lblTotalTest.Name = "lblTotalTest";
+            this.lblTotalTest.Size = new System.Drawing.Size(36, 28);
+            this.lblTotalTest.TabIndex = 86;
+            this.lblTotalTest.Text = "15";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label6.Location = new System.Drawing.Point(135, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 28);
+            this.label6.TabIndex = 85;
+            this.label6.Text = "120";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -359,7 +400,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(19, 107);
+            this.label3.Location = new System.Drawing.Point(24, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 84;
@@ -372,7 +413,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label4.Location = new System.Drawing.Point(19, 49);
+            this.label4.Location = new System.Drawing.Point(24, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 82;
@@ -385,11 +426,12 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(19, 78);
+            this.label5.Location = new System.Drawing.Point(24, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 83;
             this.label5.Text = "Total Test:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbl9
             // 
@@ -403,43 +445,6 @@
             this.lbl9.TabIndex = 93;
             this.lbl9.Click += new System.EventHandler(this.lbl9_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label6.Location = new System.Drawing.Point(138, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 28);
-            this.label6.TabIndex = 85;
-            this.label6.Text = "120";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // lblTotalTest
-            // 
-            this.lblTotalTest.AutoSize = true;
-            this.lblTotalTest.BackColor = System.Drawing.Color.White;
-            this.lblTotalTest.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblTotalTest.Location = new System.Drawing.Point(138, 71);
-            this.lblTotalTest.Name = "lblTotalTest";
-            this.lblTotalTest.Size = new System.Drawing.Size(36, 28);
-            this.lblTotalTest.TabIndex = 86;
-            this.lblTotalTest.Text = "15";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label7.Location = new System.Drawing.Point(138, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 28);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "75%";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -452,10 +457,57 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
             this.panel4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel4.Location = new System.Drawing.Point(184, 224);
+            this.panel4.Location = new System.Drawing.Point(351, 117);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(369, 197);
+            this.panel4.Size = new System.Drawing.Size(450, 292);
             this.panel4.TabIndex = 94;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(248, 176);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(124, 17);
+            this.label12.TabIndex = 88;
+            this.label12.Text = "At-Risk Students: 5";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DimGray;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label13.Location = new System.Drawing.Point(248, 91);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 17);
+            this.label13.TabIndex = 86;
+            this.label13.Text = "Mean: 78%";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(248, 132);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 17);
+            this.label14.TabIndex = 87;
+            this.label14.Text = "Median: 80%";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(22, 88);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(210, 142);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 85;
+            this.pictureBox2.TabStop = false;
             // 
             // label8
             // 
@@ -487,7 +539,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label11.Location = new System.Drawing.Point(19, 46);
+            this.label11.Location = new System.Drawing.Point(19, 52);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(182, 17);
             this.label11.TabIndex = 82;
@@ -503,57 +555,10 @@
             this.lblRTR.Size = new System.Drawing.Size(0, 21);
             this.lblRTR.TabIndex = 95;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(22, 78);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 99);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 85;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(199, 147);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 17);
-            this.label12.TabIndex = 88;
-            this.label12.Text = "At-Risk Students: 5";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label13.Location = new System.Drawing.Point(199, 89);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 17);
-            this.label13.TabIndex = 86;
-            this.label13.Text = "Mean: 78%";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(199, 118);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 17);
-            this.label14.TabIndex = 87;
-            this.label14.Text = "Median: 80%";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(713, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(1528, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 44);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -568,10 +573,23 @@
             this.panel5.Controls.Add(this.richtxtboxAlerts);
             this.panel5.Controls.Add(this.label18);
             this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(569, 224);
+            this.panel5.Location = new System.Drawing.Point(982, 469);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(207, 197);
+            this.panel5.Size = new System.Drawing.Size(450, 280);
             this.panel5.TabIndex = 97;
+            // 
+            // richtxtboxAlerts
+            // 
+            this.richtxtboxAlerts.BackColor = System.Drawing.SystemColors.Info;
+            this.richtxtboxAlerts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richtxtboxAlerts.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtxtboxAlerts.Location = new System.Drawing.Point(81, 89);
+            this.richtxtboxAlerts.Name = "richtxtboxAlerts";
+            this.richtxtboxAlerts.Size = new System.Drawing.Size(311, 106);
+            this.richtxtboxAlerts.TabIndex = 84;
+            this.richtxtboxAlerts.Text = "\n         ⚠️Question 5 (History) has low \n           discrimination. Review neede" +
+    "d.\n";
+            this.richtxtboxAlerts.TextChanged += new System.EventHandler(this.richtxtboxAlerts_TextChanged);
             // 
             // label18
             // 
@@ -585,28 +603,17 @@
             this.label18.TabIndex = 78;
             this.label18.Text = "Item Analysis Alerts";
             // 
-            // richtxtboxAlerts
-            // 
-            this.richtxtboxAlerts.BackColor = System.Drawing.SystemColors.Info;
-            this.richtxtboxAlerts.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richtxtboxAlerts.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richtxtboxAlerts.Location = new System.Drawing.Point(17, 58);
-            this.richtxtboxAlerts.Name = "richtxtboxAlerts";
-            this.richtxtboxAlerts.Size = new System.Drawing.Size(172, 106);
-            this.richtxtboxAlerts.TabIndex = 84;
-            this.richtxtboxAlerts.Text = "\n⚠️Question 5 (History) has low discrimination. Review needed.\n";
-            // 
             // TeacherDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1603, 878);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblRTR);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.lbl9);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.lbl9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);

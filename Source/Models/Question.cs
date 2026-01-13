@@ -13,6 +13,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Models
         public string QuestionText { get; set; }
         public decimal Points { get; set; }
         public string DifficultyLevel { get; set; }
+        public string CognitiveLevel { get; set; }
         public string Topic { get; set; }
 
         public abstract bool ValidateAnswer(object answer);
