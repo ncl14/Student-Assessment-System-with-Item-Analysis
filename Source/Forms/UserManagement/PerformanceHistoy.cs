@@ -41,5 +41,25 @@ namespace Student_Assessment_System_with_Item_Analysis.Source.Forms.UserManageme
         {
 
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

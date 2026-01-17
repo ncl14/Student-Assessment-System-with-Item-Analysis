@@ -1,4 +1,5 @@
-﻿using Student_Assessment_System_with_Item_Analysis.Source.Models;
+﻿using Student_Assessment_System_with_Item_Analysis.Results;
+using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,5 +108,17 @@ namespace Student_Assessment_System_with_Item_Analysis
                 this.Hide();
             }
         }
+
+        private void btnGrades_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the DetailedResult form
+            DetailedResult detailedResultPage = new DetailedResult();
+
+            // Show the DetailedResult form
+            detailedResultPage.Show();
+
+            // Hide the current StudentDashboard form
+            this.Hide();
+        }
     }
-}
+    }
