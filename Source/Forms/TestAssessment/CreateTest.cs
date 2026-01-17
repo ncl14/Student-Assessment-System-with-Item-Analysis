@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Student_Assessment_System_with_Item_Analysis.Source.Managers;
+﻿using Student_Assessment_System_with_Item_Analysis.Source.Managers;
+using Student_Assessment_System_with_Item_Analysis.Source.Managers.Subjects;
 using Student_Assessment_System_with_Item_Analysis.Source.Models;
-using Student_Assessment_System_with_Item_Analysis.Source.Forms.TestAssessment;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis
 {
@@ -28,7 +23,7 @@ namespace Student_Assessment_System_with_Item_Analysis
 
             // Wire up events programmatically since they might be missing in Designer
             this.Load += Test_Administration_Load;
-            
+
             // Navigation Buttons (Global Panel)
             if (button2 != null) button2.Click += btnNext_Click; // Next
             if (button3 != null) button3.Click += btnBack_Click; // Back
@@ -42,9 +37,9 @@ namespace Student_Assessment_System_with_Item_Analysis
             if (btnCancel != null) btnCancel.Click += btnCancel_Click;
 
             // Question Toolbar
-            if (btnAddQuestion != null) btnAddQuestion.Click += btnAddQuestion_Click;
+            //    if (btnAddQuestion != null) btnAddQuestion.Click += btnAddQuestion_Click;
             if (btnRemoveQuestion != null) btnRemoveQuestion.Click += btnRemoveQuestion_Click;
-            
+
             // Tab Control
             // Disable manual tab clicking? Or allow it? 
             // Usually Wizards disable manual navigation to enforce validation.
@@ -102,19 +97,19 @@ namespace Student_Assessment_System_with_Item_Analysis
             this.Close();
         }
 
-        private void btnAddQuestion_Click(object sender, EventArgs e)
-        {
-            using (var form = new AddQuestionForm())
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    var question = form.CreatedQuestion;
-                    _questions.Add(question);
-                    AddQuestionToGrid(question);
-                    UpdateQuestionCount();
-                }
-            }
-        }
+        //private void btnAddQuestion_Click(object sender, EventArgs e)
+        //{
+        //    using (var form = new AddQuestionForm())
+        //    {
+        //        if (form.ShowDialog() == DialogResult.OK)
+        //        {
+        //            var question = form.CreatedQuestion;
+        //            _questions.Add(question);
+        //            AddQuestionToGrid(question);
+        //            UpdateQuestionCount();
+        //        }
+        //    }
+        //}
 
         private void AddQuestionToGrid(Question q)
         {
@@ -176,9 +171,9 @@ namespace Student_Assessment_System_with_Item_Analysis
                     Questions = _questions
                 };
 
-                int testId = _testManager.SaveTest(test);
-                
-                MessageBox.Show($"Test created successfully! ID: {testId}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //        int testId = _testManager.SaveTest(test);
+
+                //              MessageBox.Show($"Test created successfully! ID: {testId}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)

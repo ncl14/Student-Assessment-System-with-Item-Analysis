@@ -1,10 +1,7 @@
-﻿using Student_Assessment_System_with_Item_Analysis;
-using Student_Assessment_System_with_Item_Analysis.Forms.Dashboards;
+﻿using Student_Assessment_System_with_Item_Analysis.Forms.Dashboards;
 using Student_Assessment_System_with_Item_Analysis.Source.Models;
 using Student_Assessment_System_with_Item_Analysis.Source.Services;
 using System;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Student_Assessment_System_with_Item_Analysis
@@ -14,66 +11,87 @@ namespace Student_Assessment_System_with_Item_Analysis
         public LoginForm()
         {
             InitializeComponent();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            // UX Improvement: Allow pressing "Enter" key to trigger the Login button
+            this.AcceptButton = btnLogin;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUser.Text;
-            string password = txtPassword.Text;
+            string username = txtUser.Text.Trim();
+            string password = txtPassword.Text; // Do not trim passwords (spaces might be valid)
 
-            // Authenticate user
-            User user = AuthService.AuthenticateUser(username, password);
-
-            if (string.IsNullOrEmpty(user.UserRole))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("User role was not loaded correctly.");
+                MessageBox.Show("Please enter both username and password.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            try
+            {
+                // Call your Service to check database
+                User user = AuthService.AuthenticateUser(username, password);
+
+                if (user == null)
+                {
+                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!user.IsActive)
+                {
+                    MessageBox.Show("This account has been deactivated. Please contact the administrator.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Route to correct Dashboard
+                OpenDashboard(user);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while connecting to the database.\nError: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void OpenDashboard(User user)
+        {
+            Form dashboard = null;
 
             switch (user.UserRole)
             {
                 case "Admin":
-                    new AdminDashboard(user).Show();
+                    dashboard = new AdminDashboard(user);
                     break;
-
                 case "Teacher":
-                    new TeacherDashboard(user).Show();
+                    dashboard = new TeacherDashboard(user);
                     break;
-
                 case "Student":
-                    new StudentDashboard(user).Show();
+                    dashboard = new StudentDashboard(user);
                     break;
-
                 default:
-                    MessageBox.Show("Invalid user role.");
+                    MessageBox.Show("Unknown user role assigned.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
             }
 
-            this.Hide();
-        }   
+            if (dashboard != null)
+            {
+                this.Hide(); // Hide Login Form
+                dashboard.Show();
 
+                // CRITICAL: Ensure the app closes when the Dashboard is closed
+                dashboard.FormClosed += (s, args) => this.Close();
+            }
+        }
 
-        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        // This ensures the entire app stops if the user clicks the 'X' on the Login form
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Optional: handle role change
+            Application.Exit();
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-            // Optional: handle username change
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            // Optional: handle password change
-        }
-        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            // Optional: You could clear error labels here if you implemented them
         }
     }
 }

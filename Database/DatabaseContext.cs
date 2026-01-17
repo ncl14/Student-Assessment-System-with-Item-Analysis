@@ -6,6 +6,7 @@ namespace Student_Assessment_System_with_Item_Analysis.Database
 {
     public static class DatabaseContext
     {
+        public static string ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StudentAssessmentDB;Integrated Security=True;";
         public static SqlConnection GetConnection()
         {
             string connString = ConfigurationManager
